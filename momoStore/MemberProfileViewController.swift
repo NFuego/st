@@ -19,6 +19,7 @@ import RxCocoa
 import SwiftyJSON
 import RxAlamofire
 import CarouselSwift
+import Kingfisher
 
 // MARK: Protocols
 
@@ -74,6 +75,8 @@ public class MemberProfileViewController: UIViewController , GlobalUI {
     var id = 0
     var carousel:CarouselView!
 
+    let petImgHeight = 60
+    let carouselWidth = 200
 
     var petsViews = [PetView]()
     let dpg = DisposeBag()
@@ -102,39 +105,16 @@ public class MemberProfileViewController: UIViewController , GlobalUI {
 		fatalError("init(coder:) has not been implemented")
 	}
     
-    func hexStringToUIColor (hex:String) -> UIColor {
-        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-        
-        if (cString.hasPrefix("#")) {
-            cString.remove(at: cString.startIndex)
-        }
-        
-        if ((cString.characters.count) != 6) {
-            return UIColor.gray
-        }
-        
-        var rgbValue:UInt32 = 0
-        Scanner(string: cString).scanHexInt32(&rgbValue)
-        
-        return UIColor(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: CGFloat(1.0)
-        )
-    }
-
 
 	// MARK: - Load Functions
-
-	override func viewDidLoad() {
+	override public func viewDidLoad() {
     	super.viewDidLoad()
 		presenter.viewLoaded()
-        
+
         setup()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
        loadData()
     }
 
@@ -148,7 +128,7 @@ public class MemberProfileViewController: UIViewController , GlobalUI {
                     self.stopLoadingView()
                     switch event {
                     case let .next(response):
-                        print(JSON(data:response.data))
+//                        print(JSON(data:response.data))
                         let json = JSON(data: response.data)
                         
 //                        self.times = (json.dictionaryValue["data"]?.arrayValue.map { (j:JSON) -> ScheduleTime in
@@ -161,7 +141,13 @@ public class MemberProfileViewController: UIViewController , GlobalUI {
                         }))!
                         
                         print(self.petsViews)
-                        
+                        self.carousel.reload()
+
+                        if let thumbnail = (json.dictionaryValue["data"]?["thumbnail"].stringValue) {
+                            let profileUrl = URL(string: (MDAppURI.imgURL + thumbnail ))
+                            self.setProfileImg(url:profileUrl!)
+                        }
+
 
 //                        "status_code" : 200,
 //                        "status" : "OK",
@@ -174,9 +160,19 @@ public class MemberProfileViewController: UIViewController , GlobalUI {
 //                        "representative_pet_id" : 1,
 //                        "description" : "我是帥哥",
 //                        "name" : "Jacklyn Dietrich"
-
-
-
+//                        "status_code" : 200,
+//                        "status" : "OK",
+//                        "data" : {
+//                            "address" : "高雄市鼓山區蓮海路70號",
+//                            "phone" : "07 525 2000",
+//                            "mobile" : "0912345678",
+//                            "id" : 2,
+//                            "customer_number" : "C001",
+//                            "thumbnail" : "\/stapler\/App\/Models\/User\/CustomerDetail\/avatars\/000\/000\/001\/thumb\/eason.jpg",
+//                            "pets" : [
+                            
+                            
+                            
                             
 //                        {
 //                            "id" : 1,
@@ -206,6 +202,12 @@ public class MemberProfileViewController: UIViewController , GlobalUI {
         self.edgesForExtendedLayout = .top
         self.extendedLayoutIncludesOpaqueBars = true
         self.navigationController?.toolbar.barStyle = .default // this make it appears
+
+        self.title = "陳小美"
+        self.navigationController?.navigationBar.barStyle = .blackOpaque
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barTintColor = UIColor(hex: "FF4081")
+        self.navigationController?.navigationBar.tintColor = .white
         
         let back = UIBarButtonItem(title: "返回", style: .plain, target: self, action: #selector(self.back))
         self.navigationItem.leftBarButtonItem = back
@@ -236,7 +238,7 @@ public class MemberProfileViewController: UIViewController , GlobalUI {
             make.left.equalTo(view).offset(edgeOffset)
         }
        
-        var memberImg = UIImage(imageLiteralResourceName: "profile.png")
+        var memberImg = UIImage(imageLiteralResourceName: "profileDefault")
         memberImg = Toucan(image: memberImg).maskWithRoundedRect(cornerRadius: 30).image
         imvMember = SwipeActImgView(img: memberImg,left: self.pointCard,up: self.call,right: self.notify,down: self.accounting)
 
@@ -245,11 +247,6 @@ public class MemberProfileViewController: UIViewController , GlobalUI {
         imvMember.layer.shadowOpacity = 0.3
         imvMember.layer.shadowRadius = 5
 
-        self.title = "陳小美"
-        self.navigationController?.navigationBar.barStyle = .blackOpaque
-        self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.barTintColor = hexStringToUIColor(hex: "#FF4081")
-        self.navigationController?.navigationBar.tintColor = .white
 
         self.bg.addSubview(imvMember)
         imvMember.snp.makeConstraints { (make) in
@@ -352,51 +349,11 @@ public class MemberProfileViewController: UIViewController , GlobalUI {
             make.top.equalTo(lbEmail.snp.bottom).offset(heightOffset)
             make.left.equalToSuperview().offset(leftOffset)
         }
-        
+
         lbComment = UILabel()
         lbComment.textColor = textualColor
         lbComment.text = "備註:小明介紹的朋友"
-//        self.bg.addSubview(lbComment)
-//        lbComment.snp.makeConstraints { (make) in
-//            make.width.equalTo(240) // no more than imgMember w
-//            make.height.equalTo(20)
-//            make.top.equalTo(lbAddress.snp.bottom).offset(heightOffset)
-//            make.left.equalToSuperview().offset(leftOffset)
-//        }
 
-        // TODO pet orders
-        var imgPet = UIImage(imageLiteralResourceName: "profile.png")
-        imgPet = Toucan(image: imgPet).maskWithRoundedRect(cornerRadius: 30).image
-        petImg = UIImageView(image: imgPet)
-        self.bg.addSubview(petImg)
-        petImg.snp.makeConstraints { (make) in
-            make.size.equalTo(60)
-//            make.left.equalToSuperview().offset(leftOffset)
-            make.centerX.equalTo(self.bg)
-            make.bottom.equalTo(self.bg).offset(-heightOffset )
-        }
-        
-        petImg.layer.shadowColor = UIColor.black.cgColor
-        petImg.layer.shadowOffset = CGSize(width: 0, height: 5)
-        petImg.layer.shadowOpacity = 0.3
-        petImg.layer.shadowRadius = 5
-
-        // actions
-
-        // replace by floating button
-//        imvActions = UIImageView(image: UIImage(imageLiteralResourceName: "ic_expand_less"))
-//        self.view.addSubview(imvActions)
-//
-//        imvActions.snp.makeConstraints { (make) in
-//            make.size.equalTo(44)
-//            make.trailing.equalTo(5)
-//            make.bottom.equalTo(self.view)
-//        }
-//
-//        let tapG = UITapGestureRecognizer(target: self, action: #selector(actions))
-//        tapG.numberOfTapsRequired = 1
-//        imvActions.addGestureRecognizer(tapG)
-//        imvActions.isUserInteractionEnabled = true
         
 //    var petImg:UIImageView!
         // lbComment
@@ -407,37 +364,13 @@ public class MemberProfileViewController: UIViewController , GlobalUI {
         // add swipe event
         self.imvMember.isUserInteractionEnabled = true
         
-//        panRecognizer =  UIPanGestureRecognizer(target: self, action: #selector(self.panHandle(sender:)))
-//        self.view.addGestureRecognizer(panRecognizer)
-//        
-//        leftGr = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeHandle(sender:)))
-//        leftGr.direction = .left
-//        self.imvMember.addGestureRecognizer(leftGr)
-//        
-//        rightGr = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeHandle(sender:)))
-//        rightGr.direction = .right
-//        self.imvMember.addGestureRecognizer(rightGr)
-//        
-//        upGr = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeHandle(sender:)))
-//        upGr.direction = .up
-//        self.imvMember.addGestureRecognizer(upGr)
-//        
-//        downGr = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeHandle(sender:)))
-//        downGr.direction = .down
-//        self.imvMember.addGestureRecognizer(downGr)
-//        downGr.delegate = self
-
-//        upGr = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeHandle(sender:)))
-//        upGr .direction = .up
-//        self.imvMember.addGestureRecognizer(upGr)
-
-
         // floating button
         let tapGr = UITapGestureRecognizer(target: self, action: #selector(actions))
         actionBtn.addGestureRecognizer(tapGr)
         actionBtn.buttonColor = UIColor(hex: "01f071")
         actionBtn.plusColor = .white
         self.view.addSubview(actionBtn)
+        actionBtn.paddingX = 10
 
 //        actionBtn.addItem("", icon: UIImage(named: "icon")!, handler: { item in
 //            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .Alert)
@@ -445,16 +378,22 @@ public class MemberProfileViewController: UIViewController , GlobalUI {
 //            self.presentViewController(alert, animated: true, completion: nil)
 //            fab.close()
 //        })
-        
+
         self.setupPetCarouselView()
     } // fin setup
+
 
     func setupPetCarouselView(){
         carousel = CarouselView()
         bg.addSubview(carousel)
-//        carousel.snp.make
+        carousel.snp.makeConstraints { (make) in
+            make.bottom.equalToSuperview()
+            make.height.equalTo(petImgHeight)
+            make.width.equalTo(carouselWidth)
+            make.centerX.equalToSuperview()
+        }
         carousel.type = .loop   // set cell loop or linear
-//        carousel.dataSource = self  // set data source cell view
+        carousel.dataSource = self  // set data source cell view
         carousel.reload()   // load datas
 
 //        carousel.autoScroll(2, increase: true)  // set auto scroll
@@ -462,10 +401,6 @@ public class MemberProfileViewController: UIViewController , GlobalUI {
 
         carousel.scrollTo(cell: 1) // scroll to specify cell
         carousel.cellPerPage = 3 // number view show in one page
-        
-//        // CarouselViewDataSourse
-//        func numberOfView(carousel:CarouselView) -> Int  // total count of view
-//        func carousel(carousel:CarouselView, viewForIndex index:Int) -> UIView?
     }
     
     // MARK:- Functional
@@ -505,7 +440,7 @@ public class MemberProfileViewController: UIViewController , GlobalUI {
     
     func back(){
         self.dismiss(animated: true) {
-            
+
         }
     }
 
@@ -592,6 +527,19 @@ extension MemberProfileViewController {
     }
 }
 
+// MARK: -Filld data
+extension MemberProfileViewController {
+    func setProfileImg(url:URL) {
+        self.imvMember.kf.setImage(with: url, options: [.transition(.fade(0.2)),.forceRefresh], progressBlock: {
+            receivedsize, totalsize in
+            let percentage = (Float(receivedsize) / Float(totalsize)) * 100.0
+            print("downloading progress: \(percentage)%")
+//            myindicator.percentage = percentage
+        })
+        self.imvMember.kf.indicatorType = .activity
+    }
+}
+
 
 
 // MARK: - MemberProfile Presenter to View Protocol
@@ -602,104 +550,31 @@ extension MemberProfileViewController: MemberProfilePresenterViewProtocol {
 	}
 }
 
+// MARK: - MemberProfile PetView
+extension MemberProfileViewController : CarouselViewDataSourse {
 
-// MARK: - Member Gesture Handle
-extension MemberProfileViewController {
-    
-    func panHandle(sender:UIPanGestureRecognizer) {
-        
-        if (sender.state == UIGestureRecognizerState.began) {
-            
-            startLocation = sender.location(in: self.view)
-            
-            //                vel = sender.velocity(in: self.view)
-        }
-        print(sender)
-
+    public func numberOfView(_ carousel: CarouselView) -> Int {
+       return self.petsViews.count
     }
-    
-    func swipeHandle(sender:UIGestureRecognizer){
 
-        print(sender.state.rawValue)
-        
-        //        print(sender.state.rawValue)
-        
-        if (sender.state == UIGestureRecognizerState.began) {
-            
-            startLocation = sender.location(in: self.view)
-            
-        } else if (sender.state == UIGestureRecognizerState.ended) {
-            
-            if let startLocation = startLocation {
-                
-                let stopLocation = sender.location(in: self.view);
-                
-                let dx = stopLocation.x - startLocation.x;
-                
-                let dy = stopLocation.y - startLocation.y;
-                
-                let distance = sqrt(dx*dx + dy*dy );
-                
-                print(distance)
-                
-                if Int(distance) > distanceToAct {
-                    
-                }
-                
-                switch sender {
-                case self.upGr :
-                    print("up")
-                    break
-                case self.downGr :
-                    print("down")
-                    break
-                case self.leftGr :
-                    print("left")
-                    break
-                case self.rightGr :
-                    print("right")
-                    break
-                default:
-                    break
-                }
-                
-            }
-            
-            
-            
-            
-            //            if (vel.x < left )
-            
-            //            {
-            
-            //                print("left")
-            
-            //            }
-            
-            //            else if (vel.x > right )
-            
-            //            {
-            
-            //                print("right")
-            
-            //            }
-            
-            //            else if (vel.y < up )
-            
-            //            {
-            
-            //                print("up")
-            
-            //            }
-            
-            //            else if (vel.y > down )
-            
-            //            {
-            
-            //                print("down")
-            
-            //            }
-            
-        } // if
+    open func carousel(_ carousel: CarouselView, viewForIndex index: Int) -> UIView? {
+        let image = UIImage(named: "petDefault")
+        let imageView = UIImageView()
+        let petData = petsViews[index]
+//        print(petData.thumbnail)
+        print(MDAppURI.imgURL + petData.thumbnail)
+//        imageView.kf.setImage(with: URL(string:MDAppURI.imgURL + petData.thumbnail), placeholder: image)
+//        imageView.kf.setImage(with: URL(string:MDAppURI.imgURL + petData.thumbnail))
+        let url =  URL(string:MDAppURI.imgURL + petData.thumbnail)
+//        let url = URL(string: "http://www.partnersforhealthypets.org/healthypetcheckup/assets/pets-fcb53b73523cd42be71be807ca0d6aaf.jpg")
+        imageView.kf.setImage(with: url, options: [.transition(.fade(0.2)),.forceRefresh], progressBlock: {
+            receivedsize, totalsize in
+            let percentage = (Float(receivedsize) / Float(totalsize)) * 100.0
+            print("downloading progress: \(percentage)%")
+//            myindicator.percentage = percentage
+        })
+        imageView.kf.indicatorType = .activity
+        return imageView
     }
 }
+

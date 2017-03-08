@@ -133,6 +133,15 @@ public enum MDAppURI {
             return ""
         }
     }
+    
+    public static var imgURL : String {
+        switch MDApp.config.appMode {
+        case .development:
+            return "http://54.145.164.44:8888"
+        case .production:
+            return ""
+        }
+    }
 }
 
 public enum MDAPI {
