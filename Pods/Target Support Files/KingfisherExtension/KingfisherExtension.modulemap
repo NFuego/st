@@ -1,0 +1,6 @@
+framework module KingfisherExtension {
+  umbrella header "KingfisherExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}

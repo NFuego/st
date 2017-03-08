@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.2.0)
-  - BadgeSwift (4.0.0)
+  - Badgeable (0.1.2)
+  - CarouselSwift (1.3)
   - ConsistencyManager (4.0.0)
   - Eureka (2.0.0-beta.1)
   - Fusuma (1.0.2)
@@ -8,6 +9,9 @@ PODS:
   - JTAppleCalendar (6.1.1)
   - Kamagari (1.1.0)
   - KCFloatingActionButton (2.1.2)
+  - Kingfisher (3.5.1)
+  - KingfisherExtension (1.0.1):
+    - Kingfisher
   - Moya (8.0.1):
     - Moya/Core (= 8.0.1)
   - Moya/Core (8.0.1):
@@ -29,6 +33,7 @@ PODS:
     - RxSwift (~> 3.1)
   - RxSwift (3.1.0)
   - SnapKit (3.1.2)
+  - Spring (1.0.3)
   - SwiftDate (4.0.11)
   - SwiftIconFont (2.6.0)
   - SwiftyJSON (3.1.3)
@@ -41,13 +46,16 @@ PODS:
   - XCGLogger/Core (4.0.0)
 
 DEPENDENCIES:
-  - BadgeSwift (~> 4.0)
+  - Badgeable
+  - CarouselSwift
   - Eureka (from `https://github.com/xmartlabs/Eureka.git`, commit `3efe00e9a65a48c8823e7622dcd478efdc78b753`)
   - Fusuma
   - ImageLoader
   - JTAppleCalendar (~> 6.0)
   - Kamagari
   - KCFloatingActionButton (~> 2.1.0)
+  - Kingfisher
+  - KingfisherExtension
   - Moya (= 8.0.1)
   - Moya/RxSwift
   - PINCache (from `https://github.com/pinterest/PINCache.git`, commit `58635e4ff8d00fcd25084259a625c0615e9d071a`)
@@ -56,6 +64,7 @@ DEPENDENCIES:
   - RxCocoa (~> 3.0)
   - RxSwift
   - SnapKit (~> 3.0)
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
   - SwiftDate (~> 4.0)
   - SwiftIconFont
   - SwiftyJSON
@@ -74,6 +83,9 @@ EXTERNAL SOURCES:
     :git: https://github.com/pinterest/PINCache.git
   RxAlamofire:
     :git: https://github.com/RxSwiftCommunity/RxAlamofire.git
+  Spring:
+    :branch: swift3
+    :git: https://github.com/MengTo/Spring.git
 
 CHECKOUT OPTIONS:
   Eureka:
@@ -85,10 +97,14 @@ CHECKOUT OPTIONS:
   RxAlamofire:
     :commit: d74c782f3c6bff45c0b5036a05178fcab9e719c3
     :git: https://github.com/RxSwiftCommunity/RxAlamofire.git
+  Spring:
+    :commit: 3a9227c6e9157e7b47f5ac1ee5abab2a56b50002
+    :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
-  BadgeSwift: b291cf8ca88674d61cd781f14988272988f4dff4
+  Badgeable: 6fc08430263f73f2bb40df3bdefa4eb1773e9ba7
+  CarouselSwift: 3b0e9e7390494e6e08fde357bf18f881ade5109f
   ConsistencyManager: 323ee466a5c933973529dfa5baa5cbc238633a67
   Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
   Fusuma: 4a1306b4cc7b7385a46865e9f64097b720db42d6
@@ -96,6 +112,8 @@ SPEC CHECKSUMS:
   JTAppleCalendar: fc53eb29ec81f8a90969e2d214b3aa610ab4e5b3
   Kamagari: e4d489eb27735d2ecc246750443dd29dc6bf21f5
   KCFloatingActionButton: 1b22ce95d44b51915280df8a8b277eae4a06c3f1
+  Kingfisher: 12eeffeef42ea45b68c5e5acfe8ba9005b713ab4
+  KingfisherExtension: bfb21c0cd08c62fd0c92e5d10c7d098b597fc45b
   Moya: f2e10a04fcb27fec154cb2afa4e536e8b46dac04
   PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
   Result: 4e3ed5995ed94d0cd6a09be9a431fce3f3624bbf
@@ -104,6 +122,7 @@ SPEC CHECKSUMS:
   RxCocoa: 50d7564866da9299161e86a263ce12a0873904d8
   RxSwift: 83ff553e7593fdfdcb2562933a64c0284dffdadc
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftDate: a36d5ce7c86bed3ed92b583ccbf15045f374ac65
   SwiftIconFont: bbe1f32e1e16bac87dad8566afc80132cb8d072c
   SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
@@ -113,6 +132,6 @@ SPEC CHECKSUMS:
   Toucan: 47485bbc9cb4541ef6318d6886103e6eaf16e919
   XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
 
-PODFILE CHECKSUM: 0c4546640b2b0b181d34d3e0552fd4a493ac24fe
+PODFILE CHECKSUM: 9d97d0da17c09eb48dd4137b642a5ee75ce91836
 
-COCOAPODS: 1.2.0.rc.1
+COCOAPODS: 1.2.0

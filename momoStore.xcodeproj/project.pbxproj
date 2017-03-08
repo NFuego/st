@@ -162,6 +162,7 @@
 		69B907A0FC8637462F178EB0 /* Pods_momoStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4876029F6FC91D30091D430 /* Pods_momoStoreTests.framework */; };
 		E71E62111E4C1C5F002E8741 /* JsonFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71E62101E4C1C5F002E8741 /* JsonFormats.swift */; };
 		E77C327B1E15F83D009340A9 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77C327A1E15F83D009340A9 /* Icons.xcassets */; };
+		E79602F71E6FCCAA00D28F97 /* SwipeActImgvView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79602F61E6FCCAA00D28F97 /* SwipeActImgvView.swift */; };
 		E7B9012E1E49B2B200EE59D9 /* ScheduleVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9012D1E49B2B200EE59D9 /* ScheduleVO.swift */; };
 		E7B9012F1E49B5B000EE59D9 /* MDAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68792D1E397189008EA4C9 /* MDAPI.swift */; };
 		E7B901301E49B5B100EE59D9 /* MDAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68792D1E397189008EA4C9 /* MDAPI.swift */; };
@@ -277,6 +278,7 @@
 		E6FF63C2D631B06F08442242 /* Pods-momoStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momoStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-momoStore/Pods-momoStore.debug.xcconfig"; sourceTree = "<group>"; };
 		E71E62101E4C1C5F002E8741 /* JsonFormats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonFormats.swift; sourceTree = "<group>"; };
 		E77C327A1E15F83D009340A9 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		E79602F61E6FCCAA00D28F97 /* SwipeActImgvView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeActImgvView.swift; sourceTree = "<group>"; };
 		E7B9012D1E49B2B200EE59D9 /* ScheduleVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVO.swift; sourceTree = "<group>"; };
 		E7C4BBD81E1636F1001B2C77 /* ScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		E7DA27191E448A3C00606798 /* GlobalUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalUI.swift; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 		4B70DE9F1E0760E2000D9D5A /* momoStore */ = {
 			isa = PBXGroup;
 			children = (
+				E79602F51E6FCC8F00D28F97 /* view */,
 				E7DA271B1E448A4200606798 /* enhancement */,
 				4B6879361E3A332F008EA4C9 /* ext */,
 				4B6879351E3A3080008EA4C9 /* util */,
@@ -570,6 +573,14 @@
 			name = img;
 			sourceTree = "<group>";
 		};
+		E79602F51E6FCC8F00D28F97 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E79602F61E6FCCAA00D28F97 /* SwipeActImgvView.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		E7B9012C1E49B29600EE59D9 /* VO */ = {
 			isa = PBXGroup;
 			children = (
@@ -664,7 +675,7 @@
 				TargetAttributes = {
 					4B70DE9C1E0760E2000D9D5A = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 4M3T5B2VJJ;
+						DevelopmentTeam = M43ZXET4L5;
 						ProvisioningStyle = Automatic;
 					};
 					4B70DEB01E0760E2000D9D5A = {
@@ -892,6 +903,7 @@
 				4BCA7E251E086C9500C42763 /* MemberInteractor.swift in Sources */,
 				4BCA7E281E086C9500C42763 /* MemberModule.swift in Sources */,
 				4B5323D51E15355800EF41D8 /* OpenTimePresenter.swift in Sources */,
+				E79602F71E6FCCAA00D28F97 /* SwipeActImgvView.swift in Sources */,
 				4B6879341E397189008EA4C9 /* MDConfig.swift in Sources */,
 				4BCA7DF21E086C6600C42763 /* MonthRouter.swift in Sources */,
 				4BCA7E2B1E086C9500C42763 /* MemberPresenter.swift in Sources */,
@@ -1193,7 +1205,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4M3T5B2VJJ;
+				DEVELOPMENT_TEAM = M43ZXET4L5;
 				INFOPLIST_FILE = momoStore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1212,7 +1224,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4M3T5B2VJJ;
+				DEVELOPMENT_TEAM = M43ZXET4L5;
 				INFOPLIST_FILE = momoStore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

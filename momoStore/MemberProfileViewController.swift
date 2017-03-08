@@ -18,6 +18,7 @@ import RxSwift
 import RxCocoa
 import SwiftyJSON
 import RxAlamofire
+import CarouselSwift
 
 // MARK: Protocols
 
@@ -38,11 +39,12 @@ struct PetView {
     var thumbnail = ""
 }
 
+
 // MARK: -
 
 /// The View Controller for the MemberProfile module
-class MemberProfileViewController: UIViewController , GlobalUI {
-    
+public class MemberProfileViewController: UIViewController , GlobalUI {
+
     
 	// MARK: - Constants
 
@@ -50,9 +52,13 @@ class MemberProfileViewController: UIViewController , GlobalUI {
 
 	// MARK: Variables
     var bg:UIView!
-    var imvMember:UIImageView!
+
+    var imvMember:SwipeActImgView!
+    
     var imvMobile:UIImageView! // mobile
+    
     var imvPhone:UIImageView!  // home
+    
     var lbName:UILabel!
     var lbMobile:UIButton!
     var lbPhone:UIButton!
@@ -63,16 +69,15 @@ class MemberProfileViewController: UIViewController , GlobalUI {
     var lbComment:UILabel!
     
     var petImg:UIImageView!
-
     var imvActions:UIImageView!
-
     let actionBtn = KCFloatingActionButton()
     var id = 0
+    var carousel:CarouselView!
+
+
     var petsViews = [PetView]()
     let dpg = DisposeBag()
 
-    
-    
     // handle
     var panRecognizer:UIPanGestureRecognizer!
     var upGr:UISwipeGestureRecognizer!
@@ -93,7 +98,7 @@ class MemberProfileViewController: UIViewController , GlobalUI {
 		super.init(nibName: nil, bundle: nil)
 	}
 
-	required init?(coder aDecoder: NSCoder) {
+	required public init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
     
@@ -130,7 +135,6 @@ class MemberProfileViewController: UIViewController , GlobalUI {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-
        loadData()
     }
 
@@ -144,7 +148,7 @@ class MemberProfileViewController: UIViewController , GlobalUI {
                     self.stopLoadingView()
                     switch event {
                     case let .next(response):
-//                        print(JSON(data:response.data))
+                        print(JSON(data:response.data))
                         let json = JSON(data: response.data)
                         
 //                        self.times = (json.dictionaryValue["data"]?.arrayValue.map { (j:JSON) -> ScheduleTime in
@@ -155,7 +159,25 @@ class MemberProfileViewController: UIViewController , GlobalUI {
                             petView.thumbnail = (j.dictionaryValue["thumbnail"]?.stringValue)!
                             return petView
                         }))!
+                        
                         print(self.petsViews)
+                        
+
+//                        "status_code" : 200,
+//                        "status" : "OK",
+//                        "data" : {
+//                            "address" : "高雄市鼓山區蓮海路70號",
+//                            "phone" : "07 525 2000",
+//                            "mobile" : "0912345678",
+//                            "id" : 2,
+//                            "customer_number" : "C001",
+//                        "representative_pet_id" : 1,
+//                        "description" : "我是帥哥",
+//                        "name" : "Jacklyn Dietrich"
+
+
+
+                            
 //                        {
 //                            "id" : 1,
 //                            "name" : "Floyd",
@@ -216,8 +238,8 @@ class MemberProfileViewController: UIViewController , GlobalUI {
        
         var memberImg = UIImage(imageLiteralResourceName: "profile.png")
         memberImg = Toucan(image: memberImg).maskWithRoundedRect(cornerRadius: 30).image
-        imvMember = UIImageView(image: memberImg)
-        
+        imvMember = SwipeActImgView(img: memberImg,left: self.pointCard,up: self.call,right: self.notify,down: self.accounting)
+
         imvMember.layer.shadowColor = UIColor.black.cgColor
         imvMember.layer.shadowOffset = CGSize(width: 0, height: 5)
         imvMember.layer.shadowOpacity = 0.3
@@ -360,19 +382,21 @@ class MemberProfileViewController: UIViewController , GlobalUI {
         petImg.layer.shadowRadius = 5
 
         // actions
-        imvActions = UIImageView(image: UIImage(imageLiteralResourceName: "ic_expand_less"))
-        self.view.addSubview(imvActions)
 
-        imvActions.snp.makeConstraints { (make) in
-            make.size.equalTo(44)
-            make.trailing.equalTo(5)
-            make.bottom.equalTo(self.view)
-        }
-
-        let tapG = UITapGestureRecognizer(target: self, action: #selector(actions))
-        tapG.numberOfTapsRequired = 1
-        imvActions.addGestureRecognizer(tapG)
-        imvActions.isUserInteractionEnabled = true
+        // replace by floating button
+//        imvActions = UIImageView(image: UIImage(imageLiteralResourceName: "ic_expand_less"))
+//        self.view.addSubview(imvActions)
+//
+//        imvActions.snp.makeConstraints { (make) in
+//            make.size.equalTo(44)
+//            make.trailing.equalTo(5)
+//            make.bottom.equalTo(self.view)
+//        }
+//
+//        let tapG = UITapGestureRecognizer(target: self, action: #selector(actions))
+//        tapG.numberOfTapsRequired = 1
+//        imvActions.addGestureRecognizer(tapG)
+//        imvActions.isUserInteractionEnabled = true
         
 //    var petImg:UIImageView!
         // lbComment
@@ -383,36 +407,36 @@ class MemberProfileViewController: UIViewController , GlobalUI {
         // add swipe event
         self.imvMember.isUserInteractionEnabled = true
         
-        panRecognizer =  UIPanGestureRecognizer(target: self, action: #selector(self.panHandle(sender:)))
-        self.view.addGestureRecognizer(panRecognizer)
-        
-        leftGr = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeHandle(sender:)))
-        leftGr.direction = .left
-        self.imvMember.addGestureRecognizer(leftGr)
-        
-        rightGr = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeHandle(sender:)))
-        rightGr.direction = .right
-        self.imvMember.addGestureRecognizer(rightGr)
-        
-        upGr = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeHandle(sender:)))
-        upGr.direction = .up
-        self.imvMember.addGestureRecognizer(upGr)
-        
-        downGr = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeHandle(sender:)))
-        downGr.direction = .down
-        self.imvMember.addGestureRecognizer(downGr)
+//        panRecognizer =  UIPanGestureRecognizer(target: self, action: #selector(self.panHandle(sender:)))
+//        self.view.addGestureRecognizer(panRecognizer)
+//        
+//        leftGr = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeHandle(sender:)))
+//        leftGr.direction = .left
+//        self.imvMember.addGestureRecognizer(leftGr)
+//        
+//        rightGr = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeHandle(sender:)))
+//        rightGr.direction = .right
+//        self.imvMember.addGestureRecognizer(rightGr)
+//        
+//        upGr = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeHandle(sender:)))
+//        upGr.direction = .up
+//        self.imvMember.addGestureRecognizer(upGr)
+//        
+//        downGr = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeHandle(sender:)))
+//        downGr.direction = .down
+//        self.imvMember.addGestureRecognizer(downGr)
+//        downGr.delegate = self
 
-        upGr = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeHandle(sender:)))
-        upGr .direction = .up
-        self.imvMember.addGestureRecognizer(upGr)
+//        upGr = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeHandle(sender:)))
+//        upGr .direction = .up
+//        self.imvMember.addGestureRecognizer(upGr)
 
 
         // floating button
         let tapGr = UITapGestureRecognizer(target: self, action: #selector(actions))
         actionBtn.addGestureRecognizer(tapGr)
-        actionBtn.buttonColor = UIColor(hex: "#01f071")
+        actionBtn.buttonColor = UIColor(hex: "01f071")
         actionBtn.plusColor = .white
-        
         self.view.addSubview(actionBtn)
 
 //        actionBtn.addItem("", icon: UIImage(named: "icon")!, handler: { item in
@@ -422,7 +446,27 @@ class MemberProfileViewController: UIViewController , GlobalUI {
 //            fab.close()
 //        })
         
+        self.setupPetCarouselView()
     } // fin setup
+
+    func setupPetCarouselView(){
+        carousel = CarouselView()
+        bg.addSubview(carousel)
+//        carousel.snp.make
+        carousel.type = .loop   // set cell loop or linear
+//        carousel.dataSource = self  // set data source cell view
+        carousel.reload()   // load datas
+
+//        carousel.autoScroll(2, increase: true)  // set auto scroll
+//        carousel.delegate = self    // set scroll delegate
+
+        carousel.scrollTo(cell: 1) // scroll to specify cell
+        carousel.cellPerPage = 3 // number view show in one page
+        
+//        // CarouselViewDataSourse
+//        func numberOfView(carousel:CarouselView) -> Int  // total count of view
+//        func carousel(carousel:CarouselView, viewForIndex index:Int) -> UIView?
+    }
     
     // MARK:- Functional
     func call(){
@@ -570,11 +614,12 @@ extension MemberProfileViewController {
             
             //                vel = sender.velocity(in: self.view)
         }
-        
+        print(sender)
+
     }
     
     func swipeHandle(sender:UIGestureRecognizer){
-        
+
         print(sender.state.rawValue)
         
         //        print(sender.state.rawValue)
@@ -597,7 +642,7 @@ extension MemberProfileViewController {
                 
                 print(distance)
                 
-                if distanceToAct > distanceToAct {
+                if Int(distance) > distanceToAct {
                     
                 }
                 

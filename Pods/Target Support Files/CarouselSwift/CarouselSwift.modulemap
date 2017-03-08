@@ -1,0 +1,6 @@
+framework module CarouselSwift {
+  umbrella header "CarouselSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

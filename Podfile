@@ -11,7 +11,8 @@
 
 
     pod 'XCGLogger', '~> 4.0.0'
-    pod 'BadgeSwift', '~> 4.0'
+   # pod 'BadgeSwift', '~> 4.0'
+    pod 'Badgeable'
     pod 'SwiftIconFont'
     pod 'SnapKit', '~> 3.0'
     pod 'SwiftyVIPER' #, :git => 'https://github.com/codytwinton/SwiftyVIPER.git'
@@ -34,6 +35,11 @@
 #    pod "Timepiece"
     pod 'SwiftDate', '~> 4.0'
     pod 'SwiftyTimer'
+    pod 'Kingfisher'
+    pod 'KingfisherExtension'
+    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
+    pod 'CarouselSwift'
+
 
 
 
