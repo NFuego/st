@@ -45,10 +45,10 @@ class MemberViewController: UIViewController {
     var tableView:UITableView!
     var searchController:UISearchController!
     let rxDbg = DisposeBag()
-    let customerURL = "http://54.145.164.44:8888/api/customer"
-    var currentList:JSON!
-    var members:JSON!
-    var filteredMembers:JSON!
+    let customerURL = "\(MDAppURI.baseURL)/customer"
+    var currentList:JSON?
+    var members:JSON?
+    var filteredMembers:JSON?
 
 	// MARK: Inits
 	init(presenter: MemberViewPresenterProtocol) {
@@ -66,14 +66,13 @@ class MemberViewController: UIViewController {
 	override func viewDidLoad() {
     	super.viewDidLoad()
 		presenter.viewLoaded()
-
+        self.setup()
         _ = json(.get, customerURL , parameters: nil , headers: ["Authorization" : "Bearer {\(token)}"])
             .observeOn(MainScheduler.instance)
             .subscribe (onNext:{
                  self.members  =  JSON($0)["data"]
+                self.tableView.reloadData()
                 print(self.members)
-
-                self.setup()
             })
     }
     
@@ -106,14 +105,10 @@ class MemberViewController: UIViewController {
             make.edges.equalToSuperview()//.inset(UIEdgeInsetsMake(0, 0, 0,0))
         }
         
-        
         // Search Controller
         self.searchController = UISearchController(searchResultsController: nil)
-        
         self.searchController.searchResultsUpdater = self
-        
         self.searchController.hidesNavigationBarDuringPresentation = false
-        
         self.searchController
             .dimsBackgroundDuringPresentation = false
         
@@ -131,9 +126,9 @@ class MemberViewController: UIViewController {
 //        })
        
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-      
+
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
 }
 
@@ -166,6 +161,7 @@ extension MemberViewController : UISearchControllerDelegate {
 
 // MARK: - TableView Delegate
 extension MemberViewController : UITableViewDelegate {
+
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        print(self.navigationController)
@@ -177,15 +173,13 @@ extension MemberViewController : UITableViewDelegate {
 
 //          let selectedCell:MemberCell = tableView.cellForRow(at: indexPath) as! MemberCell
 //          selectedCell.contentView.backgroundColor =
-        let member = members.array?[indexPath.row]
+        let member = members?.array?[indexPath.row]
         
-
-
-        
-        print(member)
+//        print(member)
 
         let memberProfileV = MemberProfileModule().view
         if let id = member?.dictionary?["id"]?.intValue {
+            print(id)
             memberProfileV.id = id
         }
         
@@ -206,14 +200,25 @@ extension MemberViewController : UITableViewDataSource {
         guard let _ = self.searchController else { return 0 }
         if self.searchController.isActive == true {
             if let _ = self.filteredMembers {
-                return self.filteredMembers.array!.count
+                return self.filteredMembers!.arrayValue.count
             } else {
-                return self.members.array!.count
+
+                if let ms = self.members {
+                    return ms.arrayValue.count
+                } else {
+                    return 0
+                }
             }
         } else {
-                return self.members.array!.count
+                if let ms = self.members {
+                    return ms.arrayValue.count
+                } else {
+                    return 0
+            }
         }
     }
+
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -230,22 +235,26 @@ extension MemberViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell( withIdentifier: NSStringFromClass(MemberCell.self), for: indexPath) as! MemberCell
         
         guard let _ = self.searchController else { return  cell}
+
         if self.searchController.isActive == true {
+
             if let _ = self.filteredMembers {
-                cell.update(name: filteredMembers[indexPath.row]["name"].stringValue,
-                            imgURL: "http://54.145.164.44:8888/avatars/thumb/missing.png",
-                            petName: filteredMembers[indexPath.row]["pets"][0]["name"].stringValue,
-                            petImgURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Labradour-jaji-happydog.jpg/220px-Labradour-jaji-happydog.jpg"
+
+                cell.update(name: (filteredMembers?[indexPath.row]["name"].stringValue)!,
+                            imgURL: (filteredMembers?[indexPath.row]["thumbnail"].stringValue)!,
+                            petName: (filteredMembers?[indexPath.row]["pets"][0]["name"].stringValue)!,
+                            petImgURL:(filteredMembers?[indexPath.row]["pets"][0]["thumbnail"].stringValue)!
                 )
                 return cell
             } else {
+                // maybe bug ?
                 return cell
             }
         } else {
-                cell.update(name: members[indexPath.row]["name"].stringValue,
-                            imgURL: "http://54.145.164.44:8888/avatars/thumb/missing.png",
-                            petName: members[indexPath.row]["pets"][0]["name"].stringValue,
-                            petImgURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Labradour-jaji-happydog.jpg/220px-Labradour-jaji-happydog.jpg"
+                cell.update(name: (members?[indexPath.row]["name"].stringValue)!,
+                            imgURL: (members?[indexPath.row]["thumbnail"].stringValue)!,
+                            petName: (members?[indexPath.row]["pets"][0]["name"].stringValue)!,
+                            petImgURL: (members?[indexPath.row]["pets"][0]["thumbnail"].stringValue)!
                 )
             return cell
         }

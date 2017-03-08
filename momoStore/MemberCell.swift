@@ -8,6 +8,7 @@ import UIKit
 import SnapKit
 import ImageLoader
 import Toucan
+import Kingfisher
 
 class MemberCell : UITableViewCell {
     
@@ -17,6 +18,7 @@ class MemberCell : UITableViewCell {
     var lbName: UILabel!
     var petImg:UIImageView!
     var lbPetName:UILabel!
+    let processor = RoundCornerImageProcessor(cornerRadius: 100)
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -36,6 +38,26 @@ class MemberCell : UITableViewCell {
         self.addSubview(lbName)
         self.addSubview(petImg)
         self.addSubview(lbPetName)
+
+        self.img.snp.makeConstraints({ (make) in
+                
+                make.height.width.equalTo(65)
+                make.leading.equalTo(20)
+                make.centerY.equalTo(self)
+//                make.bottom.equalTo(10)
+            })
+            
+//            self.img.layer.cornerRadius = self.img.frame.size.width / 2
+//            self.img.clipsToBounds = true
+
+          self.petImg.snp.makeConstraints({ (make) in
+                
+                make.height.width.equalTo(35)
+//                make.centerY.equalTo(self).offset(13)
+                make.bottom.equalToSuperview()
+                make.centerX.equalTo(self.img.snp.right).offset(8)
+//                make.bottom.equalTo(10)
+            })
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -57,16 +79,39 @@ class MemberCell : UITableViewCell {
 }
 
 extension MemberCell {
+    
     func update(name:String, imgURL :String, petName:String, petImgURL:String) {
-        img.load.request(with: imgURL, onCompletion: {_ in
-            
-                    })
-        
-        self.petImg.load.request(with: petImgURL , onCompletion: {_ in
-            
-            self.performSelector(onMainThread: #selector(self.layoutImgs), with: nil, waitUntilDone: false)
-        })
-        
+        let userImgUrl = URL(string: MDAppURI.imgURL + imgURL)
+        let petImgUrl = URL(string: MDAppURI.imgURL + petImgURL)
+
+//        http://54.145.164.44:8888/avatars/thumb/missing.png
+
+        img.kf.setImage(with: userImgUrl, placeholder: nil, options: [.processor(processor),.transition(.fade(0.2))])
+//        self.img.kf.setImage(with: userImgUrl, options: [.transition(.fade(0.2))], progressBlock: {
+//            receivedsize, totalsize in
+//            let percentage = (Float(receivedsize) / Float(totalsize)) * 100.0
+//            print("downloading progress: \(percentage)%")
+////            myindicator.percentage = percentage
+//        })
+//        img.kf.setImage(with: userImgUrl, placeholder: nil, options: [.transition(.fade(0.2)),.transition(.fade(0.2))])
+
+
+        img.kf.indicatorType = .activity
+
+//        img.load.request(with: imgURL, onCompletion: {_ in
+//            
+//                    })imvMember
+
+//
+        petImg.kf.setImage(with: petImgUrl, placeholder:nil, options:[.processor(processor),.transition(.fade(0.2))])
+//        petImg.kf.setImage(with: petImgUrl, placeholder:nil, options:[.transition(.fade(0.2)),.transition(.fade(0.2))])
+        petImg.kf.indicatorType = .activity
+
+//        self.petImg.load.request(with: petImgURL , onCompletion: {_ in
+//
+//            self.performSelector(onMainThread: #selector(self.layoutImgs), with: nil, waitUntilDone: false)
+//        })
+
         lbPetName.text = petName
         lbName.text = name
         

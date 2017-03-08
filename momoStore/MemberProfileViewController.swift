@@ -530,7 +530,7 @@ extension MemberProfileViewController {
 // MARK: -Filld data
 extension MemberProfileViewController {
     func setProfileImg(url:URL) {
-        self.imvMember.kf.setImage(with: url, options: [.transition(.fade(0.2)),.forceRefresh], progressBlock: {
+        self.imvMember.kf.setImage(with: url, options: [.transition(.fade(0.2))], progressBlock: {
             receivedsize, totalsize in
             let percentage = (Float(receivedsize) / Float(totalsize)) * 100.0
             print("downloading progress: \(percentage)%")
