@@ -1,0 +1,6 @@
+framework module Pods_SwiftDatePlayground {
+  umbrella header "Pods-SwiftDatePlayground-umbrella.h"
+
+  export *
+  module * { export * }
+}

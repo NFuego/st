@@ -1,0 +1,15 @@
+PODS:
+  - SwiftDate (4.0.11)
+  - Timepiece (1.1.0)
+
+DEPENDENCIES:
+  - SwiftDate
+  - Timepiece
+
+SPEC CHECKSUMS:
+  SwiftDate: a36d5ce7c86bed3ed92b583ccbf15045f374ac65
+  Timepiece: 4190a7bc5ae1c05c87531fd75b14e17d2a017902
+
+PODFILE CHECKSUM: 07746580957f0b5ff365bcfcdf52eb5532670660
+
+COCOAPODS: 1.1.1

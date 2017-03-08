@@ -1,0 +1,6 @@
+framework module Pods_momoStore {
+  umbrella header "Pods-momoStore-umbrella.h"
+
+  export *
+  module * { export * }
+}

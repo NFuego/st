@@ -1,0 +1,1334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28CBD888B92629AC51A7148A /* Pods_momoStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 052DC915707F80507ADEC4A2 /* Pods_momoStore.framework */; };
+		4B095D551E265E4500D1CBD5 /* MonthCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B095D541E265E4500D1CBD5 /* MonthCellView.swift */; };
+		4B432EF51E08A97F0049B3C6 /* MemberProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B432EF01E08A97F0049B3C6 /* MemberProfileInteractor.swift */; };
+		4B432EF61E08A97F0049B3C6 /* MemberProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B432EF01E08A97F0049B3C6 /* MemberProfileInteractor.swift */; };
+		4B432EF71E08A97F0049B3C6 /* MemberProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B432EF01E08A97F0049B3C6 /* MemberProfileInteractor.swift */; };
+		4B432EF81E08A97F0049B3C6 /* MemberProfileModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B432EF11E08A97F0049B3C6 /* MemberProfileModule.swift */; };
+		4B432EF91E08A97F0049B3C6 /* MemberProfileModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B432EF11E08A97F0049B3C6 /* MemberProfileModule.swift */; };
+		4B432EFA1E08A97F0049B3C6 /* MemberProfileModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B432EF11E08A97F0049B3C6 /* MemberProfileModule.swift */; };
+		4B432EFB1E08A97F0049B3C6 /* MemberProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B432EF21E08A97F0049B3C6 /* MemberProfilePresenter.swift */; };
+		4B432EFC1E08A97F0049B3C6 /* MemberProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B432EF21E08A97F0049B3C6 /* MemberProfilePresenter.swift */; };
+		4B432EFD1E08A97F0049B3C6 /* MemberProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B432EF21E08A97F0049B3C6 /* MemberProfilePresenter.swift */; };
+		4B432EFE1E08A97F0049B3C6 /* MemberProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B432EF31E08A97F0049B3C6 /* MemberProfileRouter.swift */; };
+		4B432EFF1E08A97F0049B3C6 /* MemberProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B432EF31E08A97F0049B3C6 /* MemberProfileRouter.swift */; };
+		4B432F001E08A97F0049B3C6 /* MemberProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B432EF31E08A97F0049B3C6 /* MemberProfileRouter.swift */; };
+		4B432F011E08A97F0049B3C6 /* MemberProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B432EF41E08A97F0049B3C6 /* MemberProfileViewController.swift */; };
+		4B432F021E08A97F0049B3C6 /* MemberProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B432EF41E08A97F0049B3C6 /* MemberProfileViewController.swift */; };
+		4B432F031E08A97F0049B3C6 /* MemberProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B432EF41E08A97F0049B3C6 /* MemberProfileViewController.swift */; };
+		4B5323C81E1532D800EF41D8 /* OpenTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323C71E1532D800EF41D8 /* OpenTimeCell.swift */; };
+		4B5323CF1E15355800EF41D8 /* OpenTimeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323CA1E15355800EF41D8 /* OpenTimeInteractor.swift */; };
+		4B5323D01E15355800EF41D8 /* OpenTimeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323CA1E15355800EF41D8 /* OpenTimeInteractor.swift */; };
+		4B5323D11E15355800EF41D8 /* OpenTimeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323CA1E15355800EF41D8 /* OpenTimeInteractor.swift */; };
+		4B5323D21E15355800EF41D8 /* OpenTimeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323CB1E15355800EF41D8 /* OpenTimeModule.swift */; };
+		4B5323D31E15355800EF41D8 /* OpenTimeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323CB1E15355800EF41D8 /* OpenTimeModule.swift */; };
+		4B5323D41E15355800EF41D8 /* OpenTimeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323CB1E15355800EF41D8 /* OpenTimeModule.swift */; };
+		4B5323D51E15355800EF41D8 /* OpenTimePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323CC1E15355800EF41D8 /* OpenTimePresenter.swift */; };
+		4B5323D61E15355800EF41D8 /* OpenTimePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323CC1E15355800EF41D8 /* OpenTimePresenter.swift */; };
+		4B5323D71E15355800EF41D8 /* OpenTimePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323CC1E15355800EF41D8 /* OpenTimePresenter.swift */; };
+		4B5323D81E15355800EF41D8 /* OpenTimeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323CD1E15355800EF41D8 /* OpenTimeRouter.swift */; };
+		4B5323D91E15355800EF41D8 /* OpenTimeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323CD1E15355800EF41D8 /* OpenTimeRouter.swift */; };
+		4B5323DA1E15355800EF41D8 /* OpenTimeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323CD1E15355800EF41D8 /* OpenTimeRouter.swift */; };
+		4B5323DB1E15355800EF41D8 /* OpenTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323CE1E15355800EF41D8 /* OpenTimeViewController.swift */; };
+		4B5323DC1E15355800EF41D8 /* OpenTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323CE1E15355800EF41D8 /* OpenTimeViewController.swift */; };
+		4B5323DD1E15355800EF41D8 /* OpenTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323CE1E15355800EF41D8 /* OpenTimeViewController.swift */; };
+		4B5323E21E15400800EF41D8 /* ScheduleTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323DF1E15400800EF41D8 /* ScheduleTimeView.swift */; };
+		4B5323E31E15400800EF41D8 /* ScheduleTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323DF1E15400800EF41D8 /* ScheduleTimeView.swift */; };
+		4B5323E41E15400800EF41D8 /* ScheduleTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323DF1E15400800EF41D8 /* ScheduleTimeView.swift */; };
+		4B5323E51E15400800EF41D8 /* ScheduleTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323E01E15400800EF41D8 /* ScheduleTitleView.swift */; };
+		4B5323E61E15400800EF41D8 /* ScheduleTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323E01E15400800EF41D8 /* ScheduleTitleView.swift */; };
+		4B5323E71E15400800EF41D8 /* ScheduleTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323E01E15400800EF41D8 /* ScheduleTitleView.swift */; };
+		4B5323E81E15400800EF41D8 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323E11E15400800EF41D8 /* ScheduleView.swift */; };
+		4B5323E91E15400800EF41D8 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323E11E15400800EF41D8 /* ScheduleView.swift */; };
+		4B5323EA1E15400800EF41D8 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323E11E15400800EF41D8 /* ScheduleView.swift */; };
+		4B68792F1E397189008EA4C9 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6879291E397189008EA4C9 /* CalendarVC.swift */; };
+		4B6879301E397189008EA4C9 /* CellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68792A1E397189008EA4C9 /* CellHeader.swift */; };
+		4B6879311E397189008EA4C9 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68792B1E397189008EA4C9 /* CellView.swift */; };
+		4B6879321E397189008EA4C9 /* DevKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68792C1E397189008EA4C9 /* DevKit.swift */; };
+		4B6879331E397189008EA4C9 /* MDAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68792D1E397189008EA4C9 /* MDAPI.swift */; };
+		4B6879341E397189008EA4C9 /* MDConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68792E1E397189008EA4C9 /* MDConfig.swift */; };
+		4B6879381E3A3337008EA4C9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6879371E3A3337008EA4C9 /* UIColor.swift */; };
+		4B70DEA11E0760E2000D9D5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70DEA01E0760E2000D9D5A /* AppDelegate.swift */; };
+		4B70DEA31E0760E2000D9D5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70DEA21E0760E2000D9D5A /* ViewController.swift */; };
+		4B70DEA61E0760E2000D9D5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B70DEA41E0760E2000D9D5A /* Main.storyboard */; };
+		4B70DEA81E0760E2000D9D5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B70DEA71E0760E2000D9D5A /* Assets.xcassets */; };
+		4B70DEAB1E0760E2000D9D5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B70DEA91E0760E2000D9D5A /* LaunchScreen.storyboard */; };
+		4B70DEB61E0760E2000D9D5A /* momoStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70DEB51E0760E2000D9D5A /* momoStoreTests.swift */; };
+		4B70DEC11E0760E2000D9D5A /* momoStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70DEC01E0760E2000D9D5A /* momoStoreUITests.swift */; };
+		4B7370061E0B131F002EF1F6 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B7370051E0B131F002EF1F6 /* profile.png */; };
+		4BCA7DD01E0869B300C42763 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCB1E0869B300C42763 /* RootInteractor.swift */; };
+		4BCA7DD11E0869B300C42763 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCB1E0869B300C42763 /* RootInteractor.swift */; };
+		4BCA7DD21E0869B300C42763 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCB1E0869B300C42763 /* RootInteractor.swift */; };
+		4BCA7DD31E0869B300C42763 /* RootModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCC1E0869B300C42763 /* RootModule.swift */; };
+		4BCA7DD41E0869B300C42763 /* RootModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCC1E0869B300C42763 /* RootModule.swift */; };
+		4BCA7DD51E0869B300C42763 /* RootModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCC1E0869B300C42763 /* RootModule.swift */; };
+		4BCA7DD61E0869B300C42763 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCD1E0869B300C42763 /* RootPresenter.swift */; };
+		4BCA7DD71E0869B300C42763 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCD1E0869B300C42763 /* RootPresenter.swift */; };
+		4BCA7DD81E0869B300C42763 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCD1E0869B300C42763 /* RootPresenter.swift */; };
+		4BCA7DD91E0869B300C42763 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCE1E0869B300C42763 /* RootRouter.swift */; };
+		4BCA7DDA1E0869B300C42763 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCE1E0869B300C42763 /* RootRouter.swift */; };
+		4BCA7DDB1E0869B300C42763 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCE1E0869B300C42763 /* RootRouter.swift */; };
+		4BCA7DDC1E0869B300C42763 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCF1E0869B300C42763 /* RootViewController.swift */; };
+		4BCA7DDD1E0869B300C42763 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCF1E0869B300C42763 /* RootViewController.swift */; };
+		4BCA7DDE1E0869B300C42763 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCF1E0869B300C42763 /* RootViewController.swift */; };
+		4BCA7DE91E086C6600C42763 /* MonthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DE41E086C6600C42763 /* MonthInteractor.swift */; };
+		4BCA7DEA1E086C6600C42763 /* MonthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DE41E086C6600C42763 /* MonthInteractor.swift */; };
+		4BCA7DEB1E086C6600C42763 /* MonthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DE41E086C6600C42763 /* MonthInteractor.swift */; };
+		4BCA7DEC1E086C6600C42763 /* MonthModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DE51E086C6600C42763 /* MonthModule.swift */; };
+		4BCA7DED1E086C6600C42763 /* MonthModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DE51E086C6600C42763 /* MonthModule.swift */; };
+		4BCA7DEE1E086C6600C42763 /* MonthModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DE51E086C6600C42763 /* MonthModule.swift */; };
+		4BCA7DEF1E086C6600C42763 /* MonthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DE61E086C6600C42763 /* MonthPresenter.swift */; };
+		4BCA7DF01E086C6600C42763 /* MonthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DE61E086C6600C42763 /* MonthPresenter.swift */; };
+		4BCA7DF11E086C6600C42763 /* MonthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DE61E086C6600C42763 /* MonthPresenter.swift */; };
+		4BCA7DF21E086C6600C42763 /* MonthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DE71E086C6600C42763 /* MonthRouter.swift */; };
+		4BCA7DF31E086C6600C42763 /* MonthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DE71E086C6600C42763 /* MonthRouter.swift */; };
+		4BCA7DF41E086C6600C42763 /* MonthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DE71E086C6600C42763 /* MonthRouter.swift */; };
+		4BCA7DF51E086C6600C42763 /* MonthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DE81E086C6600C42763 /* MonthViewController.swift */; };
+		4BCA7DF61E086C6600C42763 /* MonthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DE81E086C6600C42763 /* MonthViewController.swift */; };
+		4BCA7DF71E086C6600C42763 /* MonthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DE81E086C6600C42763 /* MonthViewController.swift */; };
+		4BCA7DFD1E086C7800C42763 /* WeekInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DF81E086C7800C42763 /* WeekInteractor.swift */; };
+		4BCA7DFE1E086C7800C42763 /* WeekInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DF81E086C7800C42763 /* WeekInteractor.swift */; };
+		4BCA7DFF1E086C7800C42763 /* WeekInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DF81E086C7800C42763 /* WeekInteractor.swift */; };
+		4BCA7E001E086C7800C42763 /* WeekModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DF91E086C7800C42763 /* WeekModule.swift */; };
+		4BCA7E011E086C7800C42763 /* WeekModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DF91E086C7800C42763 /* WeekModule.swift */; };
+		4BCA7E021E086C7800C42763 /* WeekModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DF91E086C7800C42763 /* WeekModule.swift */; };
+		4BCA7E031E086C7800C42763 /* WeekPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DFA1E086C7800C42763 /* WeekPresenter.swift */; };
+		4BCA7E041E086C7800C42763 /* WeekPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DFA1E086C7800C42763 /* WeekPresenter.swift */; };
+		4BCA7E051E086C7800C42763 /* WeekPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DFA1E086C7800C42763 /* WeekPresenter.swift */; };
+		4BCA7E061E086C7800C42763 /* WeekRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DFB1E086C7800C42763 /* WeekRouter.swift */; };
+		4BCA7E071E086C7800C42763 /* WeekRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DFB1E086C7800C42763 /* WeekRouter.swift */; };
+		4BCA7E081E086C7800C42763 /* WeekRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DFB1E086C7800C42763 /* WeekRouter.swift */; };
+		4BCA7E091E086C7800C42763 /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DFC1E086C7800C42763 /* WeekViewController.swift */; };
+		4BCA7E0A1E086C7800C42763 /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DFC1E086C7800C42763 /* WeekViewController.swift */; };
+		4BCA7E0B1E086C7800C42763 /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DFC1E086C7800C42763 /* WeekViewController.swift */; };
+		4BCA7E111E086C8A00C42763 /* DayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E0C1E086C8A00C42763 /* DayInteractor.swift */; };
+		4BCA7E121E086C8A00C42763 /* DayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E0C1E086C8A00C42763 /* DayInteractor.swift */; };
+		4BCA7E131E086C8A00C42763 /* DayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E0C1E086C8A00C42763 /* DayInteractor.swift */; };
+		4BCA7E141E086C8A00C42763 /* DayModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E0D1E086C8A00C42763 /* DayModule.swift */; };
+		4BCA7E151E086C8A00C42763 /* DayModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E0D1E086C8A00C42763 /* DayModule.swift */; };
+		4BCA7E161E086C8A00C42763 /* DayModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E0D1E086C8A00C42763 /* DayModule.swift */; };
+		4BCA7E171E086C8A00C42763 /* DayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E0E1E086C8A00C42763 /* DayPresenter.swift */; };
+		4BCA7E181E086C8A00C42763 /* DayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E0E1E086C8A00C42763 /* DayPresenter.swift */; };
+		4BCA7E191E086C8A00C42763 /* DayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E0E1E086C8A00C42763 /* DayPresenter.swift */; };
+		4BCA7E1A1E086C8A00C42763 /* DayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E0F1E086C8A00C42763 /* DayRouter.swift */; };
+		4BCA7E1B1E086C8A00C42763 /* DayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E0F1E086C8A00C42763 /* DayRouter.swift */; };
+		4BCA7E1C1E086C8A00C42763 /* DayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E0F1E086C8A00C42763 /* DayRouter.swift */; };
+		4BCA7E1D1E086C8A00C42763 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E101E086C8A00C42763 /* DayViewController.swift */; };
+		4BCA7E1E1E086C8A00C42763 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E101E086C8A00C42763 /* DayViewController.swift */; };
+		4BCA7E1F1E086C8A00C42763 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E101E086C8A00C42763 /* DayViewController.swift */; };
+		4BCA7E251E086C9500C42763 /* MemberInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E201E086C9500C42763 /* MemberInteractor.swift */; };
+		4BCA7E261E086C9500C42763 /* MemberInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E201E086C9500C42763 /* MemberInteractor.swift */; };
+		4BCA7E271E086C9500C42763 /* MemberInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E201E086C9500C42763 /* MemberInteractor.swift */; };
+		4BCA7E281E086C9500C42763 /* MemberModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E211E086C9500C42763 /* MemberModule.swift */; };
+		4BCA7E291E086C9500C42763 /* MemberModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E211E086C9500C42763 /* MemberModule.swift */; };
+		4BCA7E2A1E086C9500C42763 /* MemberModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E211E086C9500C42763 /* MemberModule.swift */; };
+		4BCA7E2B1E086C9500C42763 /* MemberPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E221E086C9500C42763 /* MemberPresenter.swift */; };
+		4BCA7E2C1E086C9500C42763 /* MemberPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E221E086C9500C42763 /* MemberPresenter.swift */; };
+		4BCA7E2D1E086C9500C42763 /* MemberPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E221E086C9500C42763 /* MemberPresenter.swift */; };
+		4BCA7E2E1E086C9500C42763 /* MemberRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E231E086C9500C42763 /* MemberRouter.swift */; };
+		4BCA7E2F1E086C9500C42763 /* MemberRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E231E086C9500C42763 /* MemberRouter.swift */; };
+		4BCA7E301E086C9500C42763 /* MemberRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E231E086C9500C42763 /* MemberRouter.swift */; };
+		4BCA7E311E086C9500C42763 /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E241E086C9500C42763 /* MemberViewController.swift */; };
+		4BCA7E321E086C9500C42763 /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E241E086C9500C42763 /* MemberViewController.swift */; };
+		4BCA7E331E086C9500C42763 /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E241E086C9500C42763 /* MemberViewController.swift */; };
+		4BCA7E391E086CA100C42763 /* ConfigInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E341E086CA100C42763 /* ConfigInteractor.swift */; };
+		4BCA7E3A1E086CA100C42763 /* ConfigInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E341E086CA100C42763 /* ConfigInteractor.swift */; };
+		4BCA7E3B1E086CA100C42763 /* ConfigInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E341E086CA100C42763 /* ConfigInteractor.swift */; };
+		4BCA7E3C1E086CA100C42763 /* ConfigModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E351E086CA100C42763 /* ConfigModule.swift */; };
+		4BCA7E3D1E086CA100C42763 /* ConfigModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E351E086CA100C42763 /* ConfigModule.swift */; };
+		4BCA7E3E1E086CA100C42763 /* ConfigModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E351E086CA100C42763 /* ConfigModule.swift */; };
+		4BCA7E3F1E086CA100C42763 /* ConfigPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E361E086CA100C42763 /* ConfigPresenter.swift */; };
+		4BCA7E401E086CA100C42763 /* ConfigPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E361E086CA100C42763 /* ConfigPresenter.swift */; };
+		4BCA7E411E086CA100C42763 /* ConfigPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E361E086CA100C42763 /* ConfigPresenter.swift */; };
+		4BCA7E421E086CA100C42763 /* ConfigRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E371E086CA100C42763 /* ConfigRouter.swift */; };
+		4BCA7E431E086CA100C42763 /* ConfigRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E371E086CA100C42763 /* ConfigRouter.swift */; };
+		4BCA7E441E086CA100C42763 /* ConfigRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E371E086CA100C42763 /* ConfigRouter.swift */; };
+		4BCA7E451E086CA100C42763 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E381E086CA100C42763 /* ConfigViewController.swift */; };
+		4BCA7E461E086CA100C42763 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E381E086CA100C42763 /* ConfigViewController.swift */; };
+		4BCA7E471E086CA100C42763 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E381E086CA100C42763 /* ConfigViewController.swift */; };
+		4BCA7E4B1E08810B00C42763 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E4A1E08810B00C42763 /* MemberCell.swift */; };
+		4BCA7E4C1E08810B00C42763 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E4A1E08810B00C42763 /* MemberCell.swift */; };
+		4BCA7E4D1E08810B00C42763 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7E4A1E08810B00C42763 /* MemberCell.swift */; };
+		4BF70C651E56D75700535490 /* DayScheduleTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF70C641E56D75600535490 /* DayScheduleTimeCell.swift */; };
+		59C0606B2249A23B7CEEDA23 /* Pods_momoStoreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1AE6272C4D258B35957D61 /* Pods_momoStoreUITests.framework */; };
+		69B907A0FC8637462F178EB0 /* Pods_momoStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4876029F6FC91D30091D430 /* Pods_momoStoreTests.framework */; };
+		E71E62111E4C1C5F002E8741 /* JsonFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71E62101E4C1C5F002E8741 /* JsonFormats.swift */; };
+		E77C327B1E15F83D009340A9 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77C327A1E15F83D009340A9 /* Icons.xcassets */; };
+		E7B9012E1E49B2B200EE59D9 /* ScheduleVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9012D1E49B2B200EE59D9 /* ScheduleVO.swift */; };
+		E7B9012F1E49B5B000EE59D9 /* MDAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68792D1E397189008EA4C9 /* MDAPI.swift */; };
+		E7B901301E49B5B100EE59D9 /* MDAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68792D1E397189008EA4C9 /* MDAPI.swift */; };
+		E7B901311E49B5BA00EE59D9 /* MDConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68792E1E397189008EA4C9 /* MDConfig.swift */; };
+		E7B901321E49B5BB00EE59D9 /* MDConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68792E1E397189008EA4C9 /* MDConfig.swift */; };
+		E7B901331E49B5BD00EE59D9 /* MDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA271C1E448BB500606798 /* MDService.swift */; };
+		E7B901341E49B5BD00EE59D9 /* MDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA271C1E448BB500606798 /* MDService.swift */; };
+		E7B901351E49B5C600EE59D9 /* DevKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68792C1E397189008EA4C9 /* DevKit.swift */; };
+		E7B901361E49B62400EE59D9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6879371E3A3337008EA4C9 /* UIColor.swift */; };
+		E7B901371E49B62600EE59D9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6879371E3A3337008EA4C9 /* UIColor.swift */; };
+		E7B901381E49B62900EE59D9 /* GlobalUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA27191E448A3C00606798 /* GlobalUI.swift */; };
+		E7B901391E49B62900EE59D9 /* GlobalUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA27191E448A3C00606798 /* GlobalUI.swift */; };
+		E7B9013A1E49B62C00EE59D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70DEA01E0760E2000D9D5A /* AppDelegate.swift */; };
+		E7B9013B1E49B62D00EE59D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70DEA01E0760E2000D9D5A /* AppDelegate.swift */; };
+		E7B9013C1E49B63000EE59D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70DEA21E0760E2000D9D5A /* ViewController.swift */; };
+		E7B9013D1E49B63000EE59D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70DEA21E0760E2000D9D5A /* ViewController.swift */; };
+		E7C4BBD91E1636F1001B2C77 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C4BBD81E1636F1001B2C77 /* ScheduleVC.swift */; };
+		E7DA271A1E448A3C00606798 /* GlobalUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA27191E448A3C00606798 /* GlobalUI.swift */; };
+		E7DA271D1E448BB500606798 /* MDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA271C1E448BB500606798 /* MDService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B70DEB21E0760E2000D9D5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B70DE951E0760E2000D9D5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B70DE9C1E0760E2000D9D5A;
+			remoteInfo = momoStore;
+		};
+		4B70DEBD1E0760E2000D9D5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B70DE951E0760E2000D9D5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B70DE9C1E0760E2000D9D5A;
+			remoteInfo = momoStore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		052DC915707F80507ADEC4A2 /* Pods_momoStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_momoStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B095D541E265E4500D1CBD5 /* MonthCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthCellView.swift; sourceTree = "<group>"; };
+		4B432EF01E08A97F0049B3C6 /* MemberProfileInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberProfileInteractor.swift; sourceTree = "<group>"; };
+		4B432EF11E08A97F0049B3C6 /* MemberProfileModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberProfileModule.swift; sourceTree = "<group>"; };
+		4B432EF21E08A97F0049B3C6 /* MemberProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberProfilePresenter.swift; sourceTree = "<group>"; };
+		4B432EF31E08A97F0049B3C6 /* MemberProfileRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberProfileRouter.swift; sourceTree = "<group>"; };
+		4B432EF41E08A97F0049B3C6 /* MemberProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberProfileViewController.swift; sourceTree = "<group>"; };
+		4B5323C71E1532D800EF41D8 /* OpenTimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenTimeCell.swift; sourceTree = "<group>"; };
+		4B5323CA1E15355800EF41D8 /* OpenTimeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenTimeInteractor.swift; sourceTree = "<group>"; };
+		4B5323CB1E15355800EF41D8 /* OpenTimeModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenTimeModule.swift; sourceTree = "<group>"; };
+		4B5323CC1E15355800EF41D8 /* OpenTimePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenTimePresenter.swift; sourceTree = "<group>"; };
+		4B5323CD1E15355800EF41D8 /* OpenTimeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenTimeRouter.swift; sourceTree = "<group>"; };
+		4B5323CE1E15355800EF41D8 /* OpenTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenTimeViewController.swift; sourceTree = "<group>"; };
+		4B5323DF1E15400800EF41D8 /* ScheduleTimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTimeView.swift; sourceTree = "<group>"; };
+		4B5323E01E15400800EF41D8 /* ScheduleTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTitleView.swift; sourceTree = "<group>"; };
+		4B5323E11E15400800EF41D8 /* ScheduleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		4B6879291E397189008EA4C9 /* CalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		4B68792A1E397189008EA4C9 /* CellHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellHeader.swift; sourceTree = "<group>"; };
+		4B68792B1E397189008EA4C9 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		4B68792C1E397189008EA4C9 /* DevKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevKit.swift; sourceTree = "<group>"; };
+		4B68792D1E397189008EA4C9 /* MDAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDAPI.swift; sourceTree = "<group>"; };
+		4B68792E1E397189008EA4C9 /* MDConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDConfig.swift; sourceTree = "<group>"; };
+		4B6879371E3A3337008EA4C9 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		4B70DE9D1E0760E2000D9D5A /* momoStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = momoStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B70DEA01E0760E2000D9D5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4B70DEA21E0760E2000D9D5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B70DEA51E0760E2000D9D5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4B70DEA71E0760E2000D9D5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B70DEAA1E0760E2000D9D5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4B70DEAC1E0760E2000D9D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B70DEB11E0760E2000D9D5A /* momoStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = momoStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B70DEB51E0760E2000D9D5A /* momoStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = momoStoreTests.swift; sourceTree = "<group>"; };
+		4B70DEB71E0760E2000D9D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B70DEBC1E0760E2000D9D5A /* momoStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = momoStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B70DEC01E0760E2000D9D5A /* momoStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = momoStoreUITests.swift; sourceTree = "<group>"; };
+		4B70DEC21E0760E2000D9D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B7370051E0B131F002EF1F6 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		4BCA7DCB1E0869B300C42763 /* RootInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		4BCA7DCC1E0869B300C42763 /* RootModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootModule.swift; sourceTree = "<group>"; };
+		4BCA7DCD1E0869B300C42763 /* RootPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
+		4BCA7DCE1E0869B300C42763 /* RootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		4BCA7DCF1E0869B300C42763 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		4BCA7DE41E086C6600C42763 /* MonthInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthInteractor.swift; sourceTree = "<group>"; };
+		4BCA7DE51E086C6600C42763 /* MonthModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthModule.swift; sourceTree = "<group>"; };
+		4BCA7DE61E086C6600C42763 /* MonthPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthPresenter.swift; sourceTree = "<group>"; };
+		4BCA7DE71E086C6600C42763 /* MonthRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthRouter.swift; sourceTree = "<group>"; };
+		4BCA7DE81E086C6600C42763 /* MonthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthViewController.swift; sourceTree = "<group>"; };
+		4BCA7DF81E086C7800C42763 /* WeekInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekInteractor.swift; sourceTree = "<group>"; };
+		4BCA7DF91E086C7800C42763 /* WeekModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekModule.swift; sourceTree = "<group>"; };
+		4BCA7DFA1E086C7800C42763 /* WeekPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekPresenter.swift; sourceTree = "<group>"; };
+		4BCA7DFB1E086C7800C42763 /* WeekRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekRouter.swift; sourceTree = "<group>"; };
+		4BCA7DFC1E086C7800C42763 /* WeekViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
+		4BCA7E0C1E086C8A00C42763 /* DayInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayInteractor.swift; sourceTree = "<group>"; };
+		4BCA7E0D1E086C8A00C42763 /* DayModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayModule.swift; sourceTree = "<group>"; };
+		4BCA7E0E1E086C8A00C42763 /* DayPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayPresenter.swift; sourceTree = "<group>"; };
+		4BCA7E0F1E086C8A00C42763 /* DayRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayRouter.swift; sourceTree = "<group>"; };
+		4BCA7E101E086C8A00C42763 /* DayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
+		4BCA7E201E086C9500C42763 /* MemberInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberInteractor.swift; sourceTree = "<group>"; };
+		4BCA7E211E086C9500C42763 /* MemberModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberModule.swift; sourceTree = "<group>"; };
+		4BCA7E221E086C9500C42763 /* MemberPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberPresenter.swift; sourceTree = "<group>"; };
+		4BCA7E231E086C9500C42763 /* MemberRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberRouter.swift; sourceTree = "<group>"; };
+		4BCA7E241E086C9500C42763 /* MemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
+		4BCA7E341E086CA100C42763 /* ConfigInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigInteractor.swift; sourceTree = "<group>"; };
+		4BCA7E351E086CA100C42763 /* ConfigModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigModule.swift; sourceTree = "<group>"; };
+		4BCA7E361E086CA100C42763 /* ConfigPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigPresenter.swift; sourceTree = "<group>"; };
+		4BCA7E371E086CA100C42763 /* ConfigRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigRouter.swift; sourceTree = "<group>"; };
+		4BCA7E381E086CA100C42763 /* ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
+		4BCA7E4A1E08810B00C42763 /* MemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
+		4BF70C641E56D75600535490 /* DayScheduleTimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayScheduleTimeCell.swift; sourceTree = "<group>"; };
+		631EC9FFF03FAF6C17EE7BA8 /* Pods-momoStoreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momoStoreUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-momoStoreUITests/Pods-momoStoreUITests.release.xcconfig"; sourceTree = "<group>"; };
+		847D7BA29F64BAEC7F622233 /* Pods-momoStoreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momoStoreUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-momoStoreUITests/Pods-momoStoreUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5AA40EAF982CC27A18863D7 /* Pods-momoStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momoStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-momoStore/Pods-momoStore.release.xcconfig"; sourceTree = "<group>"; };
+		D8D925B35826CC908D5D2A26 /* Pods-momoStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momoStoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-momoStoreTests/Pods-momoStoreTests.release.xcconfig"; sourceTree = "<group>"; };
+		E6FF63C2D631B06F08442242 /* Pods-momoStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momoStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-momoStore/Pods-momoStore.debug.xcconfig"; sourceTree = "<group>"; };
+		E71E62101E4C1C5F002E8741 /* JsonFormats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonFormats.swift; sourceTree = "<group>"; };
+		E77C327A1E15F83D009340A9 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		E7B9012D1E49B2B200EE59D9 /* ScheduleVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVO.swift; sourceTree = "<group>"; };
+		E7C4BBD81E1636F1001B2C77 /* ScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
+		E7DA27191E448A3C00606798 /* GlobalUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalUI.swift; sourceTree = "<group>"; };
+		E7DA271C1E448BB500606798 /* MDService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDService.swift; sourceTree = "<group>"; };
+		EC1AE6272C4D258B35957D61 /* Pods_momoStoreUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_momoStoreUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4876029F6FC91D30091D430 /* Pods_momoStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_momoStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F536384AB5099434182E9A10 /* Pods-momoStoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momoStoreTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-momoStoreTests/Pods-momoStoreTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B70DE9A1E0760E2000D9D5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28CBD888B92629AC51A7148A /* Pods_momoStore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B70DEAE1E0760E2000D9D5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69B907A0FC8637462F178EB0 /* Pods_momoStoreTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B70DEB91E0760E2000D9D5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59C0606B2249A23B7CEEDA23 /* Pods_momoStoreUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CFA769836C74F32A925D6D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6FF63C2D631B06F08442242 /* Pods-momoStore.debug.xcconfig */,
+				B5AA40EAF982CC27A18863D7 /* Pods-momoStore.release.xcconfig */,
+				F536384AB5099434182E9A10 /* Pods-momoStoreTests.debug.xcconfig */,
+				D8D925B35826CC908D5D2A26 /* Pods-momoStoreTests.release.xcconfig */,
+				847D7BA29F64BAEC7F622233 /* Pods-momoStoreUITests.debug.xcconfig */,
+				631EC9FFF03FAF6C17EE7BA8 /* Pods-momoStoreUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3F319E46BFB54E343FA81E30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				052DC915707F80507ADEC4A2 /* Pods_momoStore.framework */,
+				F4876029F6FC91D30091D430 /* Pods_momoStoreTests.framework */,
+				EC1AE6272C4D258B35957D61 /* Pods_momoStoreUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B432EEF1E08A95D0049B3C6 /* memProfile */ = {
+			isa = PBXGroup;
+			children = (
+				4B432EF01E08A97F0049B3C6 /* MemberProfileInteractor.swift */,
+				4B432EF11E08A97F0049B3C6 /* MemberProfileModule.swift */,
+				4B432EF21E08A97F0049B3C6 /* MemberProfilePresenter.swift */,
+				4B432EF31E08A97F0049B3C6 /* MemberProfileRouter.swift */,
+				4B432EF41E08A97F0049B3C6 /* MemberProfileViewController.swift */,
+			);
+			name = memProfile;
+			sourceTree = "<group>";
+		};
+		4B5323C91E15348B00EF41D8 /* openTime */ = {
+			isa = PBXGroup;
+			children = (
+				4B5323C71E1532D800EF41D8 /* OpenTimeCell.swift */,
+				4B5323CA1E15355800EF41D8 /* OpenTimeInteractor.swift */,
+				4B5323CB1E15355800EF41D8 /* OpenTimeModule.swift */,
+				4B5323CC1E15355800EF41D8 /* OpenTimePresenter.swift */,
+				4B5323CD1E15355800EF41D8 /* OpenTimeRouter.swift */,
+				4B5323CE1E15355800EF41D8 /* OpenTimeViewController.swift */,
+			);
+			name = openTime;
+			sourceTree = "<group>";
+		};
+		4B5323DE1E153FFE00EF41D8 /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				4B5323DF1E15400800EF41D8 /* ScheduleTimeView.swift */,
+				4B5323E01E15400800EF41D8 /* ScheduleTitleView.swift */,
+				4B5323E11E15400800EF41D8 /* ScheduleView.swift */,
+				E7C4BBD81E1636F1001B2C77 /* ScheduleVC.swift */,
+			);
+			name = vc;
+			sourceTree = "<group>";
+		};
+		4B6879281E397160008EA4C9 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				E7B9012C1E49B29600EE59D9 /* VO */,
+				4B68792D1E397189008EA4C9 /* MDAPI.swift */,
+				4B68792E1E397189008EA4C9 /* MDConfig.swift */,
+				E7DA271C1E448BB500606798 /* MDService.swift */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
+		4B6879351E3A3080008EA4C9 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				4B68792C1E397189008EA4C9 /* DevKit.swift */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		4B6879361E3A332F008EA4C9 /* ext */ = {
+			isa = PBXGroup;
+			children = (
+				4B6879371E3A3337008EA4C9 /* UIColor.swift */,
+			);
+			name = ext;
+			sourceTree = "<group>";
+		};
+		4B70DE941E0760E2000D9D5A = {
+			isa = PBXGroup;
+			children = (
+				4B70DE9F1E0760E2000D9D5A /* momoStore */,
+				4B70DEB41E0760E2000D9D5A /* momoStoreTests */,
+				4B70DEBF1E0760E2000D9D5A /* momoStoreUITests */,
+				4B70DE9E1E0760E2000D9D5A /* Products */,
+				1CFA769836C74F32A925D6D2 /* Pods */,
+				3F319E46BFB54E343FA81E30 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4B70DE9E1E0760E2000D9D5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B70DE9D1E0760E2000D9D5A /* momoStore.app */,
+				4B70DEB11E0760E2000D9D5A /* momoStoreTests.xctest */,
+				4B70DEBC1E0760E2000D9D5A /* momoStoreUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B70DE9F1E0760E2000D9D5A /* momoStore */ = {
+			isa = PBXGroup;
+			children = (
+				E7DA271B1E448A4200606798 /* enhancement */,
+				4B6879361E3A332F008EA4C9 /* ext */,
+				4B6879351E3A3080008EA4C9 /* util */,
+				4B6879281E397160008EA4C9 /* services */,
+				E77C32741E15F7A5009340A9 /* rsc */,
+				4B5323DE1E153FFE00EF41D8 /* vc */,
+				4B7370051E0B131F002EF1F6 /* profile.png */,
+				4BCA7DC91E08698800C42763 /* modules */,
+				4B70DEA01E0760E2000D9D5A /* AppDelegate.swift */,
+				4B70DEA21E0760E2000D9D5A /* ViewController.swift */,
+				4B70DEA41E0760E2000D9D5A /* Main.storyboard */,
+				4B70DEA71E0760E2000D9D5A /* Assets.xcassets */,
+				4B70DEA91E0760E2000D9D5A /* LaunchScreen.storyboard */,
+				4B70DEAC1E0760E2000D9D5A /* Info.plist */,
+			);
+			path = momoStore;
+			sourceTree = "<group>";
+		};
+		4B70DEB41E0760E2000D9D5A /* momoStoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				4B70DEB51E0760E2000D9D5A /* momoStoreTests.swift */,
+				4B70DEB71E0760E2000D9D5A /* Info.plist */,
+			);
+			path = momoStoreTests;
+			sourceTree = "<group>";
+		};
+		4B70DEBF1E0760E2000D9D5A /* momoStoreUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4B70DEC01E0760E2000D9D5A /* momoStoreUITests.swift */,
+				4B70DEC21E0760E2000D9D5A /* Info.plist */,
+			);
+			path = momoStoreUITests;
+			sourceTree = "<group>";
+		};
+		4BCA7DC91E08698800C42763 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				4B432EEF1E08A95D0049B3C6 /* memProfile */,
+				4BCA7DE31E086C5300C42763 /* config */,
+				4BCA7DE21E086C4900C42763 /* members */,
+				4BCA7DE11E086C3C00C42763 /* day */,
+				4BCA7DE01E086C3700C42763 /* week */,
+				4BCA7DDF1E086C2C00C42763 /* month */,
+				4BCA7DCA1E08699000C42763 /* root */,
+			);
+			name = modules;
+			sourceTree = "<group>";
+		};
+		4BCA7DCA1E08699000C42763 /* root */ = {
+			isa = PBXGroup;
+			children = (
+				4BCA7DCB1E0869B300C42763 /* RootInteractor.swift */,
+				4BCA7DCC1E0869B300C42763 /* RootModule.swift */,
+				4BCA7DCD1E0869B300C42763 /* RootPresenter.swift */,
+				4BCA7DCE1E0869B300C42763 /* RootRouter.swift */,
+				4BCA7DCF1E0869B300C42763 /* RootViewController.swift */,
+			);
+			name = root;
+			sourceTree = "<group>";
+		};
+		4BCA7DDF1E086C2C00C42763 /* month */ = {
+			isa = PBXGroup;
+			children = (
+				4BCA7DE41E086C6600C42763 /* MonthInteractor.swift */,
+				4B68792A1E397189008EA4C9 /* CellHeader.swift */,
+				4B68792B1E397189008EA4C9 /* CellView.swift */,
+				4B6879291E397189008EA4C9 /* CalendarVC.swift */,
+				4BCA7DE51E086C6600C42763 /* MonthModule.swift */,
+				4BCA7DE61E086C6600C42763 /* MonthPresenter.swift */,
+				4BCA7DE71E086C6600C42763 /* MonthRouter.swift */,
+				4BCA7DE81E086C6600C42763 /* MonthViewController.swift */,
+				4B095D541E265E4500D1CBD5 /* MonthCellView.swift */,
+			);
+			name = month;
+			sourceTree = "<group>";
+		};
+		4BCA7DE01E086C3700C42763 /* week */ = {
+			isa = PBXGroup;
+			children = (
+				4BCA7DF81E086C7800C42763 /* WeekInteractor.swift */,
+				4BCA7DF91E086C7800C42763 /* WeekModule.swift */,
+				4BCA7DFA1E086C7800C42763 /* WeekPresenter.swift */,
+				4BCA7DFB1E086C7800C42763 /* WeekRouter.swift */,
+				4BCA7DFC1E086C7800C42763 /* WeekViewController.swift */,
+			);
+			name = week;
+			sourceTree = "<group>";
+		};
+		4BCA7DE11E086C3C00C42763 /* day */ = {
+			isa = PBXGroup;
+			children = (
+				4BCA7E0C1E086C8A00C42763 /* DayInteractor.swift */,
+				4BCA7E0D1E086C8A00C42763 /* DayModule.swift */,
+				4BCA7E0E1E086C8A00C42763 /* DayPresenter.swift */,
+				4BCA7E0F1E086C8A00C42763 /* DayRouter.swift */,
+				4BCA7E101E086C8A00C42763 /* DayViewController.swift */,
+				4BF70C641E56D75600535490 /* DayScheduleTimeCell.swift */,
+			);
+			name = day;
+			sourceTree = "<group>";
+		};
+		4BCA7DE21E086C4900C42763 /* members */ = {
+			isa = PBXGroup;
+			children = (
+				4BCA7E201E086C9500C42763 /* MemberInteractor.swift */,
+				4BCA7E211E086C9500C42763 /* MemberModule.swift */,
+				4BCA7E221E086C9500C42763 /* MemberPresenter.swift */,
+				4BCA7E231E086C9500C42763 /* MemberRouter.swift */,
+				4BCA7E241E086C9500C42763 /* MemberViewController.swift */,
+				4BCA7E4A1E08810B00C42763 /* MemberCell.swift */,
+			);
+			name = members;
+			sourceTree = "<group>";
+		};
+		4BCA7DE31E086C5300C42763 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				4B5323C91E15348B00EF41D8 /* openTime */,
+				4BCA7E341E086CA100C42763 /* ConfigInteractor.swift */,
+				4BCA7E351E086CA100C42763 /* ConfigModule.swift */,
+				4BCA7E361E086CA100C42763 /* ConfigPresenter.swift */,
+				4BCA7E371E086CA100C42763 /* ConfigRouter.swift */,
+				4BCA7E381E086CA100C42763 /* ConfigViewController.swift */,
+			);
+			name = config;
+			sourceTree = "<group>";
+		};
+		E77C32741E15F7A5009340A9 /* rsc */ = {
+			isa = PBXGroup;
+			children = (
+				E77C32751E15F7A9009340A9 /* img */,
+			);
+			name = rsc;
+			sourceTree = "<group>";
+		};
+		E77C32751E15F7A9009340A9 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				E77C327A1E15F83D009340A9 /* Icons.xcassets */,
+			);
+			name = img;
+			sourceTree = "<group>";
+		};
+		E7B9012C1E49B29600EE59D9 /* VO */ = {
+			isa = PBXGroup;
+			children = (
+				E7B9012D1E49B2B200EE59D9 /* ScheduleVO.swift */,
+			);
+			name = VO;
+			sourceTree = "<group>";
+		};
+		E7DA271B1E448A4200606798 /* enhancement */ = {
+			isa = PBXGroup;
+			children = (
+				E7DA27191E448A3C00606798 /* GlobalUI.swift */,
+				E71E62101E4C1C5F002E8741 /* JsonFormats.swift */,
+			);
+			name = enhancement;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B70DE9C1E0760E2000D9D5A /* momoStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B70DEC51E0760E2000D9D5A /* Build configuration list for PBXNativeTarget "momoStore" */;
+			buildPhases = (
+				223E2F9663ADD9ADEFA3FEC7 /* [CP] Check Pods Manifest.lock */,
+				4B70DE991E0760E2000D9D5A /* Sources */,
+				4B70DE9A1E0760E2000D9D5A /* Frameworks */,
+				4B70DE9B1E0760E2000D9D5A /* Resources */,
+				2D6CB3276A9AA29EDD65A826 /* [CP] Embed Pods Frameworks */,
+				17133B7274900DD2BD81FFAA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = momoStore;
+			productName = momoStore;
+			productReference = 4B70DE9D1E0760E2000D9D5A /* momoStore.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4B70DEB01E0760E2000D9D5A /* momoStoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B70DEC81E0760E2000D9D5A /* Build configuration list for PBXNativeTarget "momoStoreTests" */;
+			buildPhases = (
+				BCB80449A2A2E130CC98BE01 /* [CP] Check Pods Manifest.lock */,
+				4B70DEAD1E0760E2000D9D5A /* Sources */,
+				4B70DEAE1E0760E2000D9D5A /* Frameworks */,
+				4B70DEAF1E0760E2000D9D5A /* Resources */,
+				016B2D4B242B67C5EBAFC3F8 /* [CP] Embed Pods Frameworks */,
+				B7A357A3B3FAEAB9C4A54FB1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B70DEB31E0760E2000D9D5A /* PBXTargetDependency */,
+			);
+			name = momoStoreTests;
+			productName = momoStoreTests;
+			productReference = 4B70DEB11E0760E2000D9D5A /* momoStoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4B70DEBB1E0760E2000D9D5A /* momoStoreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B70DECB1E0760E2000D9D5A /* Build configuration list for PBXNativeTarget "momoStoreUITests" */;
+			buildPhases = (
+				E31ED3E75B2CBB68A68821B1 /* [CP] Check Pods Manifest.lock */,
+				4B70DEB81E0760E2000D9D5A /* Sources */,
+				4B70DEB91E0760E2000D9D5A /* Frameworks */,
+				4B70DEBA1E0760E2000D9D5A /* Resources */,
+				8B565058692F83FB87B66316 /* [CP] Embed Pods Frameworks */,
+				6E73DDDE80E37A9B7539D04A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B70DEBE1E0760E2000D9D5A /* PBXTargetDependency */,
+			);
+			name = momoStoreUITests;
+			productName = momoStoreUITests;
+			productReference = 4B70DEBC1E0760E2000D9D5A /* momoStoreUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B70DE951E0760E2000D9D5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = MomoDidi;
+				TargetAttributes = {
+					4B70DE9C1E0760E2000D9D5A = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 4M3T5B2VJJ;
+						ProvisioningStyle = Automatic;
+					};
+					4B70DEB01E0760E2000D9D5A = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 4M3T5B2VJJ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4B70DE9C1E0760E2000D9D5A;
+					};
+					4B70DEBB1E0760E2000D9D5A = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 4M3T5B2VJJ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4B70DE9C1E0760E2000D9D5A;
+					};
+				};
+			};
+			buildConfigurationList = 4B70DE981E0760E2000D9D5A /* Build configuration list for PBXProject "momoStore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4B70DE941E0760E2000D9D5A;
+			productRefGroup = 4B70DE9E1E0760E2000D9D5A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B70DE9C1E0760E2000D9D5A /* momoStore */,
+				4B70DEB01E0760E2000D9D5A /* momoStoreTests */,
+				4B70DEBB1E0760E2000D9D5A /* momoStoreUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B70DE9B1E0760E2000D9D5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B70DEAB1E0760E2000D9D5A /* LaunchScreen.storyboard in Resources */,
+				4B70DEA81E0760E2000D9D5A /* Assets.xcassets in Resources */,
+				4B70DEA61E0760E2000D9D5A /* Main.storyboard in Resources */,
+				E77C327B1E15F83D009340A9 /* Icons.xcassets in Resources */,
+				4B7370061E0B131F002EF1F6 /* profile.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B70DEAF1E0760E2000D9D5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B70DEBA1E0760E2000D9D5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		016B2D4B242B67C5EBAFC3F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-momoStoreTests/Pods-momoStoreTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		17133B7274900DD2BD81FFAA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-momoStore/Pods-momoStore-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		223E2F9663ADD9ADEFA3FEC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2D6CB3276A9AA29EDD65A826 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-momoStore/Pods-momoStore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E73DDDE80E37A9B7539D04A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-momoStoreUITests/Pods-momoStoreUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B565058692F83FB87B66316 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-momoStoreUITests/Pods-momoStoreUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7A357A3B3FAEAB9C4A54FB1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-momoStoreTests/Pods-momoStoreTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCB80449A2A2E130CC98BE01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E31ED3E75B2CBB68A68821B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B70DE991E0760E2000D9D5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B68792F1E397189008EA4C9 /* CalendarVC.swift in Sources */,
+				4BCA7E091E086C7800C42763 /* WeekViewController.swift in Sources */,
+				E71E62111E4C1C5F002E8741 /* JsonFormats.swift in Sources */,
+				4BCA7DD61E0869B300C42763 /* RootPresenter.swift in Sources */,
+				4BCA7DE91E086C6600C42763 /* MonthInteractor.swift in Sources */,
+				4B5323DB1E15355800EF41D8 /* OpenTimeViewController.swift in Sources */,
+				4BCA7E111E086C8A00C42763 /* DayInteractor.swift in Sources */,
+				4BCA7E141E086C8A00C42763 /* DayModule.swift in Sources */,
+				4BCA7DFD1E086C7800C42763 /* WeekInteractor.swift in Sources */,
+				4BCA7E001E086C7800C42763 /* WeekModule.swift in Sources */,
+				4BCA7E171E086C8A00C42763 /* DayPresenter.swift in Sources */,
+				4BF70C651E56D75700535490 /* DayScheduleTimeCell.swift in Sources */,
+				4B095D551E265E4500D1CBD5 /* MonthCellView.swift in Sources */,
+				4BCA7DD01E0869B300C42763 /* RootInteractor.swift in Sources */,
+				4BCA7DD31E0869B300C42763 /* RootModule.swift in Sources */,
+				4BCA7E451E086CA100C42763 /* ConfigViewController.swift in Sources */,
+				4BCA7E251E086C9500C42763 /* MemberInteractor.swift in Sources */,
+				4BCA7E281E086C9500C42763 /* MemberModule.swift in Sources */,
+				4B5323D51E15355800EF41D8 /* OpenTimePresenter.swift in Sources */,
+				4B6879341E397189008EA4C9 /* MDConfig.swift in Sources */,
+				4BCA7DF21E086C6600C42763 /* MonthRouter.swift in Sources */,
+				4BCA7E2B1E086C9500C42763 /* MemberPresenter.swift in Sources */,
+				4B6879321E397189008EA4C9 /* DevKit.swift in Sources */,
+				E7C4BBD91E1636F1001B2C77 /* ScheduleVC.swift in Sources */,
+				4B432EF81E08A97F0049B3C6 /* MemberProfileModule.swift in Sources */,
+				4BCA7E2E1E086C9500C42763 /* MemberRouter.swift in Sources */,
+				4B5323D21E15355800EF41D8 /* OpenTimeModule.swift in Sources */,
+				4B5323E51E15400800EF41D8 /* ScheduleTitleView.swift in Sources */,
+				4B432EF51E08A97F0049B3C6 /* MemberProfileInteractor.swift in Sources */,
+				4B5323C81E1532D800EF41D8 /* OpenTimeCell.swift in Sources */,
+				4B432F011E08A97F0049B3C6 /* MemberProfileViewController.swift in Sources */,
+				4B6879381E3A3337008EA4C9 /* UIColor.swift in Sources */,
+				4BCA7DF51E086C6600C42763 /* MonthViewController.swift in Sources */,
+				E7B9012E1E49B2B200EE59D9 /* ScheduleVO.swift in Sources */,
+				4BCA7E3F1E086CA100C42763 /* ConfigPresenter.swift in Sources */,
+				4BCA7E1A1E086C8A00C42763 /* DayRouter.swift in Sources */,
+				4B432EFE1E08A97F0049B3C6 /* MemberProfileRouter.swift in Sources */,
+				4B5323E21E15400800EF41D8 /* ScheduleTimeView.swift in Sources */,
+				4BCA7E1D1E086C8A00C42763 /* DayViewController.swift in Sources */,
+				4BCA7E311E086C9500C42763 /* MemberViewController.swift in Sources */,
+				4BCA7E421E086CA100C42763 /* ConfigRouter.swift in Sources */,
+				4BCA7E4B1E08810B00C42763 /* MemberCell.swift in Sources */,
+				4BCA7E061E086C7800C42763 /* WeekRouter.swift in Sources */,
+				4BCA7E031E086C7800C42763 /* WeekPresenter.swift in Sources */,
+				4B5323E81E15400800EF41D8 /* ScheduleView.swift in Sources */,
+				4BCA7DDC1E0869B300C42763 /* RootViewController.swift in Sources */,
+				4B432EFB1E08A97F0049B3C6 /* MemberProfilePresenter.swift in Sources */,
+				4B70DEA31E0760E2000D9D5A /* ViewController.swift in Sources */,
+				4B6879301E397189008EA4C9 /* CellHeader.swift in Sources */,
+				E7DA271D1E448BB500606798 /* MDService.swift in Sources */,
+				4BCA7E3C1E086CA100C42763 /* ConfigModule.swift in Sources */,
+				4BCA7DEC1E086C6600C42763 /* MonthModule.swift in Sources */,
+				4BCA7DD91E0869B300C42763 /* RootRouter.swift in Sources */,
+				4B70DEA11E0760E2000D9D5A /* AppDelegate.swift in Sources */,
+				4B6879331E397189008EA4C9 /* MDAPI.swift in Sources */,
+				4BCA7E391E086CA100C42763 /* ConfigInteractor.swift in Sources */,
+				4B6879311E397189008EA4C9 /* CellView.swift in Sources */,
+				4BCA7DEF1E086C6600C42763 /* MonthPresenter.swift in Sources */,
+				E7DA271A1E448A3C00606798 /* GlobalUI.swift in Sources */,
+				4B5323CF1E15355800EF41D8 /* OpenTimeInteractor.swift in Sources */,
+				4B5323D81E15355800EF41D8 /* OpenTimeRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B70DEAD1E0760E2000D9D5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B5323D91E15355800EF41D8 /* OpenTimeRouter.swift in Sources */,
+				E7B901311E49B5BA00EE59D9 /* MDConfig.swift in Sources */,
+				4BCA7E461E086CA100C42763 /* ConfigViewController.swift in Sources */,
+				4BCA7E431E086CA100C42763 /* ConfigRouter.swift in Sources */,
+				4B5323E31E15400800EF41D8 /* ScheduleTimeView.swift in Sources */,
+				4BCA7E2C1E086C9500C42763 /* MemberPresenter.swift in Sources */,
+				4B5323E91E15400800EF41D8 /* ScheduleView.swift in Sources */,
+				4B432EF91E08A97F0049B3C6 /* MemberProfileModule.swift in Sources */,
+				E7B9013C1E49B63000EE59D9 /* ViewController.swift in Sources */,
+				E7B9013A1E49B62C00EE59D9 /* AppDelegate.swift in Sources */,
+				4BCA7E4C1E08810B00C42763 /* MemberCell.swift in Sources */,
+				4BCA7E3D1E086CA100C42763 /* ConfigModule.swift in Sources */,
+				4BCA7DED1E086C6600C42763 /* MonthModule.swift in Sources */,
+				4BCA7E401E086CA100C42763 /* ConfigPresenter.swift in Sources */,
+				E7B901331E49B5BD00EE59D9 /* MDService.swift in Sources */,
+				4BCA7E011E086C7800C42763 /* WeekModule.swift in Sources */,
+				4BCA7E071E086C7800C42763 /* WeekRouter.swift in Sources */,
+				4B5323E61E15400800EF41D8 /* ScheduleTitleView.swift in Sources */,
+				4BCA7DD41E0869B300C42763 /* RootModule.swift in Sources */,
+				4BCA7DDA1E0869B300C42763 /* RootRouter.swift in Sources */,
+				4BCA7E1E1E086C8A00C42763 /* DayViewController.swift in Sources */,
+				E7B901361E49B62400EE59D9 /* UIColor.swift in Sources */,
+				4BCA7DF31E086C6600C42763 /* MonthRouter.swift in Sources */,
+				4B432EFF1E08A97F0049B3C6 /* MemberProfileRouter.swift in Sources */,
+				4BCA7E181E086C8A00C42763 /* DayPresenter.swift in Sources */,
+				4BCA7E261E086C9500C42763 /* MemberInteractor.swift in Sources */,
+				E7B901381E49B62900EE59D9 /* GlobalUI.swift in Sources */,
+				4BCA7E151E086C8A00C42763 /* DayModule.swift in Sources */,
+				4BCA7DDD1E0869B300C42763 /* RootViewController.swift in Sources */,
+				4B5323D61E15355800EF41D8 /* OpenTimePresenter.swift in Sources */,
+				4B432F021E08A97F0049B3C6 /* MemberProfileViewController.swift in Sources */,
+				4BCA7E321E086C9500C42763 /* MemberViewController.swift in Sources */,
+				4BCA7E1B1E086C8A00C42763 /* DayRouter.swift in Sources */,
+				4BCA7DD11E0869B300C42763 /* RootInteractor.swift in Sources */,
+				4B5323D01E15355800EF41D8 /* OpenTimeInteractor.swift in Sources */,
+				4BCA7DFE1E086C7800C42763 /* WeekInteractor.swift in Sources */,
+				4BCA7DEA1E086C6600C42763 /* MonthInteractor.swift in Sources */,
+				4BCA7DD71E0869B300C42763 /* RootPresenter.swift in Sources */,
+				4BCA7E3A1E086CA100C42763 /* ConfigInteractor.swift in Sources */,
+				E7B9012F1E49B5B000EE59D9 /* MDAPI.swift in Sources */,
+				4BCA7E2F1E086C9500C42763 /* MemberRouter.swift in Sources */,
+				4BCA7E121E086C8A00C42763 /* DayInteractor.swift in Sources */,
+				4BCA7E041E086C7800C42763 /* WeekPresenter.swift in Sources */,
+				4BCA7DF61E086C6600C42763 /* MonthViewController.swift in Sources */,
+				4BCA7E291E086C9500C42763 /* MemberModule.swift in Sources */,
+				4B70DEB61E0760E2000D9D5A /* momoStoreTests.swift in Sources */,
+				4B432EF61E08A97F0049B3C6 /* MemberProfileInteractor.swift in Sources */,
+				4B5323D31E15355800EF41D8 /* OpenTimeModule.swift in Sources */,
+				4BCA7E0A1E086C7800C42763 /* WeekViewController.swift in Sources */,
+				4BCA7DF01E086C6600C42763 /* MonthPresenter.swift in Sources */,
+				4B432EFC1E08A97F0049B3C6 /* MemberProfilePresenter.swift in Sources */,
+				4B5323DC1E15355800EF41D8 /* OpenTimeViewController.swift in Sources */,
+				E7B901351E49B5C600EE59D9 /* DevKit.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B70DEB81E0760E2000D9D5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B5323DA1E15355800EF41D8 /* OpenTimeRouter.swift in Sources */,
+				E7B901321E49B5BB00EE59D9 /* MDConfig.swift in Sources */,
+				4BCA7E471E086CA100C42763 /* ConfigViewController.swift in Sources */,
+				4BCA7E441E086CA100C42763 /* ConfigRouter.swift in Sources */,
+				4B5323E41E15400800EF41D8 /* ScheduleTimeView.swift in Sources */,
+				4BCA7E2D1E086C9500C42763 /* MemberPresenter.swift in Sources */,
+				4B5323EA1E15400800EF41D8 /* ScheduleView.swift in Sources */,
+				4B432EFA1E08A97F0049B3C6 /* MemberProfileModule.swift in Sources */,
+				4BCA7E4D1E08810B00C42763 /* MemberCell.swift in Sources */,
+				4BCA7E3E1E086CA100C42763 /* ConfigModule.swift in Sources */,
+				4BCA7DEE1E086C6600C42763 /* MonthModule.swift in Sources */,
+				4BCA7E411E086CA100C42763 /* ConfigPresenter.swift in Sources */,
+				E7B901341E49B5BD00EE59D9 /* MDService.swift in Sources */,
+				4BCA7E021E086C7800C42763 /* WeekModule.swift in Sources */,
+				4BCA7E081E086C7800C42763 /* WeekRouter.swift in Sources */,
+				E7B9013B1E49B62D00EE59D9 /* AppDelegate.swift in Sources */,
+				E7B901371E49B62600EE59D9 /* UIColor.swift in Sources */,
+				4B5323E71E15400800EF41D8 /* ScheduleTitleView.swift in Sources */,
+				4BCA7DD51E0869B300C42763 /* RootModule.swift in Sources */,
+				4BCA7DDB1E0869B300C42763 /* RootRouter.swift in Sources */,
+				4BCA7E1F1E086C8A00C42763 /* DayViewController.swift in Sources */,
+				E7B901391E49B62900EE59D9 /* GlobalUI.swift in Sources */,
+				4BCA7DF41E086C6600C42763 /* MonthRouter.swift in Sources */,
+				4B432F001E08A97F0049B3C6 /* MemberProfileRouter.swift in Sources */,
+				4BCA7E191E086C8A00C42763 /* DayPresenter.swift in Sources */,
+				4BCA7E271E086C9500C42763 /* MemberInteractor.swift in Sources */,
+				4BCA7E161E086C8A00C42763 /* DayModule.swift in Sources */,
+				4BCA7DDE1E0869B300C42763 /* RootViewController.swift in Sources */,
+				4B5323D71E15355800EF41D8 /* OpenTimePresenter.swift in Sources */,
+				4B432F031E08A97F0049B3C6 /* MemberProfileViewController.swift in Sources */,
+				4BCA7E331E086C9500C42763 /* MemberViewController.swift in Sources */,
+				4BCA7E1C1E086C8A00C42763 /* DayRouter.swift in Sources */,
+				4BCA7DD21E0869B300C42763 /* RootInteractor.swift in Sources */,
+				4B5323D11E15355800EF41D8 /* OpenTimeInteractor.swift in Sources */,
+				E7B9013D1E49B63000EE59D9 /* ViewController.swift in Sources */,
+				4BCA7DFF1E086C7800C42763 /* WeekInteractor.swift in Sources */,
+				4BCA7DEB1E086C6600C42763 /* MonthInteractor.swift in Sources */,
+				4BCA7DD81E0869B300C42763 /* RootPresenter.swift in Sources */,
+				4BCA7E3B1E086CA100C42763 /* ConfigInteractor.swift in Sources */,
+				E7B901301E49B5B100EE59D9 /* MDAPI.swift in Sources */,
+				4BCA7E301E086C9500C42763 /* MemberRouter.swift in Sources */,
+				4BCA7E131E086C8A00C42763 /* DayInteractor.swift in Sources */,
+				4BCA7E051E086C7800C42763 /* WeekPresenter.swift in Sources */,
+				4BCA7DF71E086C6600C42763 /* MonthViewController.swift in Sources */,
+				4BCA7E2A1E086C9500C42763 /* MemberModule.swift in Sources */,
+				4B70DEC11E0760E2000D9D5A /* momoStoreUITests.swift in Sources */,
+				4B432EF71E08A97F0049B3C6 /* MemberProfileInteractor.swift in Sources */,
+				4B5323D41E15355800EF41D8 /* OpenTimeModule.swift in Sources */,
+				4BCA7E0B1E086C7800C42763 /* WeekViewController.swift in Sources */,
+				4BCA7DF11E086C6600C42763 /* MonthPresenter.swift in Sources */,
+				4B432EFD1E08A97F0049B3C6 /* MemberProfilePresenter.swift in Sources */,
+				4B5323DD1E15355800EF41D8 /* OpenTimeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B70DEB31E0760E2000D9D5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B70DE9C1E0760E2000D9D5A /* momoStore */;
+			targetProxy = 4B70DEB21E0760E2000D9D5A /* PBXContainerItemProxy */;
+		};
+		4B70DEBE1E0760E2000D9D5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B70DE9C1E0760E2000D9D5A /* momoStore */;
+			targetProxy = 4B70DEBD1E0760E2000D9D5A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4B70DEA41E0760E2000D9D5A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B70DEA51E0760E2000D9D5A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4B70DEA91E0760E2000D9D5A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B70DEAA1E0760E2000D9D5A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B70DEC31E0760E2000D9D5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4B70DEC41E0760E2000D9D5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B70DEC61E0760E2000D9D5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6FF63C2D631B06F08442242 /* Pods-momoStore.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4M3T5B2VJJ;
+				INFOPLIST_FILE = momoStore/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = md.app.store;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4B70DEC71E0760E2000D9D5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5AA40EAF982CC27A18863D7 /* Pods-momoStore.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4M3T5B2VJJ;
+				INFOPLIST_FILE = momoStore/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = md.app.store;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		4B70DEC91E0760E2000D9D5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F536384AB5099434182E9A10 /* Pods-momoStoreTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4M3T5B2VJJ;
+				INFOPLIST_FILE = momoStoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.momo.storeApp.momoStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/momoStore.app/momoStore";
+			};
+			name = Debug;
+		};
+		4B70DECA1E0760E2000D9D5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8D925B35826CC908D5D2A26 /* Pods-momoStoreTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4M3T5B2VJJ;
+				INFOPLIST_FILE = momoStoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.momo.storeApp.momoStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/momoStore.app/momoStore";
+			};
+			name = Release;
+		};
+		4B70DECC1E0760E2000D9D5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 847D7BA29F64BAEC7F622233 /* Pods-momoStoreUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 4M3T5B2VJJ;
+				INFOPLIST_FILE = momoStoreUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.momo.storeApp.momoStoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = momoStore;
+			};
+			name = Debug;
+		};
+		4B70DECD1E0760E2000D9D5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 631EC9FFF03FAF6C17EE7BA8 /* Pods-momoStoreUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 4M3T5B2VJJ;
+				INFOPLIST_FILE = momoStoreUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.momo.storeApp.momoStoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = momoStore;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B70DE981E0760E2000D9D5A /* Build configuration list for PBXProject "momoStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B70DEC31E0760E2000D9D5A /* Debug */,
+				4B70DEC41E0760E2000D9D5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B70DEC51E0760E2000D9D5A /* Build configuration list for PBXNativeTarget "momoStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B70DEC61E0760E2000D9D5A /* Debug */,
+				4B70DEC71E0760E2000D9D5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B70DEC81E0760E2000D9D5A /* Build configuration list for PBXNativeTarget "momoStoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B70DEC91E0760E2000D9D5A /* Debug */,
+				4B70DECA1E0760E2000D9D5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B70DECB1E0760E2000D9D5A /* Build configuration list for PBXNativeTarget "momoStoreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B70DECC1E0760E2000D9D5A /* Debug */,
+				4B70DECD1E0760E2000D9D5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B70DE951E0760E2000D9D5A /* Project object */;
+}
