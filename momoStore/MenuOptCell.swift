@@ -1,5 +1,6 @@
 import UIKit
 import SnapKit
+import SwiftDate
 
 class MenuOptCell : UITableViewCell {
     var iconImg: UIImageView!
@@ -146,31 +147,35 @@ class RecordOptCell : UITableViewCell {
     let lbStatus = UILabel()
     let lbDescrip = UILabel()
     let lbPetName = UILabel()
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.addSubview(lbStart)
-        self.addSubview(lbPetName)
-        self.addSubview(lbStatus)
-        self.addSubview(lbDescrip)
-    }
-    
-    let h = 20
-    let w = 200
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
+
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+
+//        print("awake")
+        self.contentView.addSubview(lbStart)
+        self.contentView.addSubview(lbEnd)
+        self.contentView.addSubview(lbPetName)
+        self.contentView.addSubview(lbStatus)
+        self.contentView.addSubview(lbDescrip)
+
+
         lbStart.snp.makeConstraints { (make) in
             make.leading.equalToSuperview().offset(5)
             make.height.equalTo(h)
             make.width.equalTo(w)
-            make.top.equalToSuperview()
+            make.top.equalToSuperview().offset(25)
+        }
+        lbEnd.snp.makeConstraints { (make) in
+            make.leading.equalToSuperview().offset(5)
+            make.height.equalTo(h)
+            make.width.equalTo(w)
+            make.top.equalTo(lbStart.snp.bottom)
         }
         lbPetName.snp.makeConstraints { (make) in
             make.leading.equalToSuperview().offset(5)
             make.height.equalTo(h)
             make.width.equalTo(w)
-            make.top.equalTo(lbStart.snp.bottom)
+            make.top.equalTo(lbEnd.snp.bottom)
         }
         lbStatus.snp.makeConstraints { (make) in
             make.leading.equalToSuperview().offset(5)
@@ -183,11 +188,32 @@ class RecordOptCell : UITableViewCell {
             make.height.equalTo(h)
             make.width.equalTo(w)
             make.top.equalTo(lbStatus.snp.bottom)
+            
         }
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    let h = 20
+    let w = 300
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
     }
     
     func update(_ record:RecordOpt){
-        lbStart.text = "時間:\(record.start_at)~\(record.end_at)"
+        let date = DateInRegion()
+        let str = date.string(format: .custom("yyyy-MM-dd HH:mm")) // example output: 2016-09-28 13:48:17
+
+        lbStart.text = "開始時間:\(record.start_at)"
+        lbEnd.text = "結束時間:\(record.end_at)"
         lbPetName.text = "寵物:\(record.pet_name)"
         lbStatus.text = "狀態:\(record.status)"
         lbDescrip.text = "備註:\(record.description)"
@@ -199,4 +225,80 @@ class AppointOptCell : UITableViewCell {
 //    func update(_ appointment:AppointMentCell){
 //
 //    }
+    let lbStart = UILabel()
+    let lbEnd = UILabel()
+    let lbStatus = UILabel()
+    let lbDescrip = UILabel()
+    let lbPetName = UILabel()
+
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+
+//        print("awake")
+        self.contentView.addSubview(lbStart)
+        self.contentView.addSubview(lbEnd)
+        self.contentView.addSubview(lbPetName)
+        self.contentView.addSubview(lbStatus)
+        self.contentView.addSubview(lbDescrip)
+
+
+        lbStart.snp.makeConstraints { (make) in
+            make.leading.equalToSuperview().offset(5)
+            make.height.equalTo(h)
+            make.width.equalTo(w)
+            make.top.equalToSuperview().offset(25)
+        }
+        lbEnd.snp.makeConstraints { (make) in
+            make.leading.equalToSuperview().offset(5)
+            make.height.equalTo(h)
+            make.width.equalTo(w)
+            make.top.equalTo(lbStart.snp.bottom)
+        }
+        lbPetName.snp.makeConstraints { (make) in
+            make.leading.equalToSuperview().offset(5)
+            make.height.equalTo(h)
+            make.width.equalTo(w)
+            make.top.equalTo(lbEnd.snp.bottom)
+        }
+        lbStatus.snp.makeConstraints { (make) in
+            make.leading.equalToSuperview().offset(5)
+            make.height.equalTo(h)
+            make.width.equalTo(w)
+            make.top.equalTo(lbPetName.snp.bottom)
+        }
+        lbDescrip.snp.makeConstraints { (make) in
+            make.leading.equalToSuperview().offset(5)
+            make.height.equalTo(h)
+            make.width.equalTo(w)
+            make.top.equalTo(lbStatus.snp.bottom)
+            
+        }
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    let h = 20
+    let w = 300
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
+    
+    func update(_ record:AppointmentOpt){
+        let date = DateInRegion()
+        let str = date.string(format: .custom("yyyy-MM-dd HH:mm")) // example output: 2016-09-28 13:48:17
+
+        lbStart.text = "開始時間:\(record.start_at)"
+        lbEnd.text = "結束時間:\(record.end_at)"
+        lbPetName.text = "寵物:\(record.pet_name)"
+        lbStatus.text = "狀態:\(record.status)"
+        lbDescrip.text = "備註:\(record.description)"
+    }
 }

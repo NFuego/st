@@ -2,6 +2,9 @@
 import UIKit
 import SnapKit
 import SwiftyVIPER
+import SwiftyTimer
+import SwiftyJSON
+import RxSwift
 
 // MARK: Protocols
 
@@ -20,7 +23,10 @@ protocol MonthPresenterViewProtocol: class {
 class MonthViewController: UIViewController {
     
     let recordVC = UINavigationController(rootViewController: RecordList())
-    
+    let appointVC = AppoinmentsListModule().view
+    var appointList = [AppointmentOpt]()
+    let dbg = DisposeBag()
+
     let stoken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cLzU0LjE0NS4xNjQuNDQ6ODg4OFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTQ4NTM4NzkxMSwiZXhwIjoxNDkzMjc3MTMxLCJuYmYiOjE0ODUzODc5MTEsImp0aSI6ImJmYmEyMjkwZmZlZTFhZWRmMjRmYTZhZTE2ZDQwMGRlIn0.qXjz2Vxf-07Wpdc-0JCO2eqt2CrfcOeUr2G6cV5Ufcg"
     
     let ctoken =      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cLzU0LjE0NS4xNjQuNDQ6ODg4OFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTQ4NTM4Nzk5OCwiZXhwIjoxNDkzMjc3MjE4LCJuYmYiOjE0ODUzODc5OTgsImp0aSI6Ijc2ZjI0MDZlMTllYThiMjhmNjZjNGZjZTU5Y2FhZWFiIn0.MS4K0wbKuhUU5cCkepuOSlNWgcrK1VOTuyGxQIUYThQ" 
@@ -56,6 +62,7 @@ class MonthViewController: UIViewController {
 		presenter.viewLoaded()
 //        self.setup()
     }
+
 }
 
 
@@ -85,7 +92,60 @@ extension MonthViewController: MonthPresenterViewProtocol {
         self.addChildViewController(monthVC)
         self.view.addSubview(monthVC.view)
         setupRightBtn()
+
+        epollAppointments()
 	}
+
+    func epollAppointments(){
+            MDApp
+                .api
+                .request(.StoreAppoint(storeId: 1, start: "2017-01-01 00:00", end: "2017-12-15 00:00"))
+                .subscribe { (event) in
+                        switch event {
+                        case let .next(response):
+        //                    print("-------------------------------------------------------------------------")
+        //                    print(JSON(data:response.data))
+                            let json = JSON(data:response.data)
+
+                            var count = 0
+                            print(JSON(data:response.data))
+                            self.appointList  = (json.dictionaryValue["data"]?.arrayValue.map({ (j:JSON) -> AppointmentOpt in
+                                var r = AppointmentOpt()
+                                r.start_at = j["start_at"].stringValue
+                                r.end_at = j["end_at"].stringValue
+                                r.status = j["status"].stringValue
+                                r.description = j["description"].stringValue
+                                r.pet_name = j["pet_name"].stringValue
+
+
+                                // count badge
+                                if r.status == "pending" {
+                                   count += 1
+                                }
+                                
+                                return r
+                            }))!
+
+
+//                            self.setAppointBadge(n: count )
+                            break
+                        case let .error(error):
+                            print(error)
+                        default:
+                            break
+                        }
+                    // test : what happend if timeout
+                            Timer.after(1.seconds) {
+                                self.epollAppointments()
+                            } // Timer
+                 }.addDisposableTo(dbg)
+    } // fin epoll
+
+    func setAppointBadge(n:Int){
+        if let _ = Optional(appointmentsBtn) {
+           appointmentsBtn.badgeCount = n
+        }
+    }
 }
 
 // MARK: - Month UI
@@ -126,6 +186,9 @@ extension MonthViewController {
        self.navigationController?.present(recordVC, animated: true)
     }
     func appointBtnHandle(){
+        appointVC.list = self.appointList 
+        let navAppointVC = UINavigationController(rootViewController: appointVC)
+       self.navigationController?.present(navAppointVC, animated: true)
     }
 } // MonthViewController
 
