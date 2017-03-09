@@ -48,22 +48,18 @@ public class MemberProfileViewController: UIViewController , GlobalUI {
 
     
 	// MARK: - Constants
-
 	let presenter: MemberProfileViewPresenterProtocol
 
 	// MARK: Variables
     var bg:UIView!
 
     var imvMember:SwipeActImgView!
-    
     var imvMobile:UIImageView! // mobile
-    
     var imvPhone:UIImageView!  // home
     
     var lbName:UILabel!
     var lbMobile:UIButton!
     var lbPhone:UIButton!
-    
     var scrollView:UIScrollView!
     var lbAddress:UILabel!
     var lbEmail:UILabel!
@@ -183,7 +179,7 @@ public class MemberProfileViewController: UIViewController , GlobalUI {
 //                        http://54.145.164.44:8888/stapler/App/Models//Pet/Pet/pet_avatars/000/000/001/thumb/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202017-03-07%20%E4%B8%8B%E5%8D%883.45.56.png
 //                        po JSON(data:response.data).dictionary?["data"]["pets"].arrayValue.forEach { print($0)}
 
-
+                        break
                     case let .error(error):
                         print(error)
                     default:
@@ -540,11 +536,8 @@ extension MemberProfileViewController {
     }
 }
 
-
-
 // MARK: - MemberProfile Presenter to View Protocol
 extension MemberProfileViewController: MemberProfilePresenterViewProtocol {
-
 	func set(title: String?) {
 		self.title = title
 	}
@@ -552,7 +545,6 @@ extension MemberProfileViewController: MemberProfilePresenterViewProtocol {
 
 // MARK: - MemberProfile PetView
 extension MemberProfileViewController : CarouselViewDataSourse {
-
     public func numberOfView(_ carousel: CarouselView) -> Int {
        return self.petsViews.count
     }

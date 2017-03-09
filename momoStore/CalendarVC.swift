@@ -87,9 +87,10 @@ class CalendarVC : UIViewController {
 //            }
 //        }
     
-        let openDayColor = UIColor(hex: "e6ccff")
+        let openDayColor = UIColor.normalDay
         if cell.dayLabel != nil {
             if cellState.dateBelongsTo == .thisMonth {
+                // this month
                 cell.dayLabel.textColor = .black
                 cell.foreView.backgroundColor = .white
 //                cell.backgroundColor = .black
@@ -133,8 +134,9 @@ class CalendarVC : UIViewController {
                     }
                 }
             } else {
-                cell.dayLabel.textColor = .gray
-                cell.backgroundColor = .gray
+                // not this month
+                cell.dayLabel.textColor = UIColor.restDay
+                cell.backgroundColor = .white
             }
         }
     } // fin handleCellTextColor

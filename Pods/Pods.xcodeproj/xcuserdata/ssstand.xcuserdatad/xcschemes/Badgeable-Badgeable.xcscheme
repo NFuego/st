@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'DE750F6E687342F9FD692203F37F8EDC'
-               BlueprintName = 'SwiftyUserDefaults'
+               BlueprintIdentifier = 'DE5E571F5AB4B1FE704BDEDBA8480234'
+               BlueprintName = 'Badgeable-Badgeable'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SwiftyUserDefaults.framework'>
+               BuildableName = 'Badgeable.bundle'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

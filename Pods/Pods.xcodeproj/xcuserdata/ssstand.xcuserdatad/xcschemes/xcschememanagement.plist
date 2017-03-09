@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>BadgeSwift.xcscheme</key>
+		<key>Badgeable-Badgeable.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Badgeable.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CarouselSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -45,6 +55,16 @@
 			<false/>
 		</dict>
 		<key>Kamagari.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>KingfisherExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -104,6 +124,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Spring.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftDate.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -147,7 +172,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>075E96842EA60C73BBD103A11CA31464</key>
+		<key>07C43057A61EE17D5B9E836014BA4DCB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>17104145C34A62DA52ED2EB51016DB19</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -157,17 +187,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>1BF06877E363B69961B97CF01F5FB31C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2A6D0851BA24DD25864CB23A3A83B9CC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2BB3C7A0D901BA50C22490631DD34A01</key>
+		<key>2F90CA23A838FB62E56625335625D2F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3BF3428FA349720105CE0CFD400EB6C0</key>
+		<key>3369628DEBD733968ECC0802AC764406</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3BB8B84ADA6EFFC531528B9A0B3DF15C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3D62B5F54E614EDDD8D39A4506073749</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -177,27 +222,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>44221D9D1199F824E5708E3BED975F82</key>
+		<key>3F7A2CA13A873D91CFB35A5C15E5EC66</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>483814674404062A34DAC719C589B9A9</key>
+		<key>3FD6BC230DD9895F9A14DCBD385A2072</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4BAB6D5086267E95B665338D0595475E</key>
+		<key>4A11FB4C429154632F6D606A36136C06</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4C0E5DFDCEEADF68F085BCC0B8257C6E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4C55157C3C5D5EE075AB4FAF651FC723</key>
+		<key>561C58A6C93894B4C1FD301A4FDCA887</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -217,11 +257,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>75F5F15EE93741A910FE76C602B39010</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>81BC97F7768FDDD2AB10FC0EDFC55773</key>
 		<dict>
 			<key>primary</key>
@@ -237,7 +272,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A0015D5E0C99BA00426B820101916677</key>
+		<key>9BA991AD8258F28D8D6E36D2CD97B511</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9F27171E67AFC25FD71D46BCAE1C482C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -247,7 +287,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B6530ED2D81EFEE98E84EED8DAAE3BD9</key>
+		<key>A9ED231ACE011243974D2D551B4E8022</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -257,7 +297,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CFC692469FD8B38E80E61C4DE31D9738</key>
+		<key>C4944FEC314D1A66588651D006273ADE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4B0BB0ED435E898405BF44A3137BEB9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -267,12 +312,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D93AFD8F136FCAB10F21FE777C406F04</key>
+		<key>DE5E571F5AB4B1FE704BDEDBA8480234</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EB37A6925B8CEE1767C67864982F0BE3</key>
+		<key>DE750F6E687342F9FD692203F37F8EDC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECE1792C673B692FEDD07A35E7BDE273</key>
 		<dict>
 			<key>primary</key>
 			<true/>
