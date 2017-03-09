@@ -60,6 +60,7 @@ class AppoinmentsListViewController: OptsVC , GlobalUI {
 
 	override func viewDidLoad() {
     	super.viewDidLoad()
+        self.title = "預約"
 		presenter.viewLoaded()
 
 		view.backgroundColor = .white
@@ -99,33 +100,33 @@ extension AppoinmentsListViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.playLoadingView()
-        MDApp
-            .api
-            .request(.StoreAppoint(storeId: 1, start: "2017-01-01 00:00", end: "2017-12-15 00:00"))
-            .subscribe { (event) in
-                self.stopLoadingView()
-                switch event {
-                case let .next(response):
-//                    print("-------------------------------------------------------------------------")
-//                    print(JSON(data:response.data))
-                    let json = JSON(data:response.data)
-                    self.list = (json.dictionaryValue["data"]?.arrayValue.map({ (j:JSON) -> AppointmentOpt in
-                        var r = AppointmentOpt()
-                        r.start_at = j["start_at"].stringValue
-                        r.end_at = j["end_at"].stringValue
-                        r.status = j["status"].stringValue
-                        r.description = j["description"].stringValue
-                        r.pet_name = j["pet_name"].stringValue
-                        return r
-                    }))!
-                    self.optsTableView.reloadData()
-                    break
-                case let .error(error):
-                    print(error)
-                default:
-                    break
-                }}.addDisposableTo(dbg)
+//        self.playLoadingView()
+//        MDApp
+//            .api
+//            .request(.StoreAppoint(storeId: 1, start: "2017-01-01 00:00", end: "2017-12-15 00:00"))
+//            .subscribe { (event) in
+//                self.stopLoadingView()
+//                switch event {
+//                case let .next(response):
+////                    print("-------------------------------------------------------------------------")
+////                    print(JSON(data:response.data))
+//                    let json = JSON(data:response.data)
+//                    self.list = (json.dictionaryValue["data"]?.arrayValue.map({ (j:JSON) -> AppointmentOpt in
+//                        var r = AppointmentOpt()
+//                        r.start_at = j["start_at"].stringValue
+//                        r.end_at = j["end_at"].stringValue
+//                        r.status = j["status"].stringValue
+//                        r.description = j["description"].stringValue
+//                        r.pet_name = j["pet_name"].stringValue
+//                        return r
+//                    }))!
+//                    self.optsTableView.reloadData()
+//                    break
+//                case let .error(error):
+//                    print(error)
+//                default:
+//                    break
+//                }}.addDisposableTo(dbg)
     } // fin viewllWillAppear
     
     
@@ -137,6 +138,7 @@ extension AppoinmentsListViewController {
 //        cell.selectionStyle = .none
 //        cell.separatorInset = .zero
 //        cell.layoutMargins = .zero
+
 
         let opt = list[idx.row]
         cell.update(opt)

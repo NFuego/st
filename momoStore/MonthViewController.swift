@@ -27,6 +27,9 @@ class MonthViewController: UIViewController {
     var appointList = [AppointmentOpt]()
     let dbg = DisposeBag()
 
+    let epollApointTime = Double(5)
+    var epollTimer = Timer.every(1.seconds) {}
+
     let stoken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cLzU0LjE0NS4xNjQuNDQ6ODg4OFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTQ4NTM4NzkxMSwiZXhwIjoxNDkzMjc3MTMxLCJuYmYiOjE0ODUzODc5MTEsImp0aSI6ImJmYmEyMjkwZmZlZTFhZWRmMjRmYTZhZTE2ZDQwMGRlIn0.qXjz2Vxf-07Wpdc-0JCO2eqt2CrfcOeUr2G6cV5Ufcg"
     
     let ctoken =      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cLzU0LjE0NS4xNjQuNDQ6ODg4OFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTQ4NTM4Nzk5OCwiZXhwIjoxNDkzMjc3MjE4LCJuYmYiOjE0ODUzODc5OTgsImp0aSI6Ijc2ZjI0MDZlMTllYThiMjhmNjZjNGZjZTU5Y2FhZWFiIn0.MS4K0wbKuhUU5cCkepuOSlNWgcrK1VOTuyGxQIUYThQ" 
@@ -83,8 +86,6 @@ extension MonthViewController: MonthPresenterViewProtocol {
         self.navigationController?.navigationBar.barTintColor = UIColor(hex: "FF4081")
         self.navigationController?.navigationBar.tintColor = .white
         
-        
-        
 //        print(self.view.frame)
         monthVC = CalendarVC()
 //        let nvc = UINavigationController(rootViewController: monthVC)
@@ -93,13 +94,14 @@ extension MonthViewController: MonthPresenterViewProtocol {
         self.view.addSubview(monthVC.view)
         setupRightBtn()
 
+
         epollAppointments()
 	}
 
     func epollAppointments(){
             MDApp
                 .api
-                .request(.StoreAppoint(storeId: 1, start: "2017-01-01 00:00", end: "2017-12-15 00:00"))
+                .request(.StoreAppointByStatus(storeId: 1, status:"pending",start: "2017-01-01 00:00", end: "2017-12-15 00:00"))
                 .subscribe { (event) in
                         switch event {
                         case let .next(response):
@@ -117,17 +119,15 @@ extension MonthViewController: MonthPresenterViewProtocol {
                                 r.description = j["description"].stringValue
                                 r.pet_name = j["pet_name"].stringValue
 
-
                                 // count badge
                                 if r.status == "pending" {
                                    count += 1
                                 }
-                                
                                 return r
                             }))!
+//
 
-
-//                            self.setAppointBadge(n: count )
+                            self.setAppointBadge(n: count )
                             break
                         case let .error(error):
                             print(error)
@@ -135,7 +135,9 @@ extension MonthViewController: MonthPresenterViewProtocol {
                             break
                         }
                     // test : what happend if timeout
-                            Timer.after(1.seconds) {
+                            self.epollTimer.invalidate()
+                            self.epollTimer = Timer.after(self.epollApointTime.seconds) {
+                                print("call")
                                 self.epollAppointments()
                             } // Timer
                  }.addDisposableTo(dbg)
@@ -188,6 +190,7 @@ extension MonthViewController {
     func appointBtnHandle(){
         appointVC.list = self.appointList 
         let navAppointVC = UINavigationController(rootViewController: appointVC)
+        appointVC.preSet()
        self.navigationController?.present(navAppointVC, animated: true)
     }
 } // MonthViewController

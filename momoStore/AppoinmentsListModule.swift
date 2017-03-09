@@ -20,7 +20,6 @@ import SwiftyVIPER
 final class AppoinmentsListModule {
 
 	// MARK: - Variables
-
 	private(set) lazy var interactor: AppoinmentsListInteractor = {
 		return AppoinmentsListInteractor()
 	}()

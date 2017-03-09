@@ -160,6 +160,7 @@ public enum MDAPI {
     case StoreAppoint(storeId:Int, start:String,end:String)
     case CustomerAppoint(customerId:Int, start:String,end:String)
 
+    case StoreAppointByStatus(storeId:Int,status:String,start:String,end:String)
     case ShowCustomer(customerId:Int)
 }
 
@@ -201,6 +202,8 @@ extension MDAPI : TargetType {
                 return "/customer/\(customerId)/appointments"
         case .StoreAppoint(let storeId,let start,let end):
                 return "/store/\(storeId)/appointments"
+        case .StoreAppointByStatus(let storeId,let status,_,_):
+            return "/store/\(storeId)/appointments/\(status)"
         case .NewAppoint(let storeId ,let customerId ,let start ,let end ,let descri ):
             return  "/appointment"
         case .AcceptAppoint(let id):
@@ -208,13 +211,17 @@ extension MDAPI : TargetType {
         case .DenyAppoint(let id):
             return "/appointment/\(id)/deny"
         }
+
+
+        
     }
+    
 
     public var method: Moya.Method {
         switch self {
         case .Auth , .NewSchedule , .NewAppoint, .AcceptAppoint, .DenyAppoint:
                 return .post
-        case .StoreSchedule , .StoreScheduleAt, .CustomerAppoint, .StoreAppoint, .ShowCustomer:
+        case .StoreSchedule , .StoreScheduleAt, .CustomerAppoint, .StoreAppoint, .ShowCustomer,.StoreAppointByStatus:
             return .get
         }
     }
@@ -260,9 +267,9 @@ extension MDAPI : TargetType {
                 return [:]
             case let .DenyAppoint(appointId):
                 return [:]
-
-
-
+        case let .StoreAppointByStatus(storeId, status,start,end):
+            let dic = [ "store_id" : storeId , "status" : status, "start_time":start, "end_time":end] as [String : Any]
+            return dic
             // Customer
         case let .ShowCustomer(customerId):
             let dic = ["id":customerId]
