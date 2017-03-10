@@ -36,6 +36,15 @@
 //
 //
 //
+/*
+ 
+ checklist :
+ 
+ Store :
+ 1. what happend when i accept an appointment in the appointmentList while the customer
+    has canceled it before.
+ 
+ */
 
 import UIKit
 import SwiftyJSON

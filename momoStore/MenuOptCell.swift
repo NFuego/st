@@ -9,7 +9,6 @@ class MenuOptCell : UITableViewCell {
 
     static let leadingOffset = 40
 
-
     override func prepareForReuse() {
         super.prepareForReuse()
 //        print("reuse")
@@ -178,6 +177,7 @@ class RecordOptCell : UITableViewCell {
             make.top.equalTo(lbEnd.snp.bottom)
         }
         lbStatus.snp.makeConstraints { (make) in
+            
             make.leading.equalToSuperview().offset(5)
             make.height.equalTo(h)
             make.width.equalTo(w)
@@ -271,7 +271,6 @@ class AppointOptCell : UITableViewCell {
             make.height.equalTo(h)
             make.width.equalTo(w)
             make.top.equalTo(lbStatus.snp.bottom)
-            
         }
     }
 

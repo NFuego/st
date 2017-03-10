@@ -15,10 +15,10 @@ public struct AppointmentOpt {
     var description = ""
     var status = ""
     
-//    "customer_thumbnail": "/stapler/App/Models/User/CustomerDetail/avatars/000/000/001/thumb/eason.jpg",
-//    "pet_id": null,
+    var customer_thumbnail = ""
+    var pet_id = 0
     var pet_name = ""
-//    "pet_thumbnail": ""
+    var pet_thumbnail = ""
 //    },
 }
 
@@ -44,6 +44,7 @@ class AppoinmentsListViewController: OptsVC , GlobalUI {
 	let presenter: AppoinmentsListViewPresenterProtocol
 
 	// MARK: Variables
+    let confirmVC = AppointmetFormerModule().view
 
 	// MARK: Inits
 
@@ -62,7 +63,6 @@ class AppoinmentsListViewController: OptsVC , GlobalUI {
     	super.viewDidLoad()
         self.title = "預約"
 		presenter.viewLoaded()
-
 		view.backgroundColor = .white
     }
 }
@@ -89,6 +89,7 @@ extension AppoinmentsListViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor.barCr
         self.navigationController?.navigationBar.tintColor = .white
         self.title = "預約"
+        
         let back = UIBarButtonItem(title: "返回", style: .plain, target: self, action: #selector(self.back))
         self.navigationItem.leftBarButtonItem = back
     }
@@ -98,7 +99,7 @@ extension AppoinmentsListViewController {
             
         }
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
 //        self.playLoadingView()
 //        MDApp
@@ -146,7 +147,31 @@ extension AppoinmentsListViewController {
     }
     
     override func didSelect(listView: UITableView, idx: IndexPath) {
+       let opt = list[idx.row]
+//                                r.start_at = j["start_at"].stringValue
+//                                r.end_at = j["end_at"].stringValue
+//                                r.status = j["status"].stringValue
+//                                r.description = j["description"].stringValue
+//                                r.pet_name = j["pet_name"].stringValue
+//                                r.customer_thumbnail = j["customer_thumbnail"].stringValue
+//                                r.pet_id =  j["pet_id"].stringValue
+//                                r.pet_thumbnail = j["pet_thumbnail"].stringValue
+        self.confirmVC.pet_id = opt.pet_id
+        print(opt)
         
+        self.confirmVC.form.setValues([
+            kPET_IMAGE: Picture(url: MDAppURI.imgURL + opt.pet_thumbnail),
+            kPET_NAME : opt.pet_name,
+            kSTART_TIME : opt.start_at,
+            kEND_TIME : opt.end_at,
+            kDESCRIPTION : opt.description
+            ])
+
+
+        
+        let nav = UINavigationController(rootViewController: self.confirmVC)
+        self.confirmVC.preSet() // set back, title, navBar config
+        self.navigationController?.present(nav,animated:true)
     }
     
     override func showVC(_ vc: UIViewController) {

@@ -118,7 +118,10 @@ extension MonthViewController: MonthPresenterViewProtocol {
                                 r.status = j["status"].stringValue
                                 r.description = j["description"].stringValue
                                 r.pet_name = j["pet_name"].stringValue
-
+                                r.customer_thumbnail = j["customer_thumbnail"].stringValue
+                                r.pet_id =  j["pet_id"].intValue
+                                r.pet_thumbnail = j["pet_thumbnail"].stringValue
+                                
                                 // count badge
                                 if r.status == "pending" {
                                    count += 1

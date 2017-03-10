@@ -172,6 +172,12 @@
 		E73598D81E70F8C900677703 /* AppoinmentsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73598D31E70F8C900677703 /* AppoinmentsListRouter.swift */; };
 		E73598D91E70F8C900677703 /* AppoinmentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73598D41E70F8C900677703 /* AppoinmentsListViewController.swift */; };
 		E77C327B1E15F83D009340A9 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77C327A1E15F83D009340A9 /* Icons.xcassets */; };
+		E78993991E7292AA0011BA71 /* AppointmetFormerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78993941E7292AA0011BA71 /* AppointmetFormerInteractor.swift */; };
+		E789939A1E7292AA0011BA71 /* AppointmetFormerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78993951E7292AA0011BA71 /* AppointmetFormerModule.swift */; };
+		E789939B1E7292AA0011BA71 /* AppointmetFormerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78993961E7292AA0011BA71 /* AppointmetFormerPresenter.swift */; };
+		E789939C1E7292AA0011BA71 /* AppointmetFormerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78993971E7292AA0011BA71 /* AppointmetFormerRouter.swift */; };
+		E789939D1E7292AA0011BA71 /* AppointmetFormerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78993981E7292AA0011BA71 /* AppointmetFormerViewController.swift */; };
+		E78993A31E72960F0011BA71 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E78993A51E72960F0011BA71 /* Localizable.strings */; };
 		E79602F71E6FCCAA00D28F97 /* SwipeActImgvView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79602F61E6FCCAA00D28F97 /* SwipeActImgvView.swift */; };
 		E7B9012E1E49B2B200EE59D9 /* ScheduleVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9012D1E49B2B200EE59D9 /* ScheduleVO.swift */; };
 		E7B9012F1E49B5B000EE59D9 /* MDAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68792D1E397189008EA4C9 /* MDAPI.swift */; };
@@ -298,6 +304,16 @@
 		E73598D31E70F8C900677703 /* AppoinmentsListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppoinmentsListRouter.swift; sourceTree = "<group>"; };
 		E73598D41E70F8C900677703 /* AppoinmentsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppoinmentsListViewController.swift; sourceTree = "<group>"; };
 		E77C327A1E15F83D009340A9 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		E78993941E7292AA0011BA71 /* AppointmetFormerInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmetFormerInteractor.swift; sourceTree = "<group>"; };
+		E78993951E7292AA0011BA71 /* AppointmetFormerModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmetFormerModule.swift; sourceTree = "<group>"; };
+		E78993961E7292AA0011BA71 /* AppointmetFormerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmetFormerPresenter.swift; sourceTree = "<group>"; };
+		E78993971E7292AA0011BA71 /* AppointmetFormerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmetFormerRouter.swift; sourceTree = "<group>"; };
+		E78993981E7292AA0011BA71 /* AppointmetFormerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmetFormerViewController.swift; sourceTree = "<group>"; };
+		E789939E1E7295980011BA71 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		E789939F1E7295980011BA71 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		E78993A41E72960F0011BA71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E78993A61E7296100011BA71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E78993A71E7296110011BA71 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E79602F61E6FCCAA00D28F97 /* SwipeActImgvView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeActImgvView.swift; sourceTree = "<group>"; };
 		E7B9012D1E49B2B200EE59D9 /* ScheduleVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVO.swift; sourceTree = "<group>"; };
 		E7C4BBD81E1636F1001B2C77 /* ScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
@@ -455,6 +471,7 @@
 		4B5323DE1E153FFE00EF41D8 /* vc */ = {
 			isa = PBXGroup;
 			children = (
+				E78993931E7292620011BA71 /* appointmetnConfirm */,
 				4B4B4DFB1E703F6700E33E2F /* recordList */,
 				4B4B4DFA1E703F4100E33E2F /* appointmentList */,
 				4B4B4DF91E703F3A00E33E2F /* base */,
@@ -651,6 +668,7 @@
 		E77C32741E15F7A5009340A9 /* rsc */ = {
 			isa = PBXGroup;
 			children = (
+				E78993A01E7295DD0011BA71 /* lang */,
 				E77C32751E15F7A9009340A9 /* img */,
 			);
 			name = rsc;
@@ -662,6 +680,26 @@
 				E77C327A1E15F83D009340A9 /* Icons.xcassets */,
 			);
 			name = img;
+			sourceTree = "<group>";
+		};
+		E78993931E7292620011BA71 /* appointmetnConfirm */ = {
+			isa = PBXGroup;
+			children = (
+				E78993941E7292AA0011BA71 /* AppointmetFormerInteractor.swift */,
+				E78993951E7292AA0011BA71 /* AppointmetFormerModule.swift */,
+				E78993961E7292AA0011BA71 /* AppointmetFormerPresenter.swift */,
+				E78993971E7292AA0011BA71 /* AppointmetFormerRouter.swift */,
+				E78993981E7292AA0011BA71 /* AppointmetFormerViewController.swift */,
+			);
+			name = appointmetnConfirm;
+			sourceTree = "<group>";
+		};
+		E78993A01E7295DD0011BA71 /* lang */ = {
+			isa = PBXGroup;
+			children = (
+				E78993A51E72960F0011BA71 /* Localizable.strings */,
+			);
+			name = lang;
 			sourceTree = "<group>";
 		};
 		E79602F51E6FCC8F00D28F97 /* view */ = {
@@ -793,6 +831,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = 4B70DE941E0760E2000D9D5A;
 			productRefGroup = 4B70DE9E1E0760E2000D9D5A /* Products */;
@@ -812,6 +851,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B70DEAB1E0760E2000D9D5A /* LaunchScreen.storyboard in Resources */,
+				E78993A31E72960F0011BA71 /* Localizable.strings in Resources */,
 				4B70DEA81E0760E2000D9D5A /* Assets.xcassets in Resources */,
 				4B70DEA61E0760E2000D9D5A /* Main.storyboard in Resources */,
 				E77C327B1E15F83D009340A9 /* Icons.xcassets in Resources */,
@@ -980,6 +1020,7 @@
 			files = (
 				4B68792F1E397189008EA4C9 /* CalendarVC.swift in Sources */,
 				4BCA7E091E086C7800C42763 /* WeekViewController.swift in Sources */,
+				E789939B1E7292AA0011BA71 /* AppointmetFormerPresenter.swift in Sources */,
 				E71E62111E4C1C5F002E8741 /* JsonFormats.swift in Sources */,
 				4BCA7DD61E0869B300C42763 /* RootPresenter.swift in Sources */,
 				4BCA7DE91E086C6600C42763 /* MonthInteractor.swift in Sources */,
@@ -993,6 +1034,7 @@
 				4B095D551E265E4500D1CBD5 /* MonthCellView.swift in Sources */,
 				4BCA7DD01E0869B300C42763 /* RootInteractor.swift in Sources */,
 				4BCA7DD31E0869B300C42763 /* RootModule.swift in Sources */,
+				E789939D1E7292AA0011BA71 /* AppointmetFormerViewController.swift in Sources */,
 				4BCA7E451E086CA100C42763 /* ConfigViewController.swift in Sources */,
 				4BCA7E251E086C9500C42763 /* MemberInteractor.swift in Sources */,
 				4BCA7E281E086C9500C42763 /* MemberModule.swift in Sources */,
@@ -1013,6 +1055,7 @@
 				E73598D71E70F8C900677703 /* AppoinmentsListPresenter.swift in Sources */,
 				4B4B4DFD1E703F7000E33E2F /* OptsVC.swift in Sources */,
 				4B5323E51E15400800EF41D8 /* ScheduleTitleView.swift in Sources */,
+				E789939C1E7292AA0011BA71 /* AppointmetFormerRouter.swift in Sources */,
 				4B432EF51E08A97F0049B3C6 /* MemberProfileInteractor.swift in Sources */,
 				4B5323C81E1532D800EF41D8 /* OpenTimeCell.swift in Sources */,
 				4B432F011E08A97F0049B3C6 /* MemberProfileViewController.swift in Sources */,
@@ -1021,6 +1064,7 @@
 				E7B9012E1E49B2B200EE59D9 /* ScheduleVO.swift in Sources */,
 				4BCA7E3F1E086CA100C42763 /* ConfigPresenter.swift in Sources */,
 				4BCA7E1A1E086C8A00C42763 /* DayRouter.swift in Sources */,
+				E789939A1E7292AA0011BA71 /* AppointmetFormerModule.swift in Sources */,
 				4B432EFE1E08A97F0049B3C6 /* MemberProfileRouter.swift in Sources */,
 				4B5323E21E15400800EF41D8 /* ScheduleTimeView.swift in Sources */,
 				4BCA7E1D1E086C8A00C42763 /* DayViewController.swift in Sources */,
@@ -1043,6 +1087,7 @@
 				4BCA7DEC1E086C6600C42763 /* MonthModule.swift in Sources */,
 				4BCA7DD91E0869B300C42763 /* RootRouter.swift in Sources */,
 				4B70DEA11E0760E2000D9D5A /* AppDelegate.swift in Sources */,
+				E78993991E7292AA0011BA71 /* AppointmetFormerInteractor.swift in Sources */,
 				4B6879331E397189008EA4C9 /* MDAPI.swift in Sources */,
 				4BCA7E391E086CA100C42763 /* ConfigInteractor.swift in Sources */,
 				4B6879311E397189008EA4C9 /* CellView.swift in Sources */,
@@ -1192,6 +1237,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4B70DEA51E0760E2000D9D5A /* Base */,
+				E789939E1E7295980011BA71 /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1200,8 +1246,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				4B70DEAA1E0760E2000D9D5A /* Base */,
+				E789939F1E7295980011BA71 /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E78993A51E72960F0011BA71 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E78993A41E72960F0011BA71 /* Base */,
+				E78993A61E7296100011BA71 /* en */,
+				E78993A71E7296110011BA71 /* zh-Hant */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1211,6 +1268,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1262,6 +1320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
