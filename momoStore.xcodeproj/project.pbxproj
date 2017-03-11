@@ -807,7 +807,7 @@
 				TargetAttributes = {
 					4B70DE9C1E0760E2000D9D5A = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = M43ZXET4L5;
+						DevelopmentTeam = 4M3T5B2VJJ;
 						ProvisioningStyle = Automatic;
 					};
 					4B70DEB01E0760E2000D9D5A = {
@@ -1368,11 +1368,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = M43ZXET4L5;
+				DEVELOPMENT_TEAM = 4M3T5B2VJJ;
 				INFOPLIST_FILE = momoStore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = md.app.store1;
+				PRODUCT_BUNDLE_IDENTIFIER = md.app.store3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1387,11 +1387,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = M43ZXET4L5;
+				DEVELOPMENT_TEAM = 4M3T5B2VJJ;
 				INFOPLIST_FILE = momoStore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = md.app.store1;
+				PRODUCT_BUNDLE_IDENTIFIER = md.app.store3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

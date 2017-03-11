@@ -110,7 +110,7 @@ extension MonthViewController: MonthPresenterViewProtocol {
                             let json = JSON(data:response.data)
 
                             var count = 0
-                            print(JSON(data:response.data))
+//                            print(JSON(data:response.data))
                             self.appointList  = (json.dictionaryValue["data"]?.arrayValue.map({ (j:JSON) -> AppointmentOpt in
                                 var r = AppointmentOpt()
                                 r.start_at = j["start_at"].stringValue
@@ -128,7 +128,6 @@ extension MonthViewController: MonthPresenterViewProtocol {
                                 }
                                 return r
                             }))!
-//
 
                             self.setAppointBadge(n: count )
                             break
@@ -140,7 +139,7 @@ extension MonthViewController: MonthPresenterViewProtocol {
                     // test : what happend if timeout
                             self.epollTimer.invalidate()
                             self.epollTimer = Timer.after(self.epollApointTime.seconds) {
-                                print("call")
+//                                print("call")
                                 self.epollAppointments()
                             } // Timer
                  }.addDisposableTo(dbg)
@@ -191,7 +190,7 @@ extension MonthViewController {
        self.navigationController?.present(recordVC, animated: true)
     }
     func appointBtnHandle(){
-        appointVC.list = self.appointList 
+//        appointVC.list = self.appointList 
         let navAppointVC = UINavigationController(rootViewController: appointVC)
         appointVC.preSet()
        self.navigationController?.present(navAppointVC, animated: true)

@@ -5,6 +5,7 @@ import Eureka
 import SwiftyVIPER
 import Kingfisher
 import SnapKit
+import SwiftyJSON
 
 
 let kNAME = "name"
@@ -47,7 +48,7 @@ class AppointmetFormerViewController: FormViewController {
 	// MARK: Variables
     let lbColor = UIColor.black
 
-    var pet_id = 0
+    var payload = AppointmentOpt()
 
 	// MARK: Inits
 	init(presenter: AppointmetFormerViewPresenterProtocol) {
@@ -95,13 +96,40 @@ extension AppointmetFormerViewController {
 
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+//        let kNAME = "name"
+//        let kPET_NAME = NSLocalizedString("pet_name", comment: "")
+//        let kPET_IMAGE = NSLocalizedString("pet_image", comment: "")
+//        let kCLASS = "class"
+//        let kWEIGHT = "weight"
+//        let kAGE = "age"
+//        
+//        let kDESCRIPTION = "description"
+//        let kOWNER_NAME = "ownername"
+//        let kEMAIL = "email"
+//        let kPHONE = "phone"
+//        let kADDRESS = "address"
+//        let kSTART_TIME = "start_time"
+//        let kEND_TIME = "end_time"
+//        let kCONFIRM = NSLocalizedString("confirm",comment:"")
+//        let kDENY = NSLocalizedString("deny",comment:"")
+        print("va:\(payload.pet_thumbnail)")
+        self.form.setValues([
+            kPET_IMAGE: Picture(url: MDAppURI.imgURL + payload.pet_thumbnail),
+            kPET_NAME : payload.pet_name,
+            kSTART_TIME : payload.start_at,
+            kEND_TIME : payload.end_at,
+            kDESCRIPTION : payload.description
+            ])
+    }
+    
+    
     func setupForm(){
         let header = "預約詳情"
 //        let header2 = "ooooooooooooooo"
-
         /*
          loaded :
-
 
          icon
          name
@@ -130,10 +158,13 @@ extension AppointmetFormerViewController {
                 <<< ImgRow() { (i:ImgRow) -> Void in
                     i.tag = kPET_IMAGE
 //                    i.value = Picture(url: url)
-                }
+                    }.onChange({ (i:ImgRow) in
+//                        print("here")
+//                        print(i.value?.url)
+                })
                 <<< LabelRow() { (l:LabelRow) -> Void in
                     l.tag = kPET_NAME
-                    l.title = NSLocalizedString(kNAME, comment: "")
+                    l.title = NSLocalizedString(kPET_NAME, comment: "")
                 }
                 <<< LabelRow() { (l:LabelRow) -> Void in
                     l.tag = kSTART_TIME
@@ -146,25 +177,53 @@ extension AppointmetFormerViewController {
 //                +++ Section(header: header2, footer: "")          //bleConnMsg)
                 <<< LabelRow() { (l:LabelRow) -> Void in
                     l.tag = kDESCRIPTION
-                    l.title = NSLocalizedString(kNAME, comment: "")
+                    l.title = NSLocalizedString(kDESCRIPTION, comment: "")
                 }
                 <<< ButtonRow() { (b:ButtonRow) -> Void in
                     b.title = kCONFIRM
                 } .onCellSelection({ (cell, row) in
+                    MDApp
+                        .api
+                        .request(.AcceptAppoint(appointId: self.payload.id))
+                        .subscribe { (event) in
+                            switch event {
+                            case let .next(response):
+                                print("-------------------------------------------------------------------------")
+                                print(JSON(data:response.data))
+                            case let .error(error):
+                                print(error)
+                            default:
+                                break
+                            }
+                    }
                     self.dismiss(animated: true, completion: {
 
                     })
+                    
                 })
                 <<< ButtonRow() { (b:ButtonRow) -> Void in
                     b.title = kDENY
                 } .onCellSelection({ (cell, row) in
+                    MDApp
+                        .api
+                        .request(.DenyAppoint(appointId: self.payload.id))
+                        .subscribe { (event) in
+                            switch event {
+                            case let .next(response):
+                                print("-------------------------------------------------------------------------")
+                                print(JSON(data:response.data))
+                            case let .error(error):
+                                print(error)
+                            default:
+                                break
+                            }
+                    }
                     self.dismiss(animated: true, completion: {
 
                     })
                 })
         
 
-        form.setValues([kEND_TIME:"te",kNAME:"nnnnn"])
         
 //                <<< TextRow() { (row2:TextRow) -> Void in
 //                    row2.title = "text" //NSLocalizedString("blevc-scan", comment: "")

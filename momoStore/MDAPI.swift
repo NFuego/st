@@ -171,6 +171,8 @@ extension MDAPI : TargetType {
         switch self {
             case .NewSchedule:
                  return JsonArrayEncoding.default
+            case .AcceptAppoint,.DenyAppoint:
+                return JSONEncoding.default
             default:
                 return URLEncoding.default
         }

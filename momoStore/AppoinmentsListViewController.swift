@@ -58,13 +58,59 @@ class AppoinmentsListViewController: OptsVC , GlobalUI {
 	}
 
 	// MARK: - Load Functions
+    
+    
 
 	override func viewDidLoad() {
     	super.viewDidLoad()
         self.title = "預約"
 		presenter.viewLoaded()
 		view.backgroundColor = .white
+        
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.playLoadingView()
+         MDApp
+                .api
+                .request(.StoreAppointByStatus(storeId: 1, status:"pending",start: "2017-01-01 00:00", end: "2017-12-15 00:00"))
+                .subscribe { (event) in
+                    self.stopLoadingView()
+                        switch event {
+                        case let .next(response):
+        //                    print("-------------------------------------------------------------------------")
+        //                    print(JSON(data:response.data))
+                            let json = JSON(data:response.data)
+
+//                            print(JSON(data:response.data))
+                            self.list  = (json.dictionaryValue["data"]?.arrayValue.map({ (j:JSON) -> AppointmentOpt in
+                                var r = AppointmentOpt()
+                                r.start_at = j["start_at"].stringValue
+                                r.end_at = j["end_at"].stringValue
+                                r.status = j["status"].stringValue
+                                r.description = j["description"].stringValue
+                                r.pet_name = j["pet_name"].stringValue
+                                r.customer_thumbnail = j["customer_thumbnail"].stringValue
+                                r.pet_id =  j["pet_id"].intValue
+                                r.pet_thumbnail = j["pet_thumbnail"].stringValue
+                                r.id =  j["id"].intValue
+                                // count badge
+                                return r
+                            }))!
+                            self.optsTableView.reloadData()
+
+                            break
+                        case let .error(error):
+                            print(error)
+                        default:
+                            break
+                        }
+                 }.addDisposableTo(dbg)
+    } // fin viewDidappear
+
+    
+    
+   
 }
 
 // MARK: - AppoinmentsList Presenter to View Protocol
@@ -139,8 +185,6 @@ extension AppoinmentsListViewController {
 //        cell.selectionStyle = .none
 //        cell.separatorInset = .zero
 //        cell.layoutMargins = .zero
-
-
         let opt = list[idx.row]
         cell.update(opt)
         return cell
@@ -156,22 +200,14 @@ extension AppoinmentsListViewController {
 //                                r.customer_thumbnail = j["customer_thumbnail"].stringValue
 //                                r.pet_id =  j["pet_id"].stringValue
 //                                r.pet_thumbnail = j["pet_thumbnail"].stringValue
-        self.confirmVC.pet_id = opt.pet_id
-        print(opt)
-        
-        self.confirmVC.form.setValues([
-            kPET_IMAGE: Picture(url: MDAppURI.imgURL + opt.pet_thumbnail),
-            kPET_NAME : opt.pet_name,
-            kSTART_TIME : opt.start_at,
-            kEND_TIME : opt.end_at,
-            kDESCRIPTION : opt.description
-            ])
-
-
+        self.confirmVC.payload = opt
+//        print(opt)
         
         let nav = UINavigationController(rootViewController: self.confirmVC)
         self.confirmVC.preSet() // set back, title, navBar config
+        
         self.navigationController?.present(nav,animated:true)
+        
     }
     
     override func showVC(_ vc: UIViewController) {

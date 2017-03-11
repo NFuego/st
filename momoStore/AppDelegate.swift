@@ -118,7 +118,7 @@ extension AppDelegate {
 
          CustomModule().present(from: self.viewController, style: .coverVertical, completion: nil)
  */
-//        quickTest()
+        quickTest()
 
         //  Pre setting
 //        255,215,241
@@ -193,28 +193,43 @@ extension AppDelegate {
     func quickTest(){
 
         let current =  DateInRegion().string(format: .iso8601(options: [.withFullDate]))
-          MDApp
-            .api
-            .request(.StoreAppoint(storeId:1, start:"2017-01-11 00:00:00",end:"2017-01-11 24:00:00"))
-            .subscribe { (event) in
-                switch event {
-                case let .next(response):
-                    print("-------------------------------------------------------------------------")
-                    print(JSON(data:response.data))
-                case let .error(error):
-                    print(error)
-                default:
-                    break
-                }
-        }
+//          MDApp
+//            .api
+//            .request(.StoreAppoint(storeId:1, start:"2017-01-11 00:00:00",end:"2017-01-11 24:00:00"))
+//            .subscribe { (event) in
+//                switch event {
+//                case let .next(response):
+//                    print("-------------------------------------------------------------------------")
+//                    print(JSON(data:response.data))
+//                case let .error(error):
+//                    print(error)
+//                default:
+//                    break
+//                }
+//        }
         print(current) // 1
 
 //        let schedule = Schedule(times: [
 //                TimePeriod(start:"09:00:00",end:"11:00:00"),
 //                TimePeriod(start:"11:30:00",end:"14:00:00")
 //            ])
+//
+//        MDApp
+//            .api
+//            .request(.AcceptAppoint(appointId: 342))
+//            .subscribe { (event) in
+//                switch event {
+//                case let .next(response):
+//                    print("-------------------------------------------------------------------------")
+//                    print(JSON(data:response.data))
+//                case let .error(error):
+//                    print(error)
+//                default:
+//                    break
+//                }
+//        }
 //        
-        
+//        
 
         /*
          
