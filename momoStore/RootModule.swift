@@ -36,7 +36,7 @@ final class RootModule {
                                     UINavigationController(rootViewController:MemberModule().view),
                                     UINavigationController(rootViewController:ConfigModule().view)
                                     ],animated: true)
-        rootVC.selectedIndex = 0
+        rootVC.selectedIndex = 2
 		return rootVC
 	}()
 

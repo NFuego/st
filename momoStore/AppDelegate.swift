@@ -118,7 +118,7 @@ extension AppDelegate {
 
          CustomModule().present(from: self.viewController, style: .coverVertical, completion: nil)
  */
-        quickTest()
+//        quickTest()
 
         //  Pre setting
 //        255,215,241

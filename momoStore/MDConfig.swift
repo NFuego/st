@@ -56,6 +56,14 @@ final class MDApp : NSObject {
     struct config {
         static var appMode = MDAppMode.development
     } // fin config
+    
+    struct appointment {
+        static var startAt = ""
+        static var endAt = ""
+        static var customerId = ""
+        static var storeId = ""
+        static var petId = ""
+    }
 
 //    class modelsMgr {
 //        public var user:UserModel!

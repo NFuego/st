@@ -47,6 +47,8 @@ class DayViewController: UIViewController,GlobalUI {
     var tableView:UITableView!
     var dayOfWeek:DayOfWeek! // pass by parent
     var times = [ScheduleTime]()
+    
+    let memberList = AppointMemberListModule().view
 
 	// MARK: Inits
 
@@ -129,11 +131,10 @@ class DayViewController: UIViewController,GlobalUI {
 //                        t.start = j["start_at"].string!
 //                        t.end = j["end_at"].string!
 //                        t.description = j["description"].string!
-                        
                         return t
                     })!
-                    print(JSON(data:response.data))
-                    print(self.times)
+//                    print(JSON(data:response.data))
+//                    print(self.times)
                     self.times.sort { $0.start < $1.start } // > Desc  < Asc , order asc
                     self.tableView.reloadData()
                     
@@ -170,6 +171,18 @@ extension DayViewController: UITableViewDelegate {
 //        print("selected row at OpenTime")
 //        selectedTimes.sort { $0.start < $1.start } // > Desc  < Asc , order asc
 //        print(selectedTimes)
+        let time = self.times[indexPath.row]
+        print(time.start)
+        print(time.end)
+        
+        MDApp.appointment.startAt = time.start
+        MDApp.appointment.endAt = time.end
+        
+        let nav = UINavigationController(rootViewController: self.memberList)
+        self.memberList.preSet()
+        self.navigationController?.present(nav, animated: true, completion: { 
+            
+        })
        
     } // fin didSelect
     

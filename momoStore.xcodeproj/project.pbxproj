@@ -68,6 +68,11 @@
 		4B70DEB61E0760E2000D9D5A /* momoStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70DEB51E0760E2000D9D5A /* momoStoreTests.swift */; };
 		4B70DEC11E0760E2000D9D5A /* momoStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70DEC01E0760E2000D9D5A /* momoStoreUITests.swift */; };
 		4B7370061E0B131F002EF1F6 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B7370051E0B131F002EF1F6 /* profile.png */; };
+		4B769D5F1E73EFCE00AECD3B /* AppointMemberListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B769D5A1E73EFCE00AECD3B /* AppointMemberListInteractor.swift */; };
+		4B769D601E73EFCE00AECD3B /* AppointMemberListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B769D5B1E73EFCE00AECD3B /* AppointMemberListModule.swift */; };
+		4B769D611E73EFCE00AECD3B /* AppointMemberListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B769D5C1E73EFCE00AECD3B /* AppointMemberListPresenter.swift */; };
+		4B769D621E73EFCE00AECD3B /* AppointMemberListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B769D5D1E73EFCE00AECD3B /* AppointMemberListRouter.swift */; };
+		4B769D631E73EFCE00AECD3B /* AppointMemberListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B769D5E1E73EFCE00AECD3B /* AppointMemberListViewController.swift */; };
 		4BCA7DD01E0869B300C42763 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCB1E0869B300C42763 /* RootInteractor.swift */; };
 		4BCA7DD11E0869B300C42763 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCB1E0869B300C42763 /* RootInteractor.swift */; };
 		4BCA7DD21E0869B300C42763 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCB1E0869B300C42763 /* RootInteractor.swift */; };
@@ -259,6 +264,11 @@
 		4B70DEC01E0760E2000D9D5A /* momoStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = momoStoreUITests.swift; sourceTree = "<group>"; };
 		4B70DEC21E0760E2000D9D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B7370051E0B131F002EF1F6 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		4B769D5A1E73EFCE00AECD3B /* AppointMemberListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointMemberListInteractor.swift; sourceTree = "<group>"; };
+		4B769D5B1E73EFCE00AECD3B /* AppointMemberListModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointMemberListModule.swift; sourceTree = "<group>"; };
+		4B769D5C1E73EFCE00AECD3B /* AppointMemberListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointMemberListPresenter.swift; sourceTree = "<group>"; };
+		4B769D5D1E73EFCE00AECD3B /* AppointMemberListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointMemberListRouter.swift; sourceTree = "<group>"; };
+		4B769D5E1E73EFCE00AECD3B /* AppointMemberListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointMemberListViewController.swift; sourceTree = "<group>"; };
 		4BCA7DCB1E0869B300C42763 /* RootInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		4BCA7DCC1E0869B300C42763 /* RootModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootModule.swift; sourceTree = "<group>"; };
 		4BCA7DCD1E0869B300C42763 /* RootPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
@@ -405,11 +415,16 @@
 			name = appointmentDay;
 			sourceTree = "<group>";
 		};
-		4B4B4DF31E70378800E33E2F /* appointmentMember */ = {
+		4B4B4DF31E70378800E33E2F /* appointmentMemberList */ = {
 			isa = PBXGroup;
 			children = (
+				4B769D5A1E73EFCE00AECD3B /* AppointMemberListInteractor.swift */,
+				4B769D5B1E73EFCE00AECD3B /* AppointMemberListModule.swift */,
+				4B769D5C1E73EFCE00AECD3B /* AppointMemberListPresenter.swift */,
+				4B769D5D1E73EFCE00AECD3B /* AppointMemberListRouter.swift */,
+				4B769D5E1E73EFCE00AECD3B /* AppointMemberListViewController.swift */,
 			);
-			name = appointmentMember;
+			name = appointmentMemberList;
 			sourceTree = "<group>";
 		};
 		4B4B4DF41E7037A200E33E2F /* appointmentProfile */ = {
@@ -476,7 +491,7 @@
 				4B4B4DFA1E703F4100E33E2F /* appointmentList */,
 				4B4B4DF91E703F3A00E33E2F /* base */,
 				4B4B4DF41E7037A200E33E2F /* appointmentProfile */,
-				4B4B4DF31E70378800E33E2F /* appointmentMember */,
+				4B4B4DF31E70378800E33E2F /* appointmentMemberList */,
 				4B4B4DF21E70376800E33E2F /* appointmentDay */,
 				4B4B4DF11E70375B00E33E2F /* schedule */,
 			);
@@ -1018,11 +1033,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B769D5F1E73EFCE00AECD3B /* AppointMemberListInteractor.swift in Sources */,
 				4B68792F1E397189008EA4C9 /* CalendarVC.swift in Sources */,
 				4BCA7E091E086C7800C42763 /* WeekViewController.swift in Sources */,
 				E789939B1E7292AA0011BA71 /* AppointmetFormerPresenter.swift in Sources */,
 				E71E62111E4C1C5F002E8741 /* JsonFormats.swift in Sources */,
 				4BCA7DD61E0869B300C42763 /* RootPresenter.swift in Sources */,
+				4B769D631E73EFCE00AECD3B /* AppointMemberListViewController.swift in Sources */,
 				4BCA7DE91E086C6600C42763 /* MonthInteractor.swift in Sources */,
 				4B5323DB1E15355800EF41D8 /* OpenTimeViewController.swift in Sources */,
 				4BCA7E111E086C8A00C42763 /* DayInteractor.swift in Sources */,
@@ -1030,6 +1047,7 @@
 				4BCA7DFD1E086C7800C42763 /* WeekInteractor.swift in Sources */,
 				4BCA7E001E086C7800C42763 /* WeekModule.swift in Sources */,
 				4BCA7E171E086C8A00C42763 /* DayPresenter.swift in Sources */,
+				4B769D601E73EFCE00AECD3B /* AppointMemberListModule.swift in Sources */,
 				4BF70C651E56D75700535490 /* DayScheduleTimeCell.swift in Sources */,
 				4B095D551E265E4500D1CBD5 /* MonthCellView.swift in Sources */,
 				4BCA7DD01E0869B300C42763 /* RootInteractor.swift in Sources */,
@@ -1069,6 +1087,7 @@
 				4B5323E21E15400800EF41D8 /* ScheduleTimeView.swift in Sources */,
 				4BCA7E1D1E086C8A00C42763 /* DayViewController.swift in Sources */,
 				4BCA7E311E086C9500C42763 /* MemberViewController.swift in Sources */,
+				4B769D621E73EFCE00AECD3B /* AppointMemberListRouter.swift in Sources */,
 				E73598D91E70F8C900677703 /* AppoinmentsListViewController.swift in Sources */,
 				4BCA7E421E086CA100C42763 /* ConfigRouter.swift in Sources */,
 				4BCA7E4B1E08810B00C42763 /* MemberCell.swift in Sources */,
@@ -1084,6 +1103,7 @@
 				E73598D51E70F8C900677703 /* AppoinmentsListInteractor.swift in Sources */,
 				E7DA271D1E448BB500606798 /* MDService.swift in Sources */,
 				4BCA7E3C1E086CA100C42763 /* ConfigModule.swift in Sources */,
+				4B769D611E73EFCE00AECD3B /* AppointMemberListPresenter.swift in Sources */,
 				4BCA7DEC1E086C6600C42763 /* MonthModule.swift in Sources */,
 				4BCA7DD91E0869B300C42763 /* RootRouter.swift in Sources */,
 				4B70DEA11E0760E2000D9D5A /* AppDelegate.swift in Sources */,
