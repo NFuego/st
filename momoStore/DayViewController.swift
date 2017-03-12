@@ -1,11 +1,4 @@
-//
-//  DayViewController.swift
-//  Project: momoStore
-//
-//  Module: Day
-//
-//  MomoDidi 2016年
-//
+
 
 // MARK: Imports
 

@@ -5,6 +5,8 @@ import SwiftyVIPER
 import SwiftyTimer
 import SwiftyJSON
 import RxSwift
+import SwiftDate
+import JTAppleCalendar
 
 // MARK: Protocols
 
@@ -26,9 +28,17 @@ class MonthViewController: UIViewController {
     let appointVC = AppoinmentsListModule().view
     var appointList = [AppointmentOpt]()
     let dbg = DisposeBag()
+    let dailyVC = AppointmentDayModule().view
 
     let epollApointTime = Double(5)
     var epollTimer = Timer.every(1.seconds) {}
+    
+    
+    var calendarView: JTAppleCalendarView!
+    let headerHeight = CGFloat(25)
+    var calendarHeight:Int!
+    
+    var appointTimes = [TimePeriod]()
 
     let stoken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cLzU0LjE0NS4xNjQuNDQ6ODg4OFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTQ4NTM4NzkxMSwiZXhwIjoxNDkzMjc3MTMxLCJuYmYiOjE0ODUzODc5MTEsImp0aSI6ImJmYmEyMjkwZmZlZTFhZWRmMjRmYTZhZTE2ZDQwMGRlIn0.qXjz2Vxf-07Wpdc-0JCO2eqt2CrfcOeUr2G6cV5Ufcg"
     
@@ -43,7 +53,6 @@ class MonthViewController: UIViewController {
     let darkPurple = UIColor(colorWithHexValue: 0x3A284C)
     let dimPurple = UIColor(colorWithHexValue: 0x574865)
     
-    var monthVC:CalendarVC!
     
     var recordBtn = NavBarBtn(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
     var appointmentsBtn = NavBarBtn(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
@@ -62,8 +71,8 @@ class MonthViewController: UIViewController {
 	override func viewDidLoad() {
         print("MonthVC viewDidload")
     	super.viewDidLoad()
-		presenter.viewLoaded()
-//        self.setup()
+//		presenter.viewLoaded()
+        self.setup()
     }
 
 }
@@ -87,16 +96,28 @@ extension MonthViewController: MonthPresenterViewProtocol {
         self.navigationController?.navigationBar.tintColor = .white
         
 //        print(self.view.frame)
-        monthVC = CalendarVC()
+        let frame = CGRect(x:0, y:0,width: self.view.frame.width , height: self.view.frame.height - 49 - 64 - headerHeight ) // 49 is the default tabbar height
+//        let frame = self.view.frame
+
+        calendarView = JTAppleCalendarView(frame: frame)
+        calendarView.registerCellViewClass(type: CellView.self)
+        calendarView.registerHeaderView(classTypeNames: [CellHeader.self])
+        calendarView.cellInset = CGPoint(x: 1 , y: 1 )
+        self.view.addSubview(calendarView)
+        calendarView.delegate = self
+        calendarView.dataSource = self
 //        let nvc = UINavigationController(rootViewController: monthVC)
 //        self.addChildViewController(nvc)
-        self.addChildViewController(monthVC)
-        self.view.addSubview(monthVC.view)
         setupRightBtn()
 
 
         epollAppointments()
 	}
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let now = DateInRegion()
+        calendarView.scrollToDate(now.absoluteDate)
+    }
 
     func epollAppointments(){
             MDApp
@@ -144,6 +165,18 @@ extension MonthViewController: MonthPresenterViewProtocol {
                             } // Timer
                  }.addDisposableTo(dbg)
     } // fin epoll
+    
+    
+    func showAppointDailyVC(date:String){
+        let nav = UINavigationController(rootViewController: self.dailyVC)
+        self.dailyVC.preSet()
+        self.dailyVC.date = date
+        MDApp.appointment.initVC = nav
+        self.navigationController?.present(nav, animated: true, completion: {
+            
+        })
+    }
+
 
     func setAppointBadge(n:Int){
         if let _ = Optional(appointmentsBtn) {
@@ -205,6 +238,195 @@ extension UIColor {
             blue: CGFloat(value & 0x0000FF) / 255.0,
             alpha: alpha
         )
+    }
+}
+
+
+
+extension MonthViewController : JTAppleCalendarViewDataSource, JTAppleCalendarViewDelegate {
+      // Function to handle the text color of the calendar
+    func handleCellTextColor(view: JTAppleDayCellView?, cellState: CellState) {
+        guard let cell = view as? CellView  else {
+            return
+        }
+//        if cellState.isSelected {
+//            if myCustomCell.dayLabel != nil {
+//                myCustomCell.dayLabel.textColor = .black
+//            }
+//            myCustomCell.foreView.backgroundColor = .gray
+//        } else {
+//            if myCustomCell.foreView != nil {
+//                myCustomCell.foreView.backgroundColor = .white
+//            }
+//            if myCustomCell.dayLabel != nil {
+//                if cellState.dateBelongsTo == .thisMonth {
+//                    myCustomCell.dayLabel.textColor = .black
+//                } else {
+//                    myCustomCell.dayLabel.textColor = .white
+//                    myCustomCell.foreView.backgroundColor = UIColor(hex: "#BBBBBB")
+//                }
+//            }
+//        }
+    
+        let openDayColor = UIColor.normalDay
+        if cell.dayLabel != nil {
+            if cellState.dateBelongsTo == .thisMonth {
+                // this month
+                cell.dayLabel.textColor = .black
+                cell.foreView.backgroundColor = .white
+//                cell.backgroundColor = .black
+                
+//                print(cellState.day.rawValue)
+                if cellState.day.rawValue == 2 {
+                    if MDApp.store.schedule.isMondayAvailable {
+                       cell.foreView.backgroundColor  = openDayColor
+                    }
+                }
+                if cellState.day.rawValue == 1 {
+                    if MDApp.store.schedule.isSundayAvailable {
+                       cell.foreView.backgroundColor  = openDayColor
+                    }
+                }
+                
+                if cellState.day.rawValue == 3 {
+                    if MDApp.store.schedule.isTuesdayAvailable {
+                       cell.foreView.backgroundColor  = openDayColor
+                    }
+                }
+                if cellState.day.rawValue == 4 {
+                    if MDApp.store.schedule.isWednsdayAvailable {
+                       cell.foreView.backgroundColor  = openDayColor
+                    }
+                }
+                if cellState.day.rawValue == 5 {
+                    if MDApp.store.schedule.isFridayAvailable {
+                       cell.foreView.backgroundColor  = openDayColor
+                    }
+                }
+                if cellState.day.rawValue == 6 {
+                    if MDApp.store.schedule.isSaturdayAvailable {
+                       cell.foreView.backgroundColor  = openDayColor
+                    }
+                }
+                
+                if cellState.day.rawValue == 7 {
+                    if MDApp.store.schedule.isSundayAvailable {
+                       cell.foreView.backgroundColor  = openDayColor
+                    }
+                }
+            } else {
+                // not this month
+                cell.dayLabel.textColor = UIColor.restDay
+                cell.backgroundColor = .white
+            }
+        }
+    } // fin handleCellTextColor
+    
+    // Function to handle the calendar selection
+    func handleCellSelection(view: JTAppleDayCellView?, cellState: CellState) {
+        guard let cell = view as? CellView  else {
+            return
+        }
+        if cellState.isSelected {
+//            myCustomCell.selectedView.layer.cornerRadius =  25
+//            myCustomCell.selectedView.isHidden = false
+        } else {
+//            myCustomCell.selectedView.isHidden = true
+        }
+    }
+    
+    func scrollDidEndDecelerating(for calendar: JTAppleCalendarView) {
+        print("done")
+    }
+    
+    func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy MM dd"
+
+        let now = DateInRegion() 
+        
+        let startDate = (now - 3.years).absoluteDate
+        let endDate =  (now + 3.years).absoluteDate
+        
+//        let startDate = formatter.date(from:"2012 12 01")! // You can use date generated from a formatter
+//        let endDate = formatter.date(from: "2013 03 01")!                                // You can also use dates created from this function
+        let calendar = Calendar.current                     // Make sure you set this up to your time zone. We'll just use default here
+
+        let numberOfRows = 5
+        let parameters = ConfigurationParameters(startDate: startDate,
+                                                 endDate: endDate,
+                                                 numberOfRows: numberOfRows,
+                                                 calendar: calendar,
+                                                 generateInDates: .forAllMonths,
+                                                 generateOutDates: .tillEndOfGrid,
+                                                 firstDayOfWeek: .sunday)
+//        let p2 = ConfigurationParameters(startDate: startDate, endDate: endDate, numberOfRows: numberOfRows, calendar: calendar, generateInDates: .forAllMonths, generateOutDates: .tillEndOfGrid, firstDayOfWeek: .sunday, hasStrictBoundaries: true)
+        return parameters
+    }
+
+
+    // will display cell
+    
+    func calendar(_ calendar: JTAppleCalendarView, willDisplayCell cell: JTAppleDayCellView, date: Date, cellState: CellState) {
+//        print("willDisplay")
+        let myCustomCell = cell as! CellView
+        
+        // Setup Cell text
+        if myCustomCell.dayLabel != nil {
+            myCustomCell.dayLabel.text = cellState.text
+        }
+
+//        handleCellSelection(view: cell, cellState: cellState)
+
+        myCustomCell.reset()
+        myCustomCell.update()
+        
+        handleCellTextColor(view: cell, cellState: cellState)
+//        print("\(cellState.column()) \(cellState.row()) \(cellState.date.description)")
+//        cell.layoutIfNeeded()
+    }
+
+//    func calendar(_ calendar: JTAppleCalendarView, willResetCell cell: JTAppleDayCellView) {
+
+//        print("willReset")
+//        let myCustomCell = cell as! CellView
+//        myCustomCell.reset()
+//        myCustomCell.update()
+//    }
+
+    // didSelect
+    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleDayCellView?, cellState: CellState) {
+//        let date1 = try! DateInRegion(string: "1999-12-31 23:30:00", format: .custom("yyyy-MM-dd HH:mm:ss"), fromRegion: regionRome)
+        let date = try! DateInRegion(absoluteDate: date)
+        let str = date.string(format: .custom("yyyy-MM-dd"))
+
+        print("didSelectDate\(date) \(str)")
+//        handleCellSelection(view: cell, cellState: cellState)
+        handleCellTextColor(view: cell, cellState: cellState)
+        
+        // todo to check if enable appointment
+        self.showAppointDailyVC(date: str)
+        
+    }
+    
+    // did deselect data
+    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleDayCellView?, cellState: CellState) {
+//        print("didDeselectDate")
+//        handleCellSelection(view: cell, cellState: cellState)
+        handleCellTextColor(view: cell, cellState: cellState)
+    }
+
+    func calendar(_ calendar: JTAppleCalendarView, sectionHeaderSizeFor range: (start: Date, end: Date), belongingTo month: Int) -> CGSize {
+        return CGSize(width: self.view.frame.width , height: headerHeight)
+    }
+
+    func calendar(_ calendar: JTAppleCalendarView, willDisplaySectionHeader header: JTAppleHeaderView, range: (start: Date, end: Date), identifier: String) {
+//        print(range.start)
+        let headerCell  = header as? CellHeader
+        let headerMsg = "\(range.start.string(custom: "yyyy-MM-dd")) ~ \(range.end.string(custom: "yyyy-MM-dd"))"
+        headerCell?.dayLabel.text = headerMsg
+        headerCell?.backgroundColor = .blue
+        headerCell?.update()
     }
 }
 

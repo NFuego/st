@@ -53,7 +53,6 @@
 		4B5323E81E15400800EF41D8 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323E11E15400800EF41D8 /* ScheduleView.swift */; };
 		4B5323E91E15400800EF41D8 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323E11E15400800EF41D8 /* ScheduleView.swift */; };
 		4B5323EA1E15400800EF41D8 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5323E11E15400800EF41D8 /* ScheduleView.swift */; };
-		4B68792F1E397189008EA4C9 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6879291E397189008EA4C9 /* CalendarVC.swift */; };
 		4B6879301E397189008EA4C9 /* CellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68792A1E397189008EA4C9 /* CellHeader.swift */; };
 		4B6879311E397189008EA4C9 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68792B1E397189008EA4C9 /* CellView.swift */; };
 		4B6879321E397189008EA4C9 /* DevKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68792C1E397189008EA4C9 /* DevKit.swift */; };
@@ -85,6 +84,11 @@
 		4B769D791E74BD4700AECD3B /* AppointmentCreateFormRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B769D741E74BD4700AECD3B /* AppointmentCreateFormRouter.swift */; };
 		4B769D7A1E74BD4700AECD3B /* AppointmentCreateFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B769D751E74BD4700AECD3B /* AppointmentCreateFormViewController.swift */; };
 		4B769D7C1E74BD7D00AECD3B /* Konstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B769D7B1E74BD7D00AECD3B /* Konstants.swift */; };
+		4B769D8C1E74CD1900AECD3B /* AppointmentDayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B769D871E74CD1900AECD3B /* AppointmentDayInteractor.swift */; };
+		4B769D8D1E74CD1900AECD3B /* AppointmentDayModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B769D881E74CD1900AECD3B /* AppointmentDayModule.swift */; };
+		4B769D8E1E74CD1900AECD3B /* AppointmentDayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B769D891E74CD1900AECD3B /* AppointmentDayPresenter.swift */; };
+		4B769D8F1E74CD1900AECD3B /* AppointmentDayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B769D8A1E74CD1900AECD3B /* AppointmentDayRouter.swift */; };
+		4B769D901E74CD1900AECD3B /* AppointmentDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B769D8B1E74CD1900AECD3B /* AppointmentDayViewController.swift */; };
 		4BCA7DD01E0869B300C42763 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCB1E0869B300C42763 /* RootInteractor.swift */; };
 		4BCA7DD11E0869B300C42763 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCB1E0869B300C42763 /* RootInteractor.swift */; };
 		4BCA7DD21E0869B300C42763 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA7DCB1E0869B300C42763 /* RootInteractor.swift */; };
@@ -255,7 +259,6 @@
 		4B5323DF1E15400800EF41D8 /* ScheduleTimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTimeView.swift; sourceTree = "<group>"; };
 		4B5323E01E15400800EF41D8 /* ScheduleTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTitleView.swift; sourceTree = "<group>"; };
 		4B5323E11E15400800EF41D8 /* ScheduleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
-		4B6879291E397189008EA4C9 /* CalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		4B68792A1E397189008EA4C9 /* CellHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellHeader.swift; sourceTree = "<group>"; };
 		4B68792B1E397189008EA4C9 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		4B68792C1E397189008EA4C9 /* DevKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevKit.swift; sourceTree = "<group>"; };
@@ -293,6 +296,11 @@
 		4B769D741E74BD4700AECD3B /* AppointmentCreateFormRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentCreateFormRouter.swift; sourceTree = "<group>"; };
 		4B769D751E74BD4700AECD3B /* AppointmentCreateFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentCreateFormViewController.swift; sourceTree = "<group>"; };
 		4B769D7B1E74BD7D00AECD3B /* Konstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Konstants.swift; sourceTree = "<group>"; };
+		4B769D871E74CD1900AECD3B /* AppointmentDayInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDayInteractor.swift; sourceTree = "<group>"; };
+		4B769D881E74CD1900AECD3B /* AppointmentDayModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDayModule.swift; sourceTree = "<group>"; };
+		4B769D891E74CD1900AECD3B /* AppointmentDayPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDayPresenter.swift; sourceTree = "<group>"; };
+		4B769D8A1E74CD1900AECD3B /* AppointmentDayRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDayRouter.swift; sourceTree = "<group>"; };
+		4B769D8B1E74CD1900AECD3B /* AppointmentDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDayViewController.swift; sourceTree = "<group>"; };
 		4BCA7DCB1E0869B300C42763 /* RootInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		4BCA7DCC1E0869B300C42763 /* RootModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootModule.swift; sourceTree = "<group>"; };
 		4BCA7DCD1E0869B300C42763 /* RootPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
@@ -435,6 +443,11 @@
 		4B4B4DF21E70376800E33E2F /* appointmentDay */ = {
 			isa = PBXGroup;
 			children = (
+				4B769D871E74CD1900AECD3B /* AppointmentDayInteractor.swift */,
+				4B769D881E74CD1900AECD3B /* AppointmentDayModule.swift */,
+				4B769D891E74CD1900AECD3B /* AppointmentDayPresenter.swift */,
+				4B769D8A1E74CD1900AECD3B /* AppointmentDayRouter.swift */,
+				4B769D8B1E74CD1900AECD3B /* AppointmentDayViewController.swift */,
 			);
 			name = appointmentDay;
 			sourceTree = "<group>";
@@ -661,7 +674,6 @@
 				4BCA7DE41E086C6600C42763 /* MonthInteractor.swift */,
 				4B68792A1E397189008EA4C9 /* CellHeader.swift */,
 				4B68792B1E397189008EA4C9 /* CellView.swift */,
-				4B6879291E397189008EA4C9 /* CalendarVC.swift */,
 				4BCA7DE51E086C6600C42763 /* MonthModule.swift */,
 				4BCA7DE61E086C6600C42763 /* MonthPresenter.swift */,
 				4BCA7DE71E086C6600C42763 /* MonthRouter.swift */,
@@ -1078,7 +1090,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B769D5F1E73EFCE00AECD3B /* AppointMemberListInteractor.swift in Sources */,
-				4B68792F1E397189008EA4C9 /* CalendarVC.swift in Sources */,
 				4BCA7E091E086C7800C42763 /* WeekViewController.swift in Sources */,
 				4B769D6A1E73F58500AECD3B /* AppointProfileModule.swift in Sources */,
 				E789939B1E7292AA0011BA71 /* AppointmetFormerPresenter.swift in Sources */,
@@ -1098,6 +1109,7 @@
 				4B095D551E265E4500D1CBD5 /* MonthCellView.swift in Sources */,
 				4B769D7C1E74BD7D00AECD3B /* Konstants.swift in Sources */,
 				4BCA7DD01E0869B300C42763 /* RootInteractor.swift in Sources */,
+				4B769D8F1E74CD1900AECD3B /* AppointmentDayRouter.swift in Sources */,
 				4BCA7DD31E0869B300C42763 /* RootModule.swift in Sources */,
 				E789939D1E7292AA0011BA71 /* AppointmetFormerViewController.swift in Sources */,
 				4BCA7E451E086CA100C42763 /* ConfigViewController.swift in Sources */,
@@ -1107,6 +1119,7 @@
 				4B5323D51E15355800EF41D8 /* OpenTimePresenter.swift in Sources */,
 				E79602F71E6FCCAA00D28F97 /* SwipeActImgvView.swift in Sources */,
 				E73598D81E70F8C900677703 /* AppoinmentsListRouter.swift in Sources */,
+				4B769D901E74CD1900AECD3B /* AppointmentDayViewController.swift in Sources */,
 				4B769D781E74BD4700AECD3B /* AppointmentCreateFormPresenter.swift in Sources */,
 				4B6879341E397189008EA4C9 /* MDConfig.swift in Sources */,
 				4BCA7DF21E086C6600C42763 /* MonthRouter.swift in Sources */,
@@ -1117,6 +1130,7 @@
 				E7C4BBD91E1636F1001B2C77 /* ScheduleVC.swift in Sources */,
 				4B432EF81E08A97F0049B3C6 /* MemberProfileModule.swift in Sources */,
 				4BCA7E2E1E086C9500C42763 /* MemberRouter.swift in Sources */,
+				4B769D8D1E74CD1900AECD3B /* AppointmentDayModule.swift in Sources */,
 				4B5323D21E15355800EF41D8 /* OpenTimeModule.swift in Sources */,
 				E73598D71E70F8C900677703 /* AppoinmentsListPresenter.swift in Sources */,
 				4B4B4DFD1E703F7000E33E2F /* OptsVC.swift in Sources */,
@@ -1146,12 +1160,14 @@
 				4BCA7E4B1E08810B00C42763 /* MemberCell.swift in Sources */,
 				4BCA7E061E086C7800C42763 /* WeekRouter.swift in Sources */,
 				4BCA7E031E086C7800C42763 /* WeekPresenter.swift in Sources */,
+				4B769D8E1E74CD1900AECD3B /* AppointmentDayPresenter.swift in Sources */,
 				4B5323E81E15400800EF41D8 /* ScheduleView.swift in Sources */,
 				4B4B4DF61E70396500E33E2F /* AppApreance.swift in Sources */,
 				4BCA7DDC1E0869B300C42763 /* RootViewController.swift in Sources */,
 				4B432EFB1E08A97F0049B3C6 /* MemberProfilePresenter.swift in Sources */,
 				4B70DEA31E0760E2000D9D5A /* ViewController.swift in Sources */,
 				4B769D791E74BD4700AECD3B /* AppointmentCreateFormRouter.swift in Sources */,
+				4B769D8C1E74CD1900AECD3B /* AppointmentDayInteractor.swift in Sources */,
 				4B4B4DF81E703C8800E33E2F /* NaviBarBtn.swift in Sources */,
 				4B6879301E397189008EA4C9 /* CellHeader.swift in Sources */,
 				E73598D51E70F8C900677703 /* AppoinmentsListInteractor.swift in Sources */,
