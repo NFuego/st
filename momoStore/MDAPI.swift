@@ -150,9 +150,7 @@ public enum MDAPI {
     case NewSchedule(weekday: DayOfWeek ,schedule:Schedule)
     case AcceptAppoint(appointId:Int)
     case DenyAppoint(appointId:Int)
-    case NewAppoint(storeId:Int,customerId:Int, start:String,end:String,descri:String)
-
-
+    case NewAppoint(storeId:Int,customerId:Int,petId:Int, start:String,end:String,descri:String)
 
     // get
     case StoreSchedule(storeId:Int)
@@ -206,7 +204,7 @@ extension MDAPI : TargetType {
                 return "/store/\(storeId)/appointments"
         case .StoreAppointByStatus(let storeId,let status,_,_):
             return "/store/\(storeId)/appointments/\(status)"
-        case .NewAppoint(let storeId ,let customerId ,let start ,let end ,let descri ):
+        case .NewAppoint(let storeId ,let customerId,let petId ,let start ,let end ,let descri ):
             return  "/appointment"
         case .AcceptAppoint(let id):
             return "/appointment/\(id)/accept"
@@ -262,8 +260,8 @@ extension MDAPI : TargetType {
                 let dic = ["start_time":start,
                            "end_time":end]
                 return dic
-            case let .NewAppoint(storeId, customerId, start, end, descri):
-                let dic = ["store_id":storeId, "customer_id":customerId, "start_at":start, "end_at":end, "description":descri] as [String : Any]
+            case let .NewAppoint(storeId, customerId,petId, start, end, descri):
+                let dic = ["store_id":storeId, "customer_id":customerId,"pet_id":petId, "start_at":start, "end_at":end, "description":descri] as [String : Any]
                 return dic
             case let .AcceptAppoint(appointId):
                 return [:]

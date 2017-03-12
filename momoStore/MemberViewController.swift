@@ -202,7 +202,6 @@ extension MemberViewController : UITableViewDataSource {
             if let _ = self.filteredMembers {
                 return self.filteredMembers!.arrayValue.count
             } else {
-
                 if let ms = self.members {
                     return ms.arrayValue.count
                 } else {
@@ -217,8 +216,6 @@ extension MemberViewController : UITableViewDataSource {
             }
         }
     }
-
-
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         

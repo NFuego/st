@@ -66,9 +66,8 @@ class DayViewController: UIViewController,GlobalUI {
     	super.viewDidLoad()
 		presenter.viewLoaded()
         
-        
-        
         self.view.backgroundColor = .white
+        self.title = "今日時段"
         
         let fullScreenSize = UIScreen.main.bounds.size
         self.edgesForExtendedLayout = .top
@@ -80,8 +79,6 @@ class DayViewController: UIViewController,GlobalUI {
         self.navigationController?.navigationBar.barTintColor = UIColor(hex: "FF4081")
         self.navigationController?.navigationBar.tintColor = .white
         
-//        let back = UIBarButtonItem(title: "返回", style: .plain, target: self, action: #selector(self.back))
-//        self.navigationItem.leftBarButtonItem = back
 
       
         // table setup
@@ -104,7 +101,12 @@ class DayViewController: UIViewController,GlobalUI {
         
     } // viewDidload
     
-    override func viewDidAppear(_ animated: Bool) {
+//    override func viewWillAppear(_ animated: Bool) {
+//
+//    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+//    override func viewDidAppear(_ animated: Bool) {
         print("Day viewDid")
         self.playLoadingView()
         MDApp
@@ -134,7 +136,7 @@ class DayViewController: UIViewController,GlobalUI {
                         return t
                     })!
 //                    print(JSON(data:response.data))
-//                    print(self.times)
+                    print(self.times)
                     self.times.sort { $0.start < $1.start } // > Desc  < Asc , order asc
                     self.tableView.reloadData()
                     
@@ -175,14 +177,20 @@ extension DayViewController: UITableViewDelegate {
         print(time.start)
         print(time.end)
         
+        let nav = UINavigationController(rootViewController: self.memberList)
+        
         MDApp.appointment.startAt = time.start
         MDApp.appointment.endAt = time.end
+        MDApp.appointment.setFromToday(start: time.start,end: time.end)
+//        MDApp.appointment.initVC = self.navigationController
+        MDApp.appointment.initVC = nav
         
-        let nav = UINavigationController(rootViewController: self.memberList)
         self.memberList.preSet()
-        self.navigationController?.present(nav, animated: true, completion: { 
-            
+//        self.navigationController?.pushViewController(self.memberList, animated: true)
+        self.navigationController?.present(nav, animated: true, completion: {
         })
+        
+        
        
     } // fin didSelect
     

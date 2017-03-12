@@ -50,6 +50,10 @@ class AppointMemberListViewController: UIViewController {
     var currentList:JSON?
     var members:JSON?
     var filteredMembers:JSON?
+    
+    
+    
+    let memberProfileV = AppointProfileModule().view
 
 	// MARK: Inits
 
@@ -64,12 +68,8 @@ class AppointMemberListViewController: UIViewController {
 
 
 	// MARK: - Load Functions
-
-	override func viewDidLoad() {
-    	super.viewDidLoad()
-		presenter.viewLoaded()
-
-		view.backgroundColor = .white
+    
+    override func viewWillAppear(_ animated: Bool) {
          self.setup()
         _ = json(.get, customerURL , parameters: nil , headers: ["Authorization" : "Bearer {\(token)}"])
             .observeOn(MainScheduler.instance)
@@ -78,6 +78,13 @@ class AppointMemberListViewController: UIViewController {
                 self.tableView.reloadData()
                 print(self.members)
             })
+    }
+
+	override func viewDidLoad() {
+    	super.viewDidLoad()
+		presenter.viewLoaded()
+
+		view.backgroundColor = .gray
     }
     
     func setup() {
@@ -209,16 +216,18 @@ extension AppointMemberListViewController : UITableViewDelegate {
         
         //        print(member)
         
-        let memberProfileV = MemberProfileModule().view
         if let id = member?.dictionary?["id"]?.intValue {
             print(id)
             memberProfileV.id = id
         }
         
-        let memProfileNav = UINavigationController(rootViewController: memberProfileV)
-        self.navigationController?.present(memProfileNav, animated: true     // with tab
-            , completion: {
-        })
+//        let memProfile = UINavigationController(rootViewController: memberProfileV)
+//        memberProfileV.preSet()
+        
+        MDApp.appointment.initVC?.pushViewController(memberProfileV, animated: true)
+//        MDApp.appointment.initVC?.push(memProfile, animated: true     // with tab
+//            , completion: {
+//        })
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -250,8 +259,6 @@ extension AppointMemberListViewController : UITableViewDataSource {
         }
     }
     
-    
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         //        let cell = tableView.dequeueReusableCell( withIdentifier: NSStringFromClass(MemberCell.self), for: indexPath) as! MemberCell
@@ -265,13 +272,9 @@ extension AppointMemberListViewController : UITableViewDataSource {
         //        )
         //       return cell
         let cell = tableView.dequeueReusableCell( withIdentifier: NSStringFromClass(MemberCell.self), for: indexPath) as! MemberCell
-        
         guard let _ = self.searchController else { return  cell}
-        
         if self.searchController.isActive == true {
-            
             if let _ = self.filteredMembers {
-                
                 cell.update(name: (filteredMembers?[indexPath.row]["name"].stringValue)!,
                             imgURL: (filteredMembers?[indexPath.row]["thumbnail"].stringValue)!,
                             petName: (filteredMembers?[indexPath.row]["pets"][0]["name"].stringValue)!,

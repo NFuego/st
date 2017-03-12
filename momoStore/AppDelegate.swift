@@ -118,7 +118,7 @@ extension AppDelegate {
 
          CustomModule().present(from: self.viewController, style: .coverVertical, completion: nil)
  */
-//        quickTest()
+        quickTest()
 
         //  Pre setting
 //        255,215,241
@@ -193,6 +193,7 @@ extension AppDelegate {
     func quickTest(){
 
         let current =  DateInRegion().string(format: .iso8601(options: [.withFullDate]))
+        let current2 =  DateInRegion().string(format: .iso8601(options: [.withYear,.withMonth,.withDay]))
 //          MDApp
 //            .api
 //            .request(.StoreAppoint(storeId:1, start:"2017-01-11 00:00:00",end:"2017-01-11 24:00:00"))
@@ -208,6 +209,7 @@ extension AppDelegate {
 //                }
 //        }
         print(current) // 1
+        print(current2) // 1
 
 //        let schedule = Schedule(times: [
 //                TimePeriod(start:"09:00:00",end:"11:00:00"),

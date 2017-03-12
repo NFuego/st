@@ -30,7 +30,6 @@ struct StoreSchedule {
     var isSundayAvailable = false
 }
 
-
 //    let stoken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cLzU0LjE0NS4xNjQuNDQ6ODg4OFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTQ4NTM4NzkxMSwiZXhwIjoxNDkzMjc3MTMxLCJuYmYiOjE0ODUzODc5MTEsImp0aSI6ImJmYmEyMjkwZmZlZTFhZWRmMjRmYTZhZTE2ZDQwMGRlIn0.qXjz2Vxf-07Wpdc-0JCO2eqt2CrfcOeUr2G6cV5Ufcg"
 
 //    let stoken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cLzU0LjE0NS4xNjQuNDQ6ODg4OFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTQ4ODg3MjUyOCwiZXhwIjoxNDk2NzYxNzQ4LCJuYmYiOjE0ODg4NzI1MjgsImp0aSI6IjFlNjI5ZGYyMzkxNDRiYjdlZGZmZTNmYThkNzczMDI5In0.lxVZUHIc1WizUaJy84fVneHDxeQNFiJO_sWTPYQGXaI"
@@ -58,11 +57,18 @@ final class MDApp : NSObject {
     } // fin config
     
     struct appointment {
+        static var initVC:UINavigationController? = nil
         static var startAt = ""
         static var endAt = ""
         static var customerId = ""
         static var storeId = ""
-        static var petId = ""
+        static var petInfo = PetView()
+        
+        static func setFromToday(start:String,end:String){
+            let current =  DateInRegion().string(format: .iso8601(options: [.withFullDate]))
+            MDApp.appointment.startAt = "\(current.description) \(start)"
+            MDApp.appointment.endAt = "\(current.description) \(end)"
+        }
     }
 
 //    class modelsMgr {
