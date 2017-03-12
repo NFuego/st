@@ -410,60 +410,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "momoStore/MonthViewController.swift"
-            timestampString = "510975062.253142"
+            timestampString = "510983310.923949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
-            landmarkName = "showAppointDailyVC(date:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "momoStore.MonthViewController.showAppointDailyVC (date : Swift.String) -&gt; ()"
-                  moduleName = "momoStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ssstand/Documents/tienma/store/momoStore/MonthViewController.swift"
-                  timestampString = "510973022.531215"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "157"
-                  endingLineNumber = "157"
-                  offsetFromSymbolStart = "704">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "momoStore.MonthViewController.(showAppointDailyVC (date : Swift.String) -&gt; ()).(closure #1)"
-                  moduleName = "momoStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ssstand/Documents/tienma/store/momoStore/MonthViewController.swift"
-                  timestampString = "510973022.532739"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "157"
-                  endingLineNumber = "157"
-                  offsetFromSymbolStart = "0">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "momoStore/MonthViewController.swift"
-            timestampString = "510975062.253142"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
-            landmarkName = "showAppointDailyVC(date:)"
+            startingLineNumber = "428"
+            endingLineNumber = "428"
+            landmarkName = "checkAppointDates(dateSeg:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -474,12 +426,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "momoStore/MonthViewController.swift"
-            timestampString = "510975062.253142"
+            timestampString = "510983310.923949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "showAppointDailyVC(date:)"
+            startingLineNumber = "429"
+            endingLineNumber = "429"
+            landmarkName = "checkAppointDates(dateSeg:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -490,12 +442,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "momoStore/MonthViewController.swift"
-            timestampString = "510975062.253142"
+            timestampString = "510983310.923949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
-            landmarkName = "showAppointDailyVC(date:)"
+            startingLineNumber = "423"
+            endingLineNumber = "423"
+            landmarkName = "checkAppointDates(dateSeg:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "momoStore/MonthViewController.swift"
+            timestampString = "510983310.923949"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "426"
+            endingLineNumber = "426"
+            landmarkName = "checkAppointDates(dateSeg:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "momoStore/MonthViewController.swift"
+            timestampString = "510983310.923949"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "424"
+            endingLineNumber = "424"
+            landmarkName = "checkAppointDates(dateSeg:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "momoStore/MonthViewController.swift"
+            timestampString = "510983310.923949"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "427"
+            endingLineNumber = "427"
+            landmarkName = "checkAppointDates(dateSeg:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "momoStore/MonthViewController.swift"
+            timestampString = "510983310.923949"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "430"
+            endingLineNumber = "430"
+            landmarkName = "checkAppointDates(dateSeg:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

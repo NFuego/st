@@ -8,13 +8,13 @@ public extension UIColor {
     //    http://www.color-hex.com/color-palettes/
     
     public class var restDay:UIColor {
-        return UIColor(hex:"#909090")
+        return UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
     }
     public class var normalDay:UIColor {
         return UIColor.white
     }
     public class var appointmentedDay:UIColor {
-        return UIColor(hex:"#f37735")
+        return UIColor(red: 243/255, green: 119/255, blue: 53/255, alpha: 1)
     }
     
     public class var options:UIColor  {

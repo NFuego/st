@@ -22,7 +22,7 @@ protocol MonthPresenterViewProtocol: class {
 // MARK: -
 
 /// The View Controller for the Month module
-class MonthViewController: UIViewController {
+class MonthViewController: UIViewController ,GlobalUI {
     
     let recordVC = UINavigationController(rootViewController: RecordList())
     let appointVC = AppoinmentsListModule().view
@@ -39,6 +39,8 @@ class MonthViewController: UIViewController {
     var calendarHeight:Int!
     
     var appointTimes = [TimePeriod]()
+    
+    var appointmentDates = [String]()
 
     let stoken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cLzU0LjE0NS4xNjQuNDQ6ODg4OFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTQ4NTM4NzkxMSwiZXhwIjoxNDkzMjc3MTMxLCJuYmYiOjE0ODUzODc5MTEsImp0aSI6ImJmYmEyMjkwZmZlZTFhZWRmMjRmYTZhZTE2ZDQwMGRlIn0.qXjz2Vxf-07Wpdc-0JCO2eqt2CrfcOeUr2G6cV5Ufcg"
     
@@ -103,20 +105,34 @@ extension MonthViewController: MonthPresenterViewProtocol {
         calendarView.registerCellViewClass(type: CellView.self)
         calendarView.registerHeaderView(classTypeNames: [CellHeader.self])
         calendarView.cellInset = CGPoint(x: 1 , y: 1 )
-        self.view.addSubview(calendarView)
         calendarView.delegate = self
         calendarView.dataSource = self
+        
+        self.view.addSubview(calendarView)
+        
 //        let nvc = UINavigationController(rootViewController: monthVC)
 //        self.addChildViewController(nvc)
         setupRightBtn()
 
 
         epollAppointments()
+        
+        let now = DateInRegion() 
+        let startDate = (now - 18.days).absoluteDate
+        let endDate =  (now + 18.days).absoluteDate
+        checkAppointDates(dateSeg: [startDate,endDate])
 	}
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
+        print("viewddid appear")
         let now = DateInRegion()
-        calendarView.scrollToDate(now.absoluteDate)
+        calendarView.scrollToDate(now.absoluteDate,triggerScrollToDateDelegate: true,animateScroll: false)
+//        let dates = calendarView.visibleDates()
+//        checkAppointDates(dateSeg: dates.monthDates)
     }
 
     func epollAppointments(){
@@ -314,10 +330,16 @@ extension MonthViewController : JTAppleCalendarViewDataSource, JTAppleCalendarVi
                        cell.foreView.backgroundColor  = openDayColor
                     }
                 }
+                
+                let cellDate = cellState.date.string(format: .custom("yyyy-MM-dd"))
+//                print(cell)
+                if appointmentDates.contains(cellDate) {
+                   cell.foreView.backgroundColor  = UIColor.appointmentedDay
+                }
             } else {
                 // not this month
-                cell.dayLabel.textColor = UIColor.restDay
-                cell.backgroundColor = .white
+                cell.dayLabel.textColor = UIColor.white
+                cell.foreView.backgroundColor = UIColor.restDay
             }
         }
     } // fin handleCellTextColor
@@ -340,6 +362,7 @@ extension MonthViewController : JTAppleCalendarViewDataSource, JTAppleCalendarVi
     }
     
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
+        print("configre")
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy MM dd"
 
@@ -385,6 +408,54 @@ extension MonthViewController : JTAppleCalendarViewDataSource, JTAppleCalendarVi
 //        print("\(cellState.column()) \(cellState.row()) \(cellState.date.description)")
 //        cell.layoutIfNeeded()
     }
+    
+    func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
+        print("didScroolToData")
+        checkAppointDates(dateSeg: visibleDates.monthDates)
+    }
+    
+    func checkAppointDates(dateSeg:[Date]){
+        self.playLoadingView()
+       let begin = dateSeg.first
+       let end = dateSeg.last
+        
+        let beginDate = try! DateInRegion(absoluteDate: begin!)
+        let beginStr = beginDate.string(format: .custom("yyyy-MM-dd"))
+        
+        let endDate = try! DateInRegion(absoluteDate: end!)
+        let endStr = endDate.string(format: .custom("yyyy-MM-dd"))
+        
+        print(beginStr)
+        print(endStr)
+        MDApp
+            .api
+            .request(.StoreAppoint(storeId:1, start:beginStr,end:endStr))
+            .subscribe { (event) in
+                self.stopLoadingView()
+                switch event {
+                case let .next(response):
+//                    print("-------------------------------------------------------------------------")
+//                    print(JSON(data:response.data))
+                    let json = JSON(data:response.data)
+                    self.appointmentDates = (json.dictionaryValue["data"]?.arrayValue.map({ (j:JSON) -> String in
+                        let s = j["start_at"].stringValue
+                        let d = s.substring(to: s.index(s.startIndex, offsetBy: 10))
+//                        print(d)
+                        return d
+                    }))!
+                    self.calendarView.reloadData()
+//                    self.calendarView.reloadDates(dateSeg.monthDates)
+                    break
+                    
+                    
+                case let .error(error):
+                    print(error)
+                default:
+                    break
+                }
+        }
+        
+    }
 
 //    func calendar(_ calendar: JTAppleCalendarView, willResetCell cell: JTAppleDayCellView) {
 
@@ -402,7 +473,7 @@ extension MonthViewController : JTAppleCalendarViewDataSource, JTAppleCalendarVi
 
         print("didSelectDate\(date) \(str)")
 //        handleCellSelection(view: cell, cellState: cellState)
-        handleCellTextColor(view: cell, cellState: cellState)
+//        handleCellTextColor(view: cell, cellState: cellState)
         
         // todo to check if enable appointment
         self.showAppointDailyVC(date: str)
@@ -413,7 +484,7 @@ extension MonthViewController : JTAppleCalendarViewDataSource, JTAppleCalendarVi
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleDayCellView?, cellState: CellState) {
 //        print("didDeselectDate")
 //        handleCellSelection(view: cell, cellState: cellState)
-        handleCellTextColor(view: cell, cellState: cellState)
+//        handleCellTextColor(view: cell, cellState: cellState)
     }
 
     func calendar(_ calendar: JTAppleCalendarView, sectionHeaderSizeFor range: (start: Date, end: Date), belongingTo month: Int) -> CGSize {
