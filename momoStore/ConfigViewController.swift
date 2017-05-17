@@ -79,21 +79,93 @@ class ConfigViewController: FormViewController {
         self.navigationController?.toolbar.barStyle = .default // this make it appears
 		view.backgroundColor = .white  // Loading
         
-        form +++ Section()//"店面資料設定")
+        
+//        設定可預約時間(商家使用第一次設定, faq,權限, 推播）
+        
+        form +++ Section(header:"頁面設定",footer:"")//"店面資料設定")
             <<< ButtonRow(){ row in
-                row.title = "首頁頁面"
+                row.title = "首頁頁面設定"
             }.onCellSelection({ (_,row) in
 //                print("pressed")
 //                print(row.title)
             })
             <<< ButtonRow(){ row in
-                row.title = "公告頁面"
+                row.title = "公告頁面設定"
             }.onCellSelection({ (_,row) in
 //                print("pressed")
 //                print(row.title)
             })
             <<< ButtonRow(){ row in
-                row.title = "營業時間"
+                row.title = "公告/協尋 頁面設定"
+            }.onCellSelection({ (_,row) in
+//                print("pressed")
+//                print(row.title)
+            })
+            
+            +++ Section(header: "資料設定", footer: "")
+            <<< ButtonRow(){ row in
+                row.title = "基本資料"
+            }.onCellSelection({ (_,row) in
+//                print("pressed")
+//                print(row.title)
+                let nscv = UINavigationController(rootViewController: self.scheduleVC )
+                self.navigationController?.present(nscv, animated: true     // with tab
+                    , completion: {
+                })
+            })
+            <<< ButtonRow(){ row in
+                row.title = "營業項目"
+            }.onCellSelection({ (_,row) in
+//                print("pressed")
+//                print(row.title)
+                let nscv = UINavigationController(rootViewController: self.scheduleVC )
+                self.navigationController?.present(nscv, animated: true     // with tab
+                    , completion: {
+                })
+            })
+            <<< ButtonRow(){ row in
+                row.title = "助理權限設定"
+            }.onCellSelection({ (_,row) in
+//                print("pressed")
+//                print(row.title)
+                let nscv = UINavigationController(rootViewController: self.scheduleVC )
+                self.navigationController?.present(nscv, animated: true     // with tab
+                    , completion: {
+                })
+            })
+            <<< ButtonRow(){ row in
+                row.title = "編寫常問問題"
+            }.onCellSelection({ (_,row) in
+//                print("pressed")
+//                print(row.title)
+                let nscv = UINavigationController(rootViewController: self.scheduleVC )
+                self.navigationController?.present(nscv, animated: true     // with tab
+                    , completion: {
+                })
+            })
+            <<< ButtonRow(){ row in
+                row.title = "發送推播"
+            }.onCellSelection({ (_,row) in
+//                print("pressed")
+//                print(row.title)
+                let nscv = UINavigationController(rootViewController: self.scheduleVC )
+                self.navigationController?.present(nscv, animated: true     // with tab
+                    , completion: {
+                })
+            })
+            +++ Section(header: "資料設定", footer: "")
+            <<< ButtonRow(){ row in
+                row.title = "聯絡Momodi"
+            }.onCellSelection({ (_,row) in
+//                print("pressed")
+//                print(row.title)
+                let nscv = UINavigationController(rootViewController: self.scheduleVC )
+                self.navigationController?.present(nscv, animated: true     // with tab
+                    , completion: {
+                })
+            })
+            <<< ButtonRow(){ row in
+                row.title = "App 使用教學"
             }.onCellSelection({ (_,row) in
 //                print("pressed")
 //                print(row.title)
