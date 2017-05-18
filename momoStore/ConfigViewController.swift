@@ -108,7 +108,9 @@ class ConfigViewController: FormViewController {
             }.onCellSelection({ (_,row) in
 //                print("pressed")
 //                print(row.title)
-                let nscv = UINavigationController(rootViewController: self.scheduleVC )
+                
+                let target = StoreBasicInfoVCModule().view
+                let nscv = UINavigationController(rootViewController: target)
                 self.navigationController?.present(nscv, animated: true     // with tab
                     , completion: {
                 })
@@ -118,17 +120,16 @@ class ConfigViewController: FormViewController {
             }.onCellSelection({ (_,row) in
 //                print("pressed")
 //                print(row.title)
-                let nscv = UINavigationController(rootViewController: self.scheduleVC )
-                self.navigationController?.present(nscv, animated: true     // with tab
-                    , completion: {
-                })
+//                let nscv = UINavigationController(rootViewController: self.scheduleVC )
+//                self.navigationController?.present(nscv, animated: true     // with tab
+//                    , completion: {
+//                })
             })
             <<< ButtonRow(){ row in
                 row.title = "助理權限設定"
             }.onCellSelection({ (_,row) in
-//                print("pressed")
-//                print(row.title)
-                let nscv = UINavigationController(rootViewController: self.scheduleVC )
+                let target = PermissionVCModule().view
+                let nscv = UINavigationController(rootViewController: target)
                 self.navigationController?.present(nscv, animated: true     // with tab
                     , completion: {
                 })
@@ -138,20 +139,20 @@ class ConfigViewController: FormViewController {
             }.onCellSelection({ (_,row) in
 //                print("pressed")
 //                print(row.title)
-                let nscv = UINavigationController(rootViewController: self.scheduleVC )
-                self.navigationController?.present(nscv, animated: true     // with tab
-                    , completion: {
-                })
+//                let nscv = UINavigationController(rootViewController: self.scheduleVC )
+//                self.navigationController?.present(nscv, animated: true     // with tab
+//                    , completion: {
+//                })
             })
             <<< ButtonRow(){ row in
                 row.title = "發送推播"
             }.onCellSelection({ (_,row) in
 //                print("pressed")
 //                print(row.title)
-                let nscv = UINavigationController(rootViewController: self.scheduleVC )
-                self.navigationController?.present(nscv, animated: true     // with tab
-                    , completion: {
-                })
+//                let nscv = UINavigationController(rootViewController: self.scheduleVC )
+//                self.navigationController?.present(nscv, animated: true     // with tab
+//                    , completion: {
+//                })
             })
             +++ Section(header: "資料設定", footer: "")
             <<< ButtonRow(){ row in
@@ -159,7 +160,9 @@ class ConfigViewController: FormViewController {
             }.onCellSelection({ (_,row) in
 //                print("pressed")
 //                print(row.title)
-                let nscv = UINavigationController(rootViewController: self.scheduleVC )
+                
+                let target = ContactToMomodiModule().view
+                let nscv = UINavigationController(rootViewController: target)
                 self.navigationController?.present(nscv, animated: true     // with tab
                     , completion: {
                 })
@@ -169,10 +172,10 @@ class ConfigViewController: FormViewController {
             }.onCellSelection({ (_,row) in
 //                print("pressed")
 //                print(row.title)
-                let nscv = UINavigationController(rootViewController: self.scheduleVC )
-                self.navigationController?.present(nscv, animated: true     // with tab
-                    , completion: {
-                })
+//                let nscv = UINavigationController(rootViewController: self.scheduleVC )
+//                self.navigationController?.present(nscv, animated: true     // with tab
+//                    , completion: {
+//                })
             })
     } // fin setup
     
