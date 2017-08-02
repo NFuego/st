@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		28CBD888B92629AC51A7148A /* Pods_momoStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 052DC915707F80507ADEC4A2 /* Pods_momoStore.framework */; };
 		4B095D551E265E4500D1CBD5 /* MonthCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B095D541E265E4500D1CBD5 /* MonthCellView.swift */; };
+		4B3F9EEA1F318E34003D2F30 /* login.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3F9EE91F318E34003D2F30 /* login.xcassets */; };
+		4B3F9EEC1F318E39003D2F30 /* ImgRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F9EEB1F318E39003D2F30 /* ImgRef.swift */; };
+		4B3F9EF51F318EAF003D2F30 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F9EF01F318EAF003D2F30 /* LoginInteractor.swift */; };
+		4B3F9EF61F318EAF003D2F30 /* LoginModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F9EF11F318EAF003D2F30 /* LoginModule.swift */; };
+		4B3F9EF71F318EAF003D2F30 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F9EF21F318EAF003D2F30 /* LoginPresenter.swift */; };
+		4B3F9EF81F318EAF003D2F30 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F9EF31F318EAF003D2F30 /* LoginRouter.swift */; };
+		4B3F9EF91F318EAF003D2F30 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F9EF41F318EAF003D2F30 /* LoginViewController.swift */; };
+		4B3F9EFB1F318F59003D2F30 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F9EFA1F318F59003D2F30 /* UIScreen.swift */; };
+		4B3F9EFD1F31911D003D2F30 /* Styler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F9EFC1F31911D003D2F30 /* Styler.swift */; };
 		4B432EF51E08A97F0049B3C6 /* MemberProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B432EF01E08A97F0049B3C6 /* MemberProfileInteractor.swift */; };
 		4B432EF61E08A97F0049B3C6 /* MemberProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B432EF01E08A97F0049B3C6 /* MemberProfileInteractor.swift */; };
 		4B432EF71E08A97F0049B3C6 /* MemberProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B432EF01E08A97F0049B3C6 /* MemberProfileInteractor.swift */; };
@@ -216,21 +225,6 @@
 		E7B9013B1E49B62D00EE59D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70DEA01E0760E2000D9D5A /* AppDelegate.swift */; };
 		E7B9013C1E49B63000EE59D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70DEA21E0760E2000D9D5A /* ViewController.swift */; };
 		E7B9013D1E49B63000EE59D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B70DEA21E0760E2000D9D5A /* ViewController.swift */; };
-		E7BA43471ECD252200324F9C /* PermissionVCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BA43421ECD252200324F9C /* PermissionVCInteractor.swift */; };
-		E7BA43481ECD252200324F9C /* PermissionVCModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BA43431ECD252200324F9C /* PermissionVCModule.swift */; };
-		E7BA43491ECD252200324F9C /* PermissionVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BA43441ECD252200324F9C /* PermissionVCPresenter.swift */; };
-		E7BA434A1ECD252200324F9C /* PermissionVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BA43451ECD252200324F9C /* PermissionVCRouter.swift */; };
-		E7BA434B1ECD252200324F9C /* PermissionVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BA43461ECD252200324F9C /* PermissionVCViewController.swift */; };
-		E7BA43521ECD295100324F9C /* ContactToMomodiInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BA434D1ECD295100324F9C /* ContactToMomodiInteractor.swift */; };
-		E7BA43531ECD295100324F9C /* ContactToMomodiModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BA434E1ECD295100324F9C /* ContactToMomodiModule.swift */; };
-		E7BA43541ECD295100324F9C /* ContactToMomodiPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BA434F1ECD295100324F9C /* ContactToMomodiPresenter.swift */; };
-		E7BA43551ECD295100324F9C /* ContactToMomodiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BA43501ECD295100324F9C /* ContactToMomodiRouter.swift */; };
-		E7BA43561ECD295100324F9C /* ContactToMomodiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BA43511ECD295100324F9C /* ContactToMomodiViewController.swift */; };
-		E7C161641ECD2BD100ECEBCC /* StoreBasicInfoVCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C1615F1ECD2BD100ECEBCC /* StoreBasicInfoVCInteractor.swift */; };
-		E7C161651ECD2BD100ECEBCC /* StoreBasicInfoVCModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C161601ECD2BD100ECEBCC /* StoreBasicInfoVCModule.swift */; };
-		E7C161661ECD2BD100ECEBCC /* StoreBasicInfoVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C161611ECD2BD100ECEBCC /* StoreBasicInfoVCPresenter.swift */; };
-		E7C161671ECD2BD100ECEBCC /* StoreBasicInfoVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C161621ECD2BD100ECEBCC /* StoreBasicInfoVCRouter.swift */; };
-		E7C161681ECD2BD100ECEBCC /* StoreBasicInfoVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C161631ECD2BD100ECEBCC /* StoreBasicInfoVCViewController.swift */; };
 		E7C4BBD91E1636F1001B2C77 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C4BBD81E1636F1001B2C77 /* ScheduleVC.swift */; };
 		E7DA271A1E448A3C00606798 /* GlobalUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA27191E448A3C00606798 /* GlobalUI.swift */; };
 		E7DA271D1E448BB500606798 /* MDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA271C1E448BB500606798 /* MDService.swift */; };
@@ -256,6 +250,15 @@
 /* Begin PBXFileReference section */
 		052DC915707F80507ADEC4A2 /* Pods_momoStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_momoStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B095D541E265E4500D1CBD5 /* MonthCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthCellView.swift; sourceTree = "<group>"; };
+		4B3F9EE91F318E34003D2F30 /* login.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = login.xcassets; sourceTree = "<group>"; };
+		4B3F9EEB1F318E39003D2F30 /* ImgRef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgRef.swift; sourceTree = "<group>"; };
+		4B3F9EF01F318EAF003D2F30 /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		4B3F9EF11F318EAF003D2F30 /* LoginModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModule.swift; sourceTree = "<group>"; };
+		4B3F9EF21F318EAF003D2F30 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		4B3F9EF31F318EAF003D2F30 /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		4B3F9EF41F318EAF003D2F30 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4B3F9EFA1F318F59003D2F30 /* UIScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
+		4B3F9EFC1F31911D003D2F30 /* Styler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styler.swift; sourceTree = "<group>"; };
 		4B432EF01E08A97F0049B3C6 /* MemberProfileInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberProfileInteractor.swift; sourceTree = "<group>"; };
 		4B432EF11E08A97F0049B3C6 /* MemberProfileModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberProfileModule.swift; sourceTree = "<group>"; };
 		4B432EF21E08A97F0049B3C6 /* MemberProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberProfilePresenter.swift; sourceTree = "<group>"; };
@@ -373,21 +376,6 @@
 		E78993A71E7296110011BA71 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E79602F61E6FCCAA00D28F97 /* SwipeActImgvView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeActImgvView.swift; sourceTree = "<group>"; };
 		E7B9012D1E49B2B200EE59D9 /* ScheduleVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVO.swift; sourceTree = "<group>"; };
-		E7BA43421ECD252200324F9C /* PermissionVCInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionVCInteractor.swift; sourceTree = "<group>"; };
-		E7BA43431ECD252200324F9C /* PermissionVCModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionVCModule.swift; sourceTree = "<group>"; };
-		E7BA43441ECD252200324F9C /* PermissionVCPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionVCPresenter.swift; sourceTree = "<group>"; };
-		E7BA43451ECD252200324F9C /* PermissionVCRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionVCRouter.swift; sourceTree = "<group>"; };
-		E7BA43461ECD252200324F9C /* PermissionVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionVCViewController.swift; sourceTree = "<group>"; };
-		E7BA434D1ECD295100324F9C /* ContactToMomodiInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactToMomodiInteractor.swift; sourceTree = "<group>"; };
-		E7BA434E1ECD295100324F9C /* ContactToMomodiModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactToMomodiModule.swift; sourceTree = "<group>"; };
-		E7BA434F1ECD295100324F9C /* ContactToMomodiPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactToMomodiPresenter.swift; sourceTree = "<group>"; };
-		E7BA43501ECD295100324F9C /* ContactToMomodiRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactToMomodiRouter.swift; sourceTree = "<group>"; };
-		E7BA43511ECD295100324F9C /* ContactToMomodiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactToMomodiViewController.swift; sourceTree = "<group>"; };
-		E7C1615F1ECD2BD100ECEBCC /* StoreBasicInfoVCInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreBasicInfoVCInteractor.swift; sourceTree = "<group>"; };
-		E7C161601ECD2BD100ECEBCC /* StoreBasicInfoVCModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreBasicInfoVCModule.swift; sourceTree = "<group>"; };
-		E7C161611ECD2BD100ECEBCC /* StoreBasicInfoVCPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreBasicInfoVCPresenter.swift; sourceTree = "<group>"; };
-		E7C161621ECD2BD100ECEBCC /* StoreBasicInfoVCRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreBasicInfoVCRouter.swift; sourceTree = "<group>"; };
-		E7C161631ECD2BD100ECEBCC /* StoreBasicInfoVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreBasicInfoVCViewController.swift; sourceTree = "<group>"; };
 		E7C4BBD81E1636F1001B2C77 /* ScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		E7DA27191E448A3C00606798 /* GlobalUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalUI.swift; sourceTree = "<group>"; };
 		E7DA271C1E448BB500606798 /* MDService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDService.swift; sourceTree = "<group>"; };
@@ -445,6 +433,18 @@
 				EC1AE6272C4D258B35957D61 /* Pods_momoStoreUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B3F9EEF1F318EA6003D2F30 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				4B3F9EF01F318EAF003D2F30 /* LoginInteractor.swift */,
+				4B3F9EF11F318EAF003D2F30 /* LoginModule.swift */,
+				4B3F9EF21F318EAF003D2F30 /* LoginPresenter.swift */,
+				4B3F9EF31F318EAF003D2F30 /* LoginRouter.swift */,
+				4B3F9EF41F318EAF003D2F30 /* LoginViewController.swift */,
+			);
+			name = login;
 			sourceTree = "<group>";
 		};
 		4B432EEF1E08A95D0049B3C6 /* memProfile */ = {
@@ -558,9 +558,7 @@
 		4B5323DE1E153FFE00EF41D8 /* vc */ = {
 			isa = PBXGroup;
 			children = (
-				E7C1615E1ECD2BBB00ECEBCC /* storeBasicInfoVC */,
-				E7BA434C1ECD292A00324F9C /* contactToMomodi */,
-				E7BA43411ECD250900324F9C /* permissionVC */,
+				4B3F9EEF1F318EA6003D2F30 /* login */,
 				4B769D701E74BD1300AECD3B /* appointmentCreateForm */,
 				E78993931E7292620011BA71 /* appointmentConfirm */,
 				4B4B4DFB1E703F6700E33E2F /* recordList */,
@@ -588,6 +586,8 @@
 		4B6879351E3A3080008EA4C9 /* util */ = {
 			isa = PBXGroup;
 			children = (
+				4B3F9EFA1F318F59003D2F30 /* UIScreen.swift */,
+				4B3F9EFC1F31911D003D2F30 /* Styler.swift */,
 				4B68792C1E397189008EA4C9 /* DevKit.swift */,
 			);
 			name = util;
@@ -779,6 +779,8 @@
 		E77C32751E15F7A9009340A9 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				4B3F9EEB1F318E39003D2F30 /* ImgRef.swift */,
+				4B3F9EE91F318E34003D2F30 /* login.xcassets */,
 				E77C327A1E15F83D009340A9 /* Icons.xcassets */,
 			);
 			name = img;
@@ -822,42 +824,6 @@
 				E7B9012D1E49B2B200EE59D9 /* ScheduleVO.swift */,
 			);
 			name = VO;
-			sourceTree = "<group>";
-		};
-		E7BA43411ECD250900324F9C /* permissionVC */ = {
-			isa = PBXGroup;
-			children = (
-				E7BA43421ECD252200324F9C /* PermissionVCInteractor.swift */,
-				E7BA43431ECD252200324F9C /* PermissionVCModule.swift */,
-				E7BA43441ECD252200324F9C /* PermissionVCPresenter.swift */,
-				E7BA43451ECD252200324F9C /* PermissionVCRouter.swift */,
-				E7BA43461ECD252200324F9C /* PermissionVCViewController.swift */,
-			);
-			name = permissionVC;
-			sourceTree = "<group>";
-		};
-		E7BA434C1ECD292A00324F9C /* contactToMomodi */ = {
-			isa = PBXGroup;
-			children = (
-				E7BA434D1ECD295100324F9C /* ContactToMomodiInteractor.swift */,
-				E7BA434E1ECD295100324F9C /* ContactToMomodiModule.swift */,
-				E7BA434F1ECD295100324F9C /* ContactToMomodiPresenter.swift */,
-				E7BA43501ECD295100324F9C /* ContactToMomodiRouter.swift */,
-				E7BA43511ECD295100324F9C /* ContactToMomodiViewController.swift */,
-			);
-			name = contactToMomodi;
-			sourceTree = "<group>";
-		};
-		E7C1615E1ECD2BBB00ECEBCC /* storeBasicInfoVC */ = {
-			isa = PBXGroup;
-			children = (
-				E7C1615F1ECD2BD100ECEBCC /* StoreBasicInfoVCInteractor.swift */,
-				E7C161601ECD2BD100ECEBCC /* StoreBasicInfoVCModule.swift */,
-				E7C161611ECD2BD100ECEBCC /* StoreBasicInfoVCPresenter.swift */,
-				E7C161621ECD2BD100ECEBCC /* StoreBasicInfoVCRouter.swift */,
-				E7C161631ECD2BD100ECEBCC /* StoreBasicInfoVCViewController.swift */,
-			);
-			name = storeBasicInfoVC;
 			sourceTree = "<group>";
 		};
 		E7DA271B1E448A4200606798 /* enhancement */ = {
@@ -994,6 +960,7 @@
 				E78993A31E72960F0011BA71 /* Localizable.strings in Resources */,
 				4B70DEA81E0760E2000D9D5A /* Assets.xcassets in Resources */,
 				4B70DEA61E0760E2000D9D5A /* Main.storyboard in Resources */,
+				4B3F9EEA1F318E34003D2F30 /* login.xcassets in Resources */,
 				E77C327B1E15F83D009340A9 /* Icons.xcassets in Resources */,
 				4B7370061E0B131F002EF1F6 /* profile.png in Resources */,
 			);
@@ -1164,34 +1131,31 @@
 				E789939B1E7292AA0011BA71 /* AppointmetFormerPresenter.swift in Sources */,
 				E71E62111E4C1C5F002E8741 /* JsonFormats.swift in Sources */,
 				4B769D6F1E743C1F00AECD3B /* ToucheableImgView.swift in Sources */,
-				E7BA434A1ECD252200324F9C /* PermissionVCRouter.swift in Sources */,
-				E7C161661ECD2BD100ECEBCC /* StoreBasicInfoVCPresenter.swift in Sources */,
 				4BCA7DD61E0869B300C42763 /* RootPresenter.swift in Sources */,
 				4B769D631E73EFCE00AECD3B /* AppointMemberListViewController.swift in Sources */,
-				E7BA43521ECD295100324F9C /* ContactToMomodiInteractor.swift in Sources */,
 				4BCA7DE91E086C6600C42763 /* MonthInteractor.swift in Sources */,
+				4B3F9EF81F318EAF003D2F30 /* LoginRouter.swift in Sources */,
 				4B5323DB1E15355800EF41D8 /* OpenTimeViewController.swift in Sources */,
 				4BCA7E111E086C8A00C42763 /* DayInteractor.swift in Sources */,
 				4BCA7E141E086C8A00C42763 /* DayModule.swift in Sources */,
 				4BCA7DFD1E086C7800C42763 /* WeekInteractor.swift in Sources */,
 				4BCA7E001E086C7800C42763 /* WeekModule.swift in Sources */,
-				E7BA43491ECD252200324F9C /* PermissionVCPresenter.swift in Sources */,
 				4BCA7E171E086C8A00C42763 /* DayPresenter.swift in Sources */,
 				4B769D601E73EFCE00AECD3B /* AppointMemberListModule.swift in Sources */,
 				4BF70C651E56D75700535490 /* DayScheduleTimeCell.swift in Sources */,
 				4B095D551E265E4500D1CBD5 /* MonthCellView.swift in Sources */,
+				4B3F9EFB1F318F59003D2F30 /* UIScreen.swift in Sources */,
 				4B769D7C1E74BD7D00AECD3B /* Konstants.swift in Sources */,
 				4BCA7DD01E0869B300C42763 /* RootInteractor.swift in Sources */,
 				4B769D8F1E74CD1900AECD3B /* AppointmentDayRouter.swift in Sources */,
 				4BCA7DD31E0869B300C42763 /* RootModule.swift in Sources */,
-				E7BA43561ECD295100324F9C /* ContactToMomodiViewController.swift in Sources */,
 				E789939D1E7292AA0011BA71 /* AppointmetFormerViewController.swift in Sources */,
-				E7C161671ECD2BD100ECEBCC /* StoreBasicInfoVCRouter.swift in Sources */,
 				4BCA7E451E086CA100C42763 /* ConfigViewController.swift in Sources */,
 				4BCA7E251E086C9500C42763 /* MemberInteractor.swift in Sources */,
 				4BCA7E281E086C9500C42763 /* MemberModule.swift in Sources */,
 				4BE3B04E1E70CD180003F048 /* RecordList.swift in Sources */,
 				4B5323D51E15355800EF41D8 /* OpenTimePresenter.swift in Sources */,
+				4B3F9EF51F318EAF003D2F30 /* LoginInteractor.swift in Sources */,
 				E79602F71E6FCCAA00D28F97 /* SwipeActImgvView.swift in Sources */,
 				E73598D81E70F8C900677703 /* AppoinmentsListRouter.swift in Sources */,
 				4B769D901E74CD1900AECD3B /* AppointmentDayViewController.swift in Sources */,
@@ -1204,6 +1168,7 @@
 				4B4B4E001E703FDD00E33E2F /* MenuOptCell.swift in Sources */,
 				E7C4BBD91E1636F1001B2C77 /* ScheduleVC.swift in Sources */,
 				4B432EF81E08A97F0049B3C6 /* MemberProfileModule.swift in Sources */,
+				4B3F9EEC1F318E39003D2F30 /* ImgRef.swift in Sources */,
 				4BCA7E2E1E086C9500C42763 /* MemberRouter.swift in Sources */,
 				4B769D8D1E74CD1900AECD3B /* AppointmentDayModule.swift in Sources */,
 				4B5323D21E15355800EF41D8 /* OpenTimeModule.swift in Sources */,
@@ -1222,6 +1187,7 @@
 				4BCA7E3F1E086CA100C42763 /* ConfigPresenter.swift in Sources */,
 				4B769D761E74BD4700AECD3B /* AppointmentCreateFormInteractor.swift in Sources */,
 				4BCA7E1A1E086C8A00C42763 /* DayRouter.swift in Sources */,
+				4B3F9EF71F318EAF003D2F30 /* LoginPresenter.swift in Sources */,
 				E789939A1E7292AA0011BA71 /* AppointmetFormerModule.swift in Sources */,
 				4B432EFE1E08A97F0049B3C6 /* MemberProfileRouter.swift in Sources */,
 				4B5323E21E15400800EF41D8 /* ScheduleTimeView.swift in Sources */,
@@ -1230,15 +1196,13 @@
 				4B769D6C1E73F58500AECD3B /* AppointProfileRouter.swift in Sources */,
 				4BCA7E311E086C9500C42763 /* MemberViewController.swift in Sources */,
 				4B769D621E73EFCE00AECD3B /* AppointMemberListRouter.swift in Sources */,
-				E7BA43541ECD295100324F9C /* ContactToMomodiPresenter.swift in Sources */,
 				E73598D91E70F8C900677703 /* AppoinmentsListViewController.swift in Sources */,
-				E7BA434B1ECD252200324F9C /* PermissionVCViewController.swift in Sources */,
 				4BCA7E421E086CA100C42763 /* ConfigRouter.swift in Sources */,
 				4BCA7E4B1E08810B00C42763 /* MemberCell.swift in Sources */,
 				4BCA7E061E086C7800C42763 /* WeekRouter.swift in Sources */,
 				4BCA7E031E086C7800C42763 /* WeekPresenter.swift in Sources */,
-				E7C161651ECD2BD100ECEBCC /* StoreBasicInfoVCModule.swift in Sources */,
 				4B769D8E1E74CD1900AECD3B /* AppointmentDayPresenter.swift in Sources */,
+				4B3F9EF91F318EAF003D2F30 /* LoginViewController.swift in Sources */,
 				4B5323E81E15400800EF41D8 /* ScheduleView.swift in Sources */,
 				4B4B4DF61E70396500E33E2F /* AppApreance.swift in Sources */,
 				4BCA7DDC1E0869B300C42763 /* RootViewController.swift in Sources */,
@@ -1246,14 +1210,11 @@
 				4B70DEA31E0760E2000D9D5A /* ViewController.swift in Sources */,
 				4B769D791E74BD4700AECD3B /* AppointmentCreateFormRouter.swift in Sources */,
 				4B769D8C1E74CD1900AECD3B /* AppointmentDayInteractor.swift in Sources */,
-				E7C161641ECD2BD100ECEBCC /* StoreBasicInfoVCInteractor.swift in Sources */,
-				E7BA43551ECD295100324F9C /* ContactToMomodiRouter.swift in Sources */,
 				4B4B4DF81E703C8800E33E2F /* NaviBarBtn.swift in Sources */,
 				4B6879301E397189008EA4C9 /* CellHeader.swift in Sources */,
 				E73598D51E70F8C900677703 /* AppoinmentsListInteractor.swift in Sources */,
 				E7DA271D1E448BB500606798 /* MDService.swift in Sources */,
 				4BCA7E3C1E086CA100C42763 /* ConfigModule.swift in Sources */,
-				E7BA43471ECD252200324F9C /* PermissionVCInteractor.swift in Sources */,
 				4B769D611E73EFCE00AECD3B /* AppointMemberListPresenter.swift in Sources */,
 				4BCA7DEC1E086C6600C42763 /* MonthModule.swift in Sources */,
 				4BCA7DD91E0869B300C42763 /* RootRouter.swift in Sources */,
@@ -1261,16 +1222,15 @@
 				E78993991E7292AA0011BA71 /* AppointmetFormerInteractor.swift in Sources */,
 				4B769D691E73F58500AECD3B /* AppointProfileInteractor.swift in Sources */,
 				4B6879331E397189008EA4C9 /* MDAPI.swift in Sources */,
+				4B3F9EF61F318EAF003D2F30 /* LoginModule.swift in Sources */,
 				4BCA7E391E086CA100C42763 /* ConfigInteractor.swift in Sources */,
 				4B6879311E397189008EA4C9 /* CellView.swift in Sources */,
-				E7BA43531ECD295100324F9C /* ContactToMomodiModule.swift in Sources */,
 				4BCA7DEF1E086C6600C42763 /* MonthPresenter.swift in Sources */,
 				4B769D6B1E73F58500AECD3B /* AppointProfilePresenter.swift in Sources */,
-				E7C161681ECD2BD100ECEBCC /* StoreBasicInfoVCViewController.swift in Sources */,
+				4B3F9EFD1F31911D003D2F30 /* Styler.swift in Sources */,
 				E7DA271A1E448A3C00606798 /* GlobalUI.swift in Sources */,
 				4B5323CF1E15355800EF41D8 /* OpenTimeInteractor.swift in Sources */,
 				4B5323D81E15355800EF41D8 /* OpenTimeRouter.swift in Sources */,
-				E7BA43481ECD252200324F9C /* PermissionVCModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1548,7 +1508,7 @@
 				INFOPLIST_FILE = momoStore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = md.app.store3;
+				PRODUCT_BUNDLE_IDENTIFIER = org.md.pet.store;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1567,7 +1527,7 @@
 				INFOPLIST_FILE = momoStore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = md.app.store3;
+				PRODUCT_BUNDLE_IDENTIFIER = org.md.pet.store;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

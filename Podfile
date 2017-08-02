@@ -12,6 +12,7 @@
 
     pod 'XCGLogger', '~> 4.0.0'
    # pod 'BadgeSwift', '~> 4.0'
+    pod 'DeviceKit'
     pod 'Badgeable'
     pod 'SwiftIconFont'
     pod 'SnapKit', '~> 3.0'

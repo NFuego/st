@@ -37,13 +37,13 @@ class ScheduleVC : UIViewController {
             make.height.equalTo(150)
         }
 
-        self.view.addSubview(scheduleView)
-        scheduleView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.scheduleTitle.view.snp.bottom)
-            make.leading.equalTo(0)
-            make.trailing.equalTo(0)
-            make.bottom.equalTo(self.view)
-        }
+//        self.view.addSubview(scheduleView)
+//        scheduleView.snp.makeConstraints { (make) in
+//            make.top.equalTo(self.scheduleTitle.view.snp.bottom)
+//            make.leading.equalTo(0)
+//            make.trailing.equalTo(0)
+//            make.bottom.equalTo(self.view)
+//        }
     } // fin viewDidLoad
 
     func back(){

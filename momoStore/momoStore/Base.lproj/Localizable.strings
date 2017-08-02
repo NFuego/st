@@ -1,0 +1,17 @@
+
+"name" = "姓名";
+"pet_name" = "寶貝名字";
+"pet_image" = "寶貝圖片";
+"class" = "種類";
+"weight" = "體重";
+"age" = "年齡";
+
+"description" = "描述";
+"ownername" = "主人姓名";
+"email" = "Email";
+"phone" = "電話";
+"address" = "地址";
+"start_time" = "開始";
+"end_time" = "完成";
+"confirm" = "確定";
+"deny" = "取消";

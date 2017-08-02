@@ -42,10 +42,6 @@ class MonthViewController: UIViewController ,GlobalUI {
     
     var appointmentDates = [String]()
 
-    let stoken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cLzU0LjE0NS4xNjQuNDQ6ODg4OFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTQ4NTM4NzkxMSwiZXhwIjoxNDkzMjc3MTMxLCJuYmYiOjE0ODUzODc5MTEsImp0aSI6ImJmYmEyMjkwZmZlZTFhZWRmMjRmYTZhZTE2ZDQwMGRlIn0.qXjz2Vxf-07Wpdc-0JCO2eqt2CrfcOeUr2G6cV5Ufcg"
-    
-    let ctoken =      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cLzU0LjE0NS4xNjQuNDQ6ODg4OFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTQ4NTM4Nzk5OCwiZXhwIjoxNDkzMjc3MjE4LCJuYmYiOjE0ODUzODc5OTgsImp0aSI6Ijc2ZjI0MDZlMTllYThiMjhmNjZjNGZjZTU5Y2FhZWFiIn0.MS4K0wbKuhUU5cCkepuOSlNWgcrK1VOTuyGxQIUYThQ" 
-    
 	// MARK: - Constants
 	let presenter: MonthViewPresenterProtocol
 
@@ -76,7 +72,6 @@ class MonthViewController: UIViewController ,GlobalUI {
 //		presenter.viewLoaded()
         self.setup()
     }
-
 }
 
 
@@ -147,7 +142,6 @@ extension MonthViewController: MonthPresenterViewProtocol {
                             let json = JSON(data:response.data)
 
                             var count = 0
-//                            print(JSON(data:response.data))
                             self.appointList  = (json.dictionaryValue["data"]?.arrayValue.map({ (j:JSON) -> AppointmentOpt in
                                 var r = AppointmentOpt()
                                 r.start_at = j["start_at"].stringValue
